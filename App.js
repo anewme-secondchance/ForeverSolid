@@ -16,7 +16,7 @@ function App() {
       </div>
 
       <p className="quote">
-        “You can’t change how solid you are
+        “You can’t change how solid you are  
         but you can change who you’re solid to”
       </p>
 
