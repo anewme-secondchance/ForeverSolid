@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Product Details | Forever Solid</title>
+
+<link rel="stylesheet" href="../style.css">
+
+<style>
+
+.container{
+    width:95%;
+    max-width:700px;
+    margin:auto;
+    padding:20px;
+}
+
+.product-image{
+    width:100%;
+    border-radius:15px;
+    border:2px solid #b30000;
+    box-shadow:0 0 20px #b30000;
+}
+
+h1{
+    text-align:center;
+    margin:20px 0;
+}
+
+label{
+    display:block;
+    margin-top:20px;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+select,
+input,
+textarea{
+
+    width:100%;
+    padding:15px;
+    border-radius:10px;
+    border:none;
+    font-size:16px;
+
+}
+
+.price{
+
+    margin:25px 0;
+    font-size:28px;
+    color:#00ff66;
+    text-align:center;
+    font-weight:bold;
+
+}
+
+.orderType{
+
+    display:flex;
+    gap:20px;
+    margin-top:10px;
+
+}
+
+.radio{
+
+    width:auto;
+
+}
+
+button{
+
+    width:100%;
+    margin-top:25px;
+    padding:18px;
+    background:#b30000;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:20px;
+    cursor:pointer;
+    box-shadow:0 0 15px #b30000;
+
+}
+
+button:hover{
+
+    background:red;
+
+}
+
+#shippingSection{
+
+    display:none;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="../images/IMG_FSLOGO.PNG" class="logo">
+
+</header>
+
+<div class="container">
+
+<img src="../images/IMG_GREENBOX1.JPG" class="product-image">
+
+<h1>Green Box Baby T-Shirt</h1>
+
+<label>Color</label>
+
+<select>
+
+<option>Black</option>
+<option>White</option>
+<option>Green</option>
+
+</select>
+
+<label>Size</label>
+
+<select id="size" onchange="updatePrice()">
+
+<option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+<option>2XL</option>
+<option>3XL</option>
+<option>4XL</option>
+
+</select>
+
+<div class="price">
+
+$<span id="price">25</span>
+
+</div>
+
+<label>Quantity</label>
+
+<input type="number" min="1" value="1">
+
+<label>Order Type</label>
+
+<div class="orderType">
+
+<label>
+<input
+class="radio"
+type="radio"
+name="delivery"
+checked
+onclick="pickup()">
+
+Pickup
+
+</label>
+
+<label>
+
+<input
+class="radio"
+type="radio"
+name="delivery"
+onclick="shipping()">
+
+Shipping
+
+</label>
+
+</div>
+
+<div id="shippingSection">
+
+<label>Street Address</label>
+
+<input type="text">
+
+<label>City</label>
+
+<input type="text">
+
+<label>State</label>
+
+<input type="text">
+
+<label>Zip Code</label>
+
+<input type="text">
+
+</div>
+
+<label>First Name</label>
+
+<input type="text">
+
+<label>Last Name</label>
+
+<input type="text">
+
+<label>Phone Number</label>
+
+<input type="tel">
+
+<label>Email Address</label>
+
+<input type="email">
+
+<button onclick="location.href='payment.html'">
+
+PLACE ORDER
+
+</button>
+
+</div>
+
+<script>
+
+function updatePrice(){
+
+let size=document.getElementById("size").value;
+
+if(size==="2XL"||
+size==="3XL"||
+size==="4XL"){
+
+document.getElementById("price").innerHTML="35";
+
+}else{
+
+document.getElementById("price").innerHTML="25";
+
+}
+
+}
+
+function shipping(){
+
+document.getElementById("shippingSection").style.display="block";
+
+}
+
+function pickup(){
+
+document.getElementById("shippingSection").style.display="none";
+
+}
+
+</script>
+
+</body>
+</html>
