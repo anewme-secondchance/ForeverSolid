@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Place Order | Forever Solid</title>
+
+<link rel="stylesheet" href="../style.css">
+
+<style>
+
+.container{
+
+max-width:700px;
+width:95%;
+margin:auto;
+padding:20px;
+
+}
+
+h1{
+
+text-align:center;
+margin-bottom:30px;
+
+}
+
+label{
+
+display:block;
+margin-top:18px;
+font-weight:bold;
+
+}
+
+input,
+select,
+textarea{
+
+width:100%;
+padding:15px;
+margin-top:8px;
+border-radius:10px;
+border:none;
+font-size:16px;
+
+}
+
+.radio-group{
+
+display:flex;
+gap:30px;
+margin-top:15px;
+
+}
+
+.radio-group label{
+
+font-weight:normal;
+
+}
+
+button{
+
+width:100%;
+margin-top:30px;
+padding:18px;
+font-size:18px;
+background:#b30000;
+color:white;
+border:none;
+border-radius:12px;
+cursor:pointer;
+box-shadow:0 0 15px #b30000;
+
+}
+
+button:hover{
+
+background:red;
+
+}
+
+#shippingAddress{
+
+display:none;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="../images/IMG_FSLOGO.PNG" class="logo">
+
+</header>
+
+<div class="container">
+
+<h1>Place Your Order</h1>
+
+<label>First Name</label>
+
+<input type="text">
+
+<label>Last Name</label>
+
+<input type="text">
+
+<label>Phone Number</label>
+
+<input type="tel">
+
+<label>Email Address</label>
+
+<input type="email">
+
+<label>Pickup or Shipping</label>
+
+<div class="radio-group">
+
+<label>
+
+<input
+type="radio"
+name="orderType"
+checked
+onclick="pickup()">
+
+Pickup
+
+</label>
+
+<label>
+
+<input
+type="radio"
+name="orderType"
+onclick="shipping()">
+
+Shipping
+
+</label>
+
+</div>
+
+<div id="shippingAddress">
+
+<label>Street Address</label>
+
+<input type="text">
+
+<label>City</label>
+
+<input type="text">
+
+<label>State</label>
+
+<input type="text">
+
+<label>Zip Code</label>
+
+<input type="text">
+
+</div>
+
+<label>Special Instructions</label>
+
+<textarea rows="4"></textarea>
+
+<button onclick="location.href='payment.html'">
+
+Continue To Payment
+
+</button>
+
+</div>
+
+<script>
+
+function shipping(){
+
+document.getElementById("shippingAddress").style.display="block";
+
+}
+
+function pickup(){
+
+document.getElementById("shippingAddress").style.display="none";
+
+}
+
+</script>
+
+</body>
+</html>
