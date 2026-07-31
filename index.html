@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forever Solid</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+header{
+    text-align:center;
+    padding:20px;
+}
+
+.logo{
+    width:280px;
+    max-width:90%;
+}
+
+.hero{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    padding:15px;
+}
+
+.hero img{
+    width:45%;
+    border-radius:15px;
+    border:2px solid #b30000;
+    box-shadow:0 0 20px #b30000;
+}
+
+.motto{
+    text-align:center;
+    padding:20px;
+    font-size:18px;
+    line-height:1.6;
+    color:white;
+}
+
+.buttons{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    width:90%;
+    margin:auto;
+}
+
+.buttons button{
+    background:#b30000;
+    color:white;
+    border:none;
+    padding:18px;
+    border-radius:12px;
+    font-size:18px;
+    cursor:pointer;
+    box-shadow:0 0 15px #b30000;
+}
+
+.buttons button:hover{
+    background:#d10000;
+}
+
+.featured{
+    padding:30px 15px;
+}
+
+.featured h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.product{
+    background:#111;
+    border-radius:12px;
+    padding:10px;
+    text-align:center;
+    box-shadow:0 0 10px rgba(255,0,0,.4);
+}
+
+.product img{
+    width:100%;
+    border-radius:10px;
+}
+
+.product h3{
+    margin-top:10px;
+    font-size:16px;
+}
+
+footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:#111;
+    display:flex;
+    justify-content:space-around;
+    padding:15px 0;
+    border-top:2px solid #b30000;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="images/IMG_FSLOGO.PNG" class="logo" alt="Forever Solid Logo">
+
+</header>
+
+<section class="hero">
+
+<img src="images/IMG_FSHMP1.jpg" alt="Girlfriend">
+
+<img src="images/IMG_HMPG2.jpg" alt="Forever Solid">
+
+</section>
+
+<section class="motto">
+
+<p>
+
+"You Can't Change How Solid You Are...
+<br><br>
+But You Can Change Who You're Solid To."
+
+</p>
+
+</section>
+
+<section class="buttons">
+
+<button onclick="location.href='pages/shop.html'">
+Shop Forever Solid
+</button>
+
+<button onclick="location.href='pages/greenbox.html'">
+Shop Green Box Baby
+</button>
+
+</section>
+
+<section class="featured">
+
+<h2>Featured Products</h2>
+
+<div class="product-grid">
+
+<div class="product">
+<img src="images/IMG_FS1.jpg" alt="">
+<h3>Forever Solid</h3>
+</div>
+
+<div class="product">
+<img src="images/IMG_FS2.jpeg" alt="">
+<h3>Forever Solid</h3>
+</div>
+
+<div class="product">
+<img src="images/IMG_GREENBOX1.JPG" alt="">
+<h3>Green Box Baby</h3>
+</div>
+
+<div class="product">
+<img src="images/IMG_FSHAT1.jpeg" alt="">
+<h3>Forever Solid Hat</h3>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<a href="#">Home</a>
+
+<a href="pages/shop.html">Shop</a>
+
+<a href="pages/order.html">Order</a>
+
+<a href="pages/payment.html">Pay</a>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
