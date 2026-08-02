@@ -7,7 +7,13 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Forever Solid Shop</title>
+<title>Forever Solid Collection</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="../style.css">
 
@@ -15,164 +21,301 @@
 
 <body>
 
+<!-- ================= TOP NAVIGATION ================= -->
+
+<div class="top-nav">
+
+<button onclick="history.back()">
+
+⬅ Back
+
+</button>
+
+<button onclick="window.location='../index.html'">
+
+🏠 Home
+
+</button>
+
+<button onclick="window.location='../cart.html'">
+
+🛒 Cart
+
+<span id="cartBadge">0</span>
+
+</button>
+
+</div>
+
+<!-- ================= HEADER ================= -->
+
 <header>
 
-<img src="../images/IMG_FSLOGO.PNG" class="logo" alt="Forever Solid">
+<img src="../images/IMG_FSLOGO.PNG"
+
+class="logo"
+
+alt="Forever Solid Logo">
+
+<h1 class="page-title">
+
+Forever Solid Collection
+
+</h1>
+
+<p class="page-subtitle">
+
+You Can't Change How Solid You Are...
+
+<br>
+
+But You Can Change Who You're Solid To.
+
+</p>
 
 </header>
 
-<section class="featured">
+<!-- ================= SEARCH ================= -->
 
-<h2>Forever Solid Collection</h2>
+<section class="search-section">
 
-<div class="product-grid">
+<input
 
-<div class="product" onclick="viewProduct('fs1')">
+type="text"
 
-<img src="../images/IMG_FS1.jpg" alt="Forever Solid">
+id="searchBox"
 
-<h3>Forever Solid</h3>
+placeholder="🔍 Search Forever Solid..."
 
-</div>
-
-<div class="product" onclick="viewProduct('fs2')">
-
-<img src="../images/IMG_FS2.jpeg" alt="Forever Solid">
-
-<h3>Forever Solid</h3>
-
-</div>
-
-<div class="product" onclick="viewProduct('fs3')">
-
-<img src="../images/IMG_FS3.PNG" alt="Forever Solid">
-
-<h3>Forever Solid</h3>
-
-</div>
-
-<div class="product" onclick="viewProduct('fs4')">
-
-<img src="../images/IMG_FS4.jpg" alt="Forever Solid">
-
-<h3>Forever Solid</h3>
-
-</div>
-
-<div class="product" onclick="viewProduct('fs5')">
-
-<img src="../images/IMG_FS5.jpg" alt="Forever Solid">
-
-<h3>Forever Solid</h3>
-
-</div>
-
-<div class="product" onclick="viewProduct('fs6')">
-
-<img src="../images/IMG_FS6.jpg" alt="Forever Solid">
-
-<h3>Forever Solid</h3>
-
-</div>
-
-<div class="product" onclick="viewProduct('fs7')">
-
-<img src="../images/IMG_FS7.jpg" alt="Forever Solid">
-
-<h3>Forever Solid</h3>
-
-</div>
-
-<div class="product" onclick="viewProduct('fs8')">
-
-<img src="../images/IMG_FS8.jpg" alt="Forever Solid">
-
-<h3>Forever Solid</h3>
-
-</div>
-
-<div class="product" onclick="viewProduct('fs9')">
-
-<img src="../images/IMG_FS9.jpg" alt="Forever Solid">
-
-<h3>Forever Solid</h3>
-
-</div>
-
-<div class="product" onclick="viewProduct('fs10')">
-
-<img src="../images/IMG_FS10.jpg" alt="Forever Solid">
-
-<h3>Forever Solid</h3>
-
-</div>
-
-<div class="product" onclick="viewProduct('fs11')">
-
-<img src="../images/IMG_FS11.JPG" alt="Forever Solid">
-
-<h3>Forever Solid</h3>
-
-</div>
-
-<div class="product" onclick="viewProduct('fs12')">
-
-<img src="../images/IMG_FS12.jpg" alt="Forever Solid">
-
-<h3>Forever Solid</h3>
-
-</div>
-
-<div class="product" onclick="viewProduct('fs13')">
-
-<img src="../images/IMG_FS13.jpeg" alt="Forever Solid">
-
-<h3>Forever Solid</h3>
-
-</div>
-
-<div class="product" onclick="viewProduct('fs14')">
-
-<img src="../images/IMG_FS14.jpeg" alt="Forever Solid">
-
-<h3>Forever Solid</h3>
-
-</div>
-
-<div class="product" onclick="viewProduct('fs15')">
-
-<img src="../images/IMG_FS15.jpeg" alt="Forever Solid">
-
-<h3>Forever Solid</h3>
-
-</div>
-
-<div class="product" onclick="viewProduct('fs16')">
-
-<img src="../images/IMG_FS16.jpeg" alt="Forever Solid">
-
-<h3>Forever Solid</h3>
-
-</div>
-
-</div>
+onkeyup="searchProducts()">
 
 </section>
 
+<!-- ================= FILTERS ================= -->
+
+<section class="filter-section">
+
+<button onclick="filterProducts('All')">
+
+All
+
+</button>
+
+<button onclick="filterProducts('Shirts')">
+
+Shirts
+
+</button>
+
+<button onclick="filterProducts('Long Sleeve')">
+
+Long Sleeve
+
+</button>
+
+<button onclick="filterProducts('Hoodies')">
+
+Hoodies
+
+</button>
+
+<button onclick="filterProducts('Shorts')">
+
+Shorts
+
+</button>
+
+<button onclick="filterProducts('Short Sets')">
+
+Sets
+
+</button>
+
+<button onclick="filterProducts('Hats')">
+
+Hats
+
+</button>
+
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+
+<section
+
+class="product-grid"
+
+id="productGrid">
+
+<!-- Products will load automatically -->
+
+  <!-- ================= FEATURED COLLECTION ================= -->
+
+<section class="featured-banner">
+
+<h2>
+
+🔥 Featured Forever Solid Collection
+
+</h2>
+
+<p>
+
+Premium Apparel • Quality Materials • Built Different
+
+</p>
+
+</section>
+
+<!-- ================= PRODUCT TEMPLATE ================= -->
+
+<div id="shopProducts"></div>
+
+<!-- ================= FOOTER ================= -->
+
 <footer>
+
+<div class="footer-logo">
+
+<img src="../images/IMG_FSLOGO.PNG" alt="Forever Solid Logo">
+
+</div>
+
+<div class="footer-links">
+
+<div>
+
+<h3>Forever Solid</h3>
 
 <a href="../index.html">Home</a>
 
-<a href="greenbox.html">Green Box</a>
+<a href="greenbox.html">Green Box Baby</a>
 
-<a href="order.html">Order</a>
+<a href="../cart.html">Shopping Cart</a>
 
-<a href="payment.html">Pay</a>
+</div>
+
+<div>
+
+<h3>Customer Care</h3>
+
+<a href="../checkout.html">Checkout</a>
+
+<a href="../receipt.html">Receipt</a>
+
+</div>
+
+<div>
+
+<h3>Designed By</h3>
+
+<p>
+
+TaDie4ENT
+
+</p>
+
+<p>
+
+Custom Apps
+
+</p>
+
+<p>
+
+Business Solutions
+
+</p>
+
+</div>
+
+</div>
 
 </footer>
 
+<script src="../products.js"></script>
+
 <script src="../script.js"></script>
+
+<script>
+
+/*=========================================
+        LOAD FOREVER SOLID PRODUCTS
+=========================================*/
+
+const container =
+document.getElementById("shopProducts");
+
+let html = "";
+
+products
+.filter(product => product.brand === "Forever Solid")
+.forEach(product => {
+
+html += `
+
+<div class="product-card"
+data-category="${product.category}">
+
+<button
+class="favorite-btn"
+data-id="${product.id}"
+onclick="toggleFavorite('${product.id}')">
+
+🤍
+
+</button>
+
+<img
+src="../${product.image}"
+alt="${product.name}">
+
+<h3>
+
+${product.name}
+
+</h3>
+
+<p>
+
+${product.category}
+
+</p>
+
+<p>
+
+S-XL $${product.priceSmall}
+
+<br>
+
+2XL+ $${product.priceLarge}
+
+</p>
+
+<button
+class="buy-btn"
+onclick="viewProduct('${product.id}')">
+
+Customize & Order
+
+</button>
+
+</div>
+
+`;
+
+});
+
+container.innerHTML = html;
+
+updateFavoriteIcons();
+
+updateCartBadge();
+
+</script>
 
 </body>
 
 </html>
+
+</section>
