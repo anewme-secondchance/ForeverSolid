@@ -1,221 +1,871 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forever Solid</title>
 
-<link rel="stylesheet" href="style.css">
+<title>Forever Solid | Official Store</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-body{
-    background:#000;
-    color:#fff;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-header{
-    text-align:center;
-    padding:20px;
-}
-
-.logo{
-    width:280px;
-    max-width:90%;
-}
-
-.hero{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:15px;
-    padding:15px;
-}
-
-.hero img{
-    width:45%;
-    border-radius:15px;
-    border:2px solid #b30000;
-    box-shadow:0 0 20px #b30000;
-}
-
-.motto{
-    text-align:center;
-    padding:20px;
-    font-size:18px;
-    line-height:1.6;
-    color:white;
-}
-
-.buttons{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    width:90%;
-    margin:auto;
-}
-
-.buttons button{
-    background:#b30000;
-    color:white;
-    border:none;
-    padding:18px;
-    border-radius:12px;
-    font-size:18px;
-    cursor:pointer;
-    box-shadow:0 0 15px #b30000;
-}
-
-.buttons button:hover{
-    background:#d10000;
-}
-
-.featured{
-    padding:30px 15px;
-}
-
-.featured h2{
-    text-align:center;
-    margin-bottom:20px;
-}
-
-.product-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-}
-
-.product{
-    background:#111;
-    border-radius:12px;
-    padding:10px;
-    text-align:center;
-    box-shadow:0 0 10px rgba(255,0,0,.4);
-}
-
-.product img{
-    width:100%;
-    border-radius:10px;
-}
-
-.product h3{
-    margin-top:10px;
-    font-size:16px;
-}
-
-footer{
-    position:fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-    background:#111;
-    display:flex;
-    justify-content:space-around;
-    padding:15px 0;
-    border-top:2px solid #b30000;
-}
-
-footer a{
-    color:white;
-    text-decoration:none;
-    font-size:15px;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
+<!-- ========================= -->
+<!-- LOADER -->
+<!-- ========================= -->
+
+<div id="loader">
+    <div class="loader-logo">
+        Forever Solid
+    </div>
+</div>
+
+<!-- ========================= -->
+<!-- HEADER -->
+<!-- ========================= -->
+
 <header>
 
-<img src="images/IMG_FSLOGO.PNG" class="logo" alt="Forever Solid Logo">
+<div class="logo">
+
+<a href="index.html">
+
+<img src="images/FSLOGO.PNG" alt="Forever Solid Logo">
+
+</a>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html" class="active">Home</a></li>
+
+<li><a href="foreversolid.html">Forever Solid</a></li>
+
+<li><a href="greenboxbaby.html">Green Box Baby</a></li>
+
+<li><a href="shop.html">Shop All</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<div class="nav-icons">
+
+<button id="searchBtn">
+
+<i class="fas fa-search"></i>
+
+</button>
+
+<button id="favoriteBtn">
+
+❤
+
+</button>
+
+<button id="cartBtn">
+
+🛒
+
+<span id="cart-count">0</span>
+
+</button>
+
+</div>
+
+<div class="menu-toggle">
+
+☰
+
+</div>
 
 </header>
 
+<!-- ========================= -->
+<!-- MOBILE MENU -->
+<!-- ========================= -->
+
+<div class="mobile-menu">
+
+<a href="index.html">Home</a>
+
+<a href="foreversolid.html">Forever Solid</a>
+
+<a href="greenboxbaby.html">Green Box Baby</a>
+
+<a href="shop.html">Shop All</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
+
 <section class="hero">
 
-<img src="images/IMG_FSHMP1.jpg" alt="Girlfriend">
+<div class="hero-left">
 
-<img src="images/IMG_HMPG2.jpg" alt="Forever Solid">
+<img src="images/FSHMP1.jpg" alt="Forever Solid">
 
-</section>
+</div>
 
-<section class="motto">
+<div class="hero-center">
 
-<p>
+<h1 class="glow-title">
 
-"You Can't Change How Solid You Are...
+Forever Solid
+
+</h1>
+
+<p class="hero-quote">
+
+YOU CAN'T CHANGE HOW SOLID YOU ARE
+
 <br><br>
-But You Can Change Who You're Solid To."
+
+BUT YOU CAN CHANGE
+
+<br>
+
+WHO YOU'RE SOLID TO.
 
 </p>
 
+<div class="hero-buttons">
+
+<a href="foreversolid.html" class="shop-btn red-btn">
+
+SHOP FOREVER SOLID
+
+</a>
+
+<a href="greenboxbaby.html" class="shop-btn green-btn">
+
+SHOP GREEN BOX BABY
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<img src="images/HMPG2.jpg" alt="Green Box Baby">
+
+</div>
+
 </section>
 
-<section class="buttons">
+<!-- ========================= -->
+<!-- FEATURES -->
+<!-- ========================= -->
 
-<button onclick="location.href='pages/shop.html'">
-Shop Forever Solid
-</button>
+<section class="features">
 
-<button onclick="location.href='pages/greenbox.html'">
-Shop Green Box Baby
-</button>
+<div class="feature">
+
+🚚
+
+<h3>Fast Shipping</h3>
+
+<p>Quick & Reliable</p>
+
+</div>
+
+<div class="feature">
+
+🛡️
+
+<h3>Premium Quality</h3>
+
+<p>Built To Last</p>
+
+</div>
+
+<div class="feature">
+
+🔒
+
+<h3>Secure Checkout</h3>
+
+<p>Safe Payments</p>
+
+</div>
+
+<div class="feature">
+
+🔄
+
+<h3>Easy Returns</h3>
+
+<p>30 Day Guarantee</p>
+
+</div>
 
 </section>
 
-<section class="featured">
+<!-- FEATURED PRODUCTS START HERE -->
 
-<h2>Featured Products</h2>
+ <!-- ========================= -->
+<!-- FEATURED PRODUCTS -->
+<!-- ========================= -->
+
+<section class="featured-products">
+
+<div class="section-title">
+
+<h2>Featured Collection</h2>
+
+<p>
+Premium Streetwear Built Different
+</p>
+
+</div>
 
 <div class="product-grid">
 
-<div class="product">
-<img src="images/IMG_FS1.jpg" alt="">
-<h3>Forever Solid</h3>
+<!-- Product 1 -->
+
+<div class="product-card">
+
+<img src="images/IMG_FS1.jpg" alt="Forever Solid">
+
+<div class="product-info">
+
+<h3>Forever Solid Tee</h3>
+
+<p class="price">
+
+S-XL $35
+
+<br>
+
+2XL+ $40
+
+</p>
+
+<a href="pages/product.html?id=fs1" class="buy-btn">
+
+View Product
+
+</a>
+
 </div>
 
-<div class="product">
-<img src="images/IMG_FS2.jpeg" alt="">
-<h3>Forever Solid</h3>
 </div>
 
-<div class="product">
-<img src="images/IMG_GREENBOX1.JPG" alt="">
-<h3>Green Box Baby</h3>
+<!-- Product 2 -->
+
+<div class="product-card">
+
+<img src="images/IMG_FS2.jpeg" alt="Forever Solid">
+
+<div class="product-info">
+
+<h3>Forever Solid Signature</h3>
+
+<p class="price">
+
+S-XL $35
+
+<br>
+
+2XL+ $40
+
+</p>
+
+<a href="pages/product.html?id=fs2" class="buy-btn">
+
+View Product
+
+</a>
+
 </div>
 
-<div class="product">
-<img src="images/IMG_FSHAT1.jpeg" alt="">
-<h3>Forever Solid Hat</h3>
+</div>
+
+<!-- Product 3 -->
+
+<div class="product-card">
+
+<img src="images/IMG_FS11.JPG" alt="Forever Solid">
+
+<div class="product-info">
+
+<h3>Never Did Tee</h3>
+
+<p class="price">
+
+S-XL $35
+
+<br>
+
+2XL+ $40
+
+</p>
+
+<a href="pages/product.html?id=fs11" class="buy-btn">
+
+View Product
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Product 4 -->
+
+<div class="product-card">
+
+<img src="images/IMG_FS12.JPG" alt="Forever Solid">
+
+<div class="product-info">
+
+<h3>Pink Signature Tee</h3>
+
+<p class="price">
+
+S-XL $35
+
+<br>
+
+2XL+ $40
+
+</p>
+
+<a href="pages/product.html?id=fs12" class="buy-btn">
+
+View Product
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Product 5 -->
+
+<div class="product-card">
+
+<img src="images/IMG_FS14.jpeg" alt="Forever Solid">
+
+<div class="product-info">
+
+<h3>Lil Cacc Lil Hawk</h3>
+
+<p class="price">
+
+S-XL $35
+
+<br>
+
+2XL+ $40
+
+</p>
+
+<a href="pages/product.html?id=fs14" class="buy-btn">
+
+View Product
+
+</a>
+
+</div>
+
+</div>
+
+<!-- Product 6 -->
+
+<div class="product-card">
+
+<img src="images/IMG_FS20.JPG" alt="Forever Solid">
+
+<div class="product-info">
+
+<h3>Red Hoodie</h3>
+
+<p class="price">
+
+S-XL $55
+
+<br>
+
+2XL+ $60
+
+</p>
+
+<a href="pages/product.html?id=fs20" class="buy-btn">
+
+View Product
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="shop-buttons">
+
+<a href="pages/shop.html" class="big-red-button">
+
+SHOP THE ENTIRE FOREVER SOLID COLLECTION
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- GREEN BOX BABY -->
+<!-- ========================= -->
+
+<section class="greenbox-home">
+
+<div class="greenbox-logo">
+
+<img src="images/IMG_GREENBOX.PNG" alt="Green Box Baby">
+
+</div>
+
+<h2 class="green-title">
+
+Green Box Baby Collection
+
+</h2>
+
+<p class="green-text">
+
+Streetwear with a different mindset.
+Premium quality.
+Premium comfort.
+Premium style.
+
+</p>
+
+<div class="product-grid">
+
+<!-- Green Product -->
+
+<div class="product-card">
+
+<img src="images/IMG_GREENBOX1.JPG" alt="Green Box Baby">
+
+<div class="product-info">
+
+<h3>Graphic Tee</h3>
+
+<p class="price">
+
+S-XL $35
+
+<br>
+
+2XL+ $40
+
+</p>
+
+<a href="pages/product.html?id=gb1" class="green-btn">
+
+View Product
+
+</a>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<img src="images/IMG_GREENBOX2.JPG" alt="Green Box Baby">
+
+<div class="product-info">
+
+<h3>Signature Tee</h3>
+
+<p class="price">
+
+S-XL $35
+
+<br>
+
+2XL+ $40
+
+</p>
+
+<a href="pages/product.html?id=gb2" class="green-btn">
+
+View Product
+
+</a>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<img src="images/IMG_GREENBOX3.jpeg" alt="Green Box Baby">
+
+<div class="product-info">
+
+<h3>Long Sleeve</h3>
+
+<p class="price">
+
+S-XL $35
+
+<br>
+
+2XL+ $40
+
+</p>
+
+<a href="pages/product.html?id=gb3" class="green-btn">
+
+View Product
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="shop-buttons">
+
+<a href="pages/greenbox.html" class="big-green-button">
+
+SHOP GREEN BOX BABY
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- WHY CHOOSE US -->
+<!-- ========================= -->
+
+<section class="why-us">
+
+<h2>
+
+Why Shop Forever Solid?
+
+</h2>
+
+<div class="why-grid">
+
+<div>
+
+🔥 Premium Streetwear
+
+</div>
+
+<div>
+
+💯 Quality Materials
+
+</div>
+
+<div>
+
+🚚 Fast Shipping
+
+</div>
+
+<div>
+
+🔒 Secure Checkout
+
+</div>
+
+<div>
+
+❤️ Family Owned
+
+</div>
+
+<div>
+
+⭐ Trusted Brand
+
 </div>
 
 </div>
 
 </section>
 
+<!-- ========================= -->
+<!-- FOOTER STARTS BELOW -->   
+
+  <!-- ========================= -->
+<!-- NEWSLETTER -->
+<!-- ========================= -->
+
+<section class="newsletter">
+
+<div class="newsletter-box">
+
+<h2>Stay Forever Solid</h2>
+
+<p>
+
+Be the first to know about new drops,
+exclusive releases, giveaways, and special offers.
+
+</p>
+
+<form id="newsletterForm">
+
+<input
+type="email"
+placeholder="Enter Your Email"
+required>
+
+<button type="submit">
+
+SUBSCRIBE
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- INSTAGRAM -->
+<!-- ========================= -->
+
+<section class="instagram">
+
+<h2>
+
+Follow Forever Solid
+
+</h2>
+
+<p>
+
+@ForeverSolidFS
+
+</p>
+
+<div class="instagram-grid">
+
+<img src="images/IMG_FS18.JPG">
+
+<img src="images/IMG_FS22.jpeg">
+
+<img src="images/IMG_FS23.JPEG">
+
+<img src="images/IMG_FS24.JPEG">
+
+<img src="images/IMG_GREENBOX2.JPG">
+
+<img src="images/IMG_GREENBOX5.jpeg">
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
 <footer>
 
-<a href="#">Home</a>
+<div class="footer-logo">
 
-<a href="pages/shop.html">Shop</a>
+<img src="images/IMG_FSLOGO.PNG">
 
-<a href="pages/order.html">Order</a>
+</div>
 
-<a href="pages/payment.html">Pay</a>
+<div class="footer-links">
+
+<div>
+
+<h3>Shop</h3>
+
+<a href="pages/shop.html">
+
+Forever Solid
+
+</a>
+
+<a href="pages/greenbox.html">
+
+Green Box Baby
+
+</a>
+
+<a href="pages/order.html">
+
+Orders
+
+</a>
+
+<a href="pages/payment.html">
+
+Payments
+
+</a>
+
+</div>
+
+<div>
+
+<h3>Customer Care</h3>
+
+<a href="#">
+
+Shipping
+
+</a>
+
+<a href="#">
+
+Returns
+
+</a>
+
+<a href="#">
+
+FAQ
+
+</a>
+
+<a href="#">
+
+Privacy Policy
+
+</a>
+
+</div>
+
+<div>
+
+<h3>Contact</h3>
+
+<p>
+
+Email
+
+</p>
+
+<p>
+
+Phone
+
+</p>
+
+<p>
+
+Tyler, Texas
+
+</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 Forever Solid.
+
+All Rights Reserved.
+
+</div>
 
 </footer>
+
+<!-- ========================= -->
+<!-- MOBILE NAVIGATION -->
+<!-- ========================= -->
+
+<nav class="bottom-nav">
+
+<a href="index.html">
+
+🏠
+
+<span>Home</span>
+
+</a>
+
+<a href="pages/shop.html">
+
+👕
+
+<span>Shop</span>
+
+</a>
+
+<a href="pages/order.html">
+
+🛍
+
+<span>Cart</span>
+
+</a>
+
+<a href="#">
+
+❤
+
+<span>Favorites</span>
+
+</a>
+
+<a href="#">
+
+👤
+
+<span>Account</span>
+
+</a>
+
+</nav>
+
+<!-- ========================= -->
+<!-- BACK TO TOP -->
+<!-- ========================= -->
+
+<button id="topButton">
+
+↑
+
+</button>
 
 <script src="script.js"></script>
 
 </body>
-</html>
+
+</html>  
