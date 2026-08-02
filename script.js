@@ -6,7 +6,7 @@
         APP SETTINGS
 =========================================*/
 
-const APP_MODE = "TRIAL";     // TRIAL or FULL
+const APP_MODE = "FULL";     // TRIAL or FULL
 
 const TRIAL_DAYS = 7;
 
@@ -1024,3 +1024,14 @@ function(){
 
 });
 
+window.addEventListener("load", function () {
+
+    const loader = document.getElementById("loader");
+
+    if (loader) {
+
+        loader.style.display = "none";
+
+    }
+
+});
