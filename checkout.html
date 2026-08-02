@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Checkout | Forever Solid</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="logo">
+
+<a href="index.html">
+
+<img src="images/IMG_FSLOGO.PNG" alt="Forever Solid">
+
+</a>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="pages/shop.html">Forever Solid</a></li>
+
+<li><a href="pages/greenbox.html">Green Box Baby</a></li>
+
+<li><a href="cart.html">Cart</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- ================= PAGE TITLE ================= -->
+
+<section class="cart-header">
+
+<h1>
+
+Checkout
+
+</h1>
+
+<p>
+
+Almost there! Complete your information below.
+
+</p>
+
+</section>
+
+<!-- ================= CHECKOUT ================= -->
+
+<section class="checkout-container">
+
+<div class="checkout-form">
+
+<h2>
+
+Customer Information
+
+</h2>
+
+<label>
+
+First Name
+
+</label>
+
+<input
+type="text"
+id="firstName"
+placeholder="First Name"
+required>
+
+<label>
+
+Last Name
+
+</label>
+
+<input
+type="text"
+id="lastName"
+placeholder="Last Name"
+required>
+
+<label>
+
+Phone Number
+
+</label>
+
+<input
+type="tel"
+id="phone"
+placeholder="Phone Number"
+required>
+
+<label>
+
+Email Address
+
+</label>
+
+<input
+type="email"
+id="email"
+placeholder="Email Address">
+
+<label>
+
+Pickup or Shipping
+
+</label>
+
+<select id="deliveryMethod">
+
+<option value="pickup">
+
+Pickup
+
+</option>
+
+<option value="shipping">
+
+Shipping
+
+</option>
+
+</select>
+
+<div id="shippingSection" style="display:none;">
+
+<label>
+
+Street Address
+
+</label>
+
+<input
+type="text"
+id="street">
+
+<label>
+
+City
+
+</label>
+
+<input
+type="text"
+id="city">
+
+<label>
+
+State
+
+</label>
+
+<input
+type="text"
+id="state">
+
+<label>
+
+Zip Code
+
+</label>
+
+<input
+type="text"
+id="zip">
+
+</div>
+
+<label>
+
+Special Instructions
+
+</label>
+
+<textarea
+id="notes"
+rows="5"
+placeholder="Anything we should know?"></textarea>
+
+</div>
+
+<!-- ================= ORDER SUMMARY ================= -->
+
+<div class="checkout-summary">
+
+<h2>
+
+Your Order
+
+</h2>
+
+<div id="checkoutItems">
+
+<!-- Cart Items Load Here -->
+
+</div>
+
+<hr>
+
+<div class="summary-line">
+
+<span>Items</span>
+
+<strong id="checkoutItemCount">
+
+0
+
+</strong>
+
+</div>
+
+<div class="summary-line">
+
+<span>Subtotal</span>
+
+<strong id="checkoutSubtotal">
+
+$0.00
+
+</strong>
+
+</div>
+
+<div class="summary-line">
+
+<span>Shipping</span>
+
+<strong id="checkoutShipping">
+
+Calculated at Checkout
+
+</strong>
+
+</div>
+
+<div class="summary-total">
+
+<span>Total</span>
+
+<strong id="checkoutTotal">
+
+$0.00
+
+</strong>
+
+</div>
+
+  <!-- ================= PLACE ORDER ================= -->
+
+<button
+class="order-button"
+id="placeOrderBtn"
+onclick="placeOrder()">
+
+🛍️ PLACE ORDER
+
+</button>
+
+<button
+class="continue-button"
+onclick="location.href='cart.html'">
+
+← Return To Cart
+
+</button>
+
+<div class="secure-checkout">
+
+<div class="feature">
+
+🔒
+
+<h3>Secure Checkout</h3>
+
+<p>
+
+Your information is only used to complete your order.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+🚚
+
+<h3>Pickup or Shipping</h3>
+
+<p>
+
+Choose the option that works best for you.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+⭐
+
+<h3>Premium Quality</h3>
+
+<p>
+
+Every Forever Solid item is made with quality in mind.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="footer-logo">
+
+<img src="images/IMG_FSLOGO.PNG" alt="Forever Solid Logo">
+
+</div>
+
+<div class="footer-links">
+
+<div>
+
+<h3>Shop</h3>
+
+<a href="pages/shop.html">Forever Solid</a>
+
+<a href="pages/greenbox.html">Green Box Baby</a>
+
+<a href="cart.html">Shopping Cart</a>
+
+</div>
+
+<div>
+
+<h3>Support</h3>
+
+<a href="#">Shipping</a>
+
+<a href="#">Returns</a>
+
+<a href="#">FAQ</a>
+
+</div>
+
+<div>
+
+<h3>Forever Solid</h3>
+
+<p>Tyler, Texas</p>
+
+<p>Premium Streetwear</p>
+
+<p>Built Different.</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 Forever Solid. All Rights Reserved.
+
+</div>
+
+</footer>
+
+<!-- ================= MOBILE NAV ================= -->
+
+<nav class="bottom-nav">
+
+<a href="index.html">
+
+🏠
+
+<span>Home</span>
+
+</a>
+
+<a href="pages/shop.html">
+
+👕
+
+<span>Shop</span>
+
+</a>
+
+<a href="cart.html">
+
+🛒
+
+<span>Cart</span>
+
+</a>
+
+<a href="pages/greenbox.html">
+
+💚
+
+<span>Green Box</span>
+
+</a>
+
+<a href="#">
+
+👤
+
+<span>Account</span>
+
+</a>
+
+</nav>
+
+<script src="products.js"></script>
+
+<script src="script.js"></script>
+
+<script>
+
+const deliveryMethod = document.getElementById("deliveryMethod");
+const shippingSection = document.getElementById("shippingSection");
+
+deliveryMethod.addEventListener("change", function(){
+
+    if(this.value === "shipping"){
+
+        shippingSection.style.display = "block";
+
+    }else{
+
+        shippingSection.style.display = "none";
+
+    }
+
+});
+
+// Load cart into checkout
+updateCheckout();
+
+</script>
+
+</body>
+
+</html>
