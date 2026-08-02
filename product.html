@@ -7,7 +7,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Forever Solid | Product</title>
+<title>Product Details | Forever Solid</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -20,7 +20,8 @@
 </head>
 
 <body>
-<!-- ================= TOP NAVIGATION ================= -->
+
+<!-- ================= TOP NAV ================= -->
 
 <div class="top-nav">
 
@@ -30,13 +31,13 @@
 
 </button>
 
-<button onclick="window.location='../index.html'">
+<button onclick="location.href='../index.html'">
 
 🏠 Home
 
 </button>
 
-<button onclick="window.location='../cart.html'">
+<button onclick="location.href='../cart.html'">
 
 🛒 Cart
 
@@ -45,88 +46,58 @@
 </button>
 
 </div>
-<!-- ================= HEADER ================= -->
 
 <header>
 
-<div class="logo">
+<img src="../images/IMG_FSLOGO.PNG"
 
-<a href="../index.html">
+class="logo"
 
-<img src="../images/IMG_FSLOGO.PNG" alt="Forever Solid Logo">
-
-</a>
-
-</div>
-
-<nav>
-
-<ul>
-
-<li><a href="../index.html">Home</a></li>
-
-<li><a href="shop.html">Forever Solid</a></li>
-
-<li><a href="greenbox.html">Green Box Baby</a></li>
-
-<li><a href="order.html">Cart</a></li>
-
-</ul>
-
-</nav>
+alt="Forever Solid">
 
 </header>
 
-<!-- =============== PRODUCT ================= -->
-
 <section class="product-page">
 
-<div class="product-left">
+<div class="product-image">
 
 <img
+
 id="productImage"
-src="../images/IMG_FS1.jpg"
-alt="Forever Solid Product">
+
+src=""
+
+alt="Product">
 
 </div>
 
-<div class="product-right">
+<div class="product-details">
 
 <h1 id="productName">
 
-Forever Solid Tee
+Loading...
 
 </h1>
 
-<div class="stars">
-
-★★★★★
-
-</div>
-
 <p id="productDescription">
 
-Premium Forever Solid apparel designed for everyday wear.
-Built for comfort.
-Built to last.
+Premium Streetwear
 
 </p>
 
-<div class="product-price">
+<h2>
 
-$
-
-<span id="productPrice">
+$<span id="productPrice">
 
 35
 
 </span>
 
-</div>
+</h2>
 
 <label>
 
-Select Size
+Size
 
 </label>
 
@@ -155,9 +126,12 @@ Color
 </label>
 
 <input
+
 type="text"
+
 id="color"
-placeholder="Enter Color">
+
+placeholder="Type Desired Color">
 
 <label>
 
@@ -166,28 +140,51 @@ Quantity
 </label>
 
 <input
+
 type="number"
+
 id="quantity"
+
 value="1"
+
 min="1">
 
-<label>
+ <label>
 
 Pickup or Shipping
 
 </label>
 
-<select id="delivery">
+<div class="delivery-options">
 
-<option>Pickup</option>
+<label>
 
-<option>Shipping</option>
+<input
+type="radio"
+name="delivery"
+value="Pickup"
+checked
+onclick="toggleShipping()">
 
-</select>
+Pickup
 
-<div
-id="shippingFields"
-style="display:none;">
+</label>
+
+<label>
+
+<input
+type="radio"
+name="delivery"
+value="Shipping"
+onclick="toggleShipping()">
+
+Shipping
+
+</label>
+
+</div>
+
+<div id="shippingSection" style="display:none;">
 
 <label>
 
@@ -197,7 +194,8 @@ Street Address
 
 <input
 type="text"
-id="street">
+id="address"
+placeholder="123 Main Street">
 
 <label>
 
@@ -207,7 +205,8 @@ City
 
 <input
 type="text"
-id="city">
+id="city"
+placeholder="City">
 
 <label>
 
@@ -217,7 +216,8 @@ State
 
 <input
 type="text"
-id="state">
+id="state"
+placeholder="State">
 
 <label>
 
@@ -227,64 +227,10 @@ Zip Code
 
 <input
 type="text"
-id="zip">
+id="zip"
+placeholder="Zip Code">
 
 </div>
-
-  <!-- ================= CUSTOMER INFORMATION ================= -->
-
-<h2 class="section-heading">
-
-Customer Information
-
-</h2>
-
-<label>
-
-First Name
-
-</label>
-
-<input
-type="text"
-id="firstName"
-placeholder="First Name"
-required>
-
-<label>
-
-Last Name
-
-</label>
-
-<input
-type="text"
-id="lastName"
-placeholder="Last Name"
-required>
-
-<label>
-
-Phone Number
-
-</label>
-
-<input
-type="tel"
-id="phone"
-placeholder="Phone Number"
-required>
-
-<label>
-
-Email Address
-
-</label>
-
-<input
-type="email"
-id="email"
-placeholder="Email Address">
 
 <label>
 
@@ -293,76 +239,21 @@ Special Instructions
 </label>
 
 <textarea
+
 id="notes"
-rows="5"
-placeholder="Anything you'd like us to know?"></textarea>
 
-<!-- ================= ORDER SUMMARY ================= -->
+rows="4"
 
-<div class="order-summary">
+placeholder="Anything you'd like us to know?">
 
-<h2>
-
-Order Summary
-
-</h2>
-
-<div class="summary-row">
-
-<span>Product</span>
-
-<strong id="summaryProduct">
-
-Forever Solid Tee
-
-</strong>
-
-</div>
-
-<div class="summary-row">
-
-<span>Size</span>
-
-<strong id="summarySize">
-
-S
-
-</strong>
-
-</div>
-
-<div class="summary-row">
-
-<span>Quantity</span>
-
-<strong id="summaryQuantity">
-
-1
-
-</strong>
-
-</div>
-
-<div class="summary-row">
-
-<span>Total</span>
-
-<strong id="summaryTotal">
-
-$35.00
-
-</strong>
-
-</div>
-
-</div>
-
-<!-- ================= BUTTONS ================= -->
+</textarea>
 
 <div class="product-buttons">
 
 <button
+
 class="cart-button"
+
 onclick="addToCart()">
 
 🛒 Add To Cart
@@ -370,10 +261,12 @@ onclick="addToCart()">
 </button>
 
 <button
-class="order-button"
-onclick="placeOrder()">
 
-✨ Customize & Order
+class="order-button"
+
+onclick="buyNow()">
+
+⚡ Buy Now
 
 </button>
 
@@ -383,97 +276,135 @@ onclick="placeOrder()">
 
 </section>
 
-<!-- ================= RELATED PRODUCTS ================= -->
+<!-- ================= SCRIPTS ================= -->
 
-<section class="related-products">
-
-<h2>
-
-You May Also Like
-
-</h2>
-
-<div class="product-grid">
-
-<div class="product-card">
-
-<img src="../images/IMG_FS20.JPG" alt="Hoodie">
-
-<div class="product-info">
-
-<h3>
-
-Forever Solid Hoodie
-
-</h3>
-
-<p class="price">
-
-S-XL $55
-
-<br>
-
-2XL+ $60
-
-</p>
-
-</div>
-
-</div>
-
-<div class="product-card">
-
-<img src="../images/IMG_FSHAT1.jpeg" alt="Hat">
-
-<div class="product-info">
-
-<h3>
-
-Forever Solid Hat
-
-</h3>
-
-<p class="price">
-
-$30
-
-</p>
-
-</div>
-
-</div>
-
-<div class="product-card">
-
-<img src="../images/IMG_GREENBOX2.JPG" alt="Green Box Baby">
-
-<div class="product-info">
-
-<h3>
-
-Green Box Baby Tee
-
-</h3>
-
-<p class="price">
-
-S-XL $35
-
-<br>
-
-2XL+ $40
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
+<script src="../products.js"></script>
 
 <script src="../script.js"></script>
+
+<script>
+
+/*=========================================
+        LOAD PRODUCT
+=========================================*/
+
+const params = new URLSearchParams(window.location.search);
+
+const productId = params.get("id");
+
+const product = products.find(p => p.id === productId);
+
+if(product){
+
+document.getElementById("productImage").src =
+"../" + product.image;
+
+document.getElementById("productName").innerHTML =
+product.name;
+
+document.getElementById("productDescription").innerHTML =
+product.description || "Premium Streetwear";
+
+document.getElementById("productPrice").innerHTML =
+product.priceSmall;
+
+}
+
+/*=========================================
+        UPDATE PRICE
+=========================================*/
+
+document.getElementById("size").addEventListener("change",function(){
+
+const size=this.value;
+
+if(size==="2XL" || size==="3XL" || size==="4XL"){
+
+document.getElementById("productPrice").innerHTML=
+product.priceLarge;
+
+}else{
+
+document.getElementById("productPrice").innerHTML=
+product.priceSmall;
+
+}
+
+});
+
+/*=========================================
+        SHIPPING
+=========================================*/
+
+function toggleShipping(){
+
+const method=document.querySelector('input[name="delivery"]:checked').value;
+
+document.getElementById("shippingSection").style.display=
+
+method==="Shipping" ? "block" : "none";
+
+}
+
+/*=========================================
+        ADD TO CART
+=========================================*/
+
+function addToCart(){
+
+const cart=JSON.parse(localStorage.getItem("cart")) || [];
+
+cart.push({
+
+id:product.id,
+
+name:product.name,
+
+image:product.image,
+
+price:document.getElementById("productPrice").innerHTML,
+
+size:document.getElementById("size").value,
+
+color:document.getElementById("color").value,
+
+quantity:document.getElementById("quantity").value,
+
+delivery:document.querySelector('input[name="delivery"]:checked').value,
+
+address:document.getElementById("address").value,
+
+city:document.getElementById("city").value,
+
+state:document.getElementById("state").value,
+
+zip:document.getElementById("zip").value,
+
+notes:document.getElementById("notes").value
+
+});
+
+localStorage.setItem("cart",JSON.stringify(cart));
+
+location.href="../cart.html";
+
+}
+
+/*=========================================
+        BUY NOW
+=========================================*/
+
+function buyNow(){
+
+addToCart();
+
+location.href="../checkout.html";
+
+}
+
+updateCartBadge();
+
+</script>
 
 </body>
 
