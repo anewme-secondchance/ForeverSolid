@@ -20,7 +20,10 @@
 </head>
 
 <body>
-<!-- ================= TOP NAVIGATION ================= -->
+
+<!-- ========================= -->
+<!-- TOP NAVIGATION -->
+<!-- ========================= -->
 
 <div class="top-nav">
 
@@ -30,22 +33,29 @@
 
 </button>
 
-<button onclick="window.location='index.html'">
+<button onclick="location.href='index.html'">
 
 🏠 Home
 
 </button>
 
-<button onclick="window.location='cart.html'">
+<button onclick="location.href='cart.html'">
 
 🛒 Cart
 
-<span id="cartBadge">0</span>
+<span id="cartBadge">
+
+0
+
+</span>
 
 </button>
 
 </div>
-<!-- ================= HEADER ================= -->
+
+<!-- ========================= -->
+<!-- HEADER -->
+<!-- ========================= -->
 
 <header>
 
@@ -53,49 +63,31 @@
 
 <a href="index.html">
 
-<img src="images/IMG_FSLOGO.PNG" alt="Forever Solid">
+<img src="images/IMG_FSLOGO.PNG"
+
+alt="Forever Solid Logo">
 
 </a>
 
 </div>
 
-<nav>
-
-<ul>
-
-<li><a href="index.html">Home</a></li>
-
-<li><a href="pages/shop.html">Forever Solid</a></li>
-
-<li><a href="pages/greenbox.html">Green Box Baby</a></li>
-
-<li><a href="cart.html">Cart</a></li>
-
-</ul>
-
-</nav>
-
-</header>
-
-<!-- ================= PAGE TITLE ================= -->
-
-<section class="cart-header">
-
-<h1>
+<h1 class="page-title">
 
 Checkout
 
 </h1>
 
-<p>
+<p class="page-subtitle">
 
-Almost there! Complete your information below.
+Complete your order below.
 
 </p>
 
-</section>
+</header>
 
-<!-- ================= CHECKOUT ================= -->
+<!-- ========================= -->
+<!-- CHECKOUT -->
+<!-- ========================= -->
 
 <section class="checkout-container">
 
@@ -116,8 +108,7 @@ First Name
 <input
 type="text"
 id="firstName"
-placeholder="First Name"
-required>
+placeholder="First Name">
 
 <label>
 
@@ -128,8 +119,7 @@ Last Name
 <input
 type="text"
 id="lastName"
-placeholder="Last Name"
-required>
+placeholder="Last Name">
 
 <label>
 
@@ -140,8 +130,7 @@ Phone Number
 <input
 type="tel"
 id="phone"
-placeholder="Phone Number"
-required>
+placeholder="Phone Number">
 
 <label>
 
@@ -154,27 +143,49 @@ type="email"
 id="email"
 placeholder="Email Address">
 
-<label>
+ <label>
 
 Pickup or Shipping
 
 </label>
 
-<select id="deliveryMethod">
+<div class="delivery-options">
 
-<option value="pickup">
+<label>
+
+<input
+
+type="radio"
+
+name="delivery"
+
+value="Pickup"
+
+checked
+
+onclick="toggleShipping()">
 
 Pickup
 
-</option>
+</label>
 
-<option value="shipping">
+<label>
+
+<input
+
+type="radio"
+
+name="delivery"
+
+value="Shipping"
+
+onclick="toggleShipping()">
 
 Shipping
 
-</option>
+</label>
 
-</select>
+</div>
 
 <div id="shippingSection" style="display:none;">
 
@@ -185,8 +196,12 @@ Street Address
 </label>
 
 <input
+
 type="text"
-id="street">
+
+id="address"
+
+placeholder="123 Main Street">
 
 <label>
 
@@ -195,8 +210,12 @@ City
 </label>
 
 <input
+
 type="text"
-id="city">
+
+id="city"
+
+placeholder="City">
 
 <label>
 
@@ -205,8 +224,12 @@ State
 </label>
 
 <input
+
 type="text"
-id="state">
+
+id="state"
+
+placeholder="State">
 
 <label>
 
@@ -215,8 +238,12 @@ Zip Code
 </label>
 
 <input
+
 type="text"
-id="zip">
+
+id="zip"
+
+placeholder="Zip Code">
 
 </div>
 
@@ -227,19 +254,26 @@ Special Instructions
 </label>
 
 <textarea
+
 id="notes"
-rows="5"
-placeholder="Anything we should know?"></textarea>
+
+rows="4"
+
+placeholder="Add any special requests here...">
+
+</textarea>
 
 </div>
 
-<!-- ================= ORDER SUMMARY ================= -->
+<!-- ========================= -->
+<!-- ORDER SUMMARY -->
+<!-- ========================= -->
 
 <div class="checkout-summary">
 
 <h2>
 
-Your Order
+Order Summary
 
 </h2>
 
@@ -253,7 +287,11 @@ Your Order
 
 <div class="summary-line">
 
-<span>Items</span>
+<span>
+
+Items
+
+</span>
 
 <strong id="checkoutItemCount">
 
@@ -265,7 +303,11 @@ Your Order
 
 <div class="summary-line">
 
-<span>Subtotal</span>
+<span>
+
+Subtotal
+
+</span>
 
 <strong id="checkoutSubtotal">
 
@@ -277,19 +319,29 @@ $0.00
 
 <div class="summary-line">
 
-<span>Shipping</span>
+<span>
 
-<strong id="checkoutShipping">
+Shipping
 
-Calculated at Checkout
+</span>
+
+<strong>
+
+Calculated After Order
 
 </strong>
 
 </div>
 
+<hr>
+
 <div class="summary-total">
 
-<span>Total</span>
+<span>
+
+Total
+
+</span>
 
 <strong id="checkoutTotal">
 
@@ -299,82 +351,41 @@ $0.00
 
 </div>
 
-  <!-- ================= PLACE ORDER ================= -->
-
 <button
+
 class="order-button"
-id="placeOrderBtn"
+
 onclick="placeOrder()">
 
-🛍️ PLACE ORDER
+✅ Place Order
 
 </button>
 
 <button
-class="continue-button"
+
+class="cart-button"
+
 onclick="location.href='cart.html'">
 
-← Return To Cart
+⬅ Back To Cart
 
 </button>
-
-<div class="secure-checkout">
-
-<div class="feature">
-
-🔒
-
-<h3>Secure Checkout</h3>
-
-<p>
-
-Your information is only used to complete your order.
-
-</p>
-
-</div>
-
-<div class="feature">
-
-🚚
-
-<h3>Pickup or Shipping</h3>
-
-<p>
-
-Choose the option that works best for you.
-
-</p>
-
-</div>
-
-<div class="feature">
-
-⭐
-
-<h3>Premium Quality</h3>
-
-<p>
-
-Every Forever Solid item is made with quality in mind.
-
-</p>
-
-</div>
-
-</div>
 
 </div>
 
 </section>
 
-<!-- ================= FOOTER ================= -->
+ <!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
 
 <footer>
 
 <div class="footer-logo">
 
-<img src="images/IMG_FSLOGO.PNG" alt="Forever Solid Logo">
+<img src="images/IMG_FSLOGO.PNG"
+
+alt="Forever Solid Logo">
 
 </div>
 
@@ -382,37 +393,79 @@ Every Forever Solid item is made with quality in mind.
 
 <div>
 
-<h3>Shop</h3>
+<h3>
 
-<a href="pages/shop.html">Forever Solid</a>
+Collections
 
-<a href="pages/greenbox.html">Green Box Baby</a>
+</h3>
 
-<a href="cart.html">Shopping Cart</a>
+<a href="pages/shop.html">
 
-</div>
+Forever Solid
 
-<div>
+</a>
 
-<h3>Support</h3>
+<a href="pages/greenbox.html">
 
-<a href="#">Shipping</a>
+Green Box Baby
 
-<a href="#">Returns</a>
-
-<a href="#">FAQ</a>
+</a>
 
 </div>
 
 <div>
 
-<h3>Forever Solid</h3>
+<h3>
 
-<p>Tyler, Texas</p>
+Customer Care
 
-<p>Premium Streetwear</p>
+</h3>
 
-<p>Built Different.</p>
+<a href="cart.html">
+
+Shopping Cart
+
+</a>
+
+<a href="receipt.html">
+
+Receipt
+
+</a>
+
+</div>
+
+<div>
+
+<h3>
+
+Designed By
+
+</h3>
+
+<p>
+
+TaDie4ENT
+
+</p>
+
+<p>
+
+Business Apps Starting at $750
+
+</p>
+
+<p>
+
+Payment Plans Available
+
+</p>
+
+<p>
+
+📱903-262-9694
+
+</p>
 
 </div>
 
@@ -420,13 +473,29 @@ Every Forever Solid item is made with quality in mind.
 
 <div class="copyright">
 
-© 2026 Forever Solid. All Rights Reserved.
+© 2026 Forever Solid
+
+<br><br>
+
+Designed by
+
+<strong>
+
+TaDie4ENT
+
+</strong>
+
+<br>
+
+Custom Apps • Websites • Business Solutions
 
 </div>
 
 </footer>
 
-<!-- ================= MOBILE NAV ================= -->
+<!-- ========================= -->
+<!-- MOBILE NAVIGATION -->
+<!-- ========================= -->
 
 <nav class="bottom-nav">
 
@@ -464,9 +533,9 @@ Every Forever Solid item is made with quality in mind.
 
 <a href="#">
 
-👤
+❤️
 
-<span>Account</span>
+<span>Favorites</span>
 
 </a>
 
@@ -478,28 +547,34 @@ Every Forever Solid item is made with quality in mind.
 
 <script>
 
-const deliveryMethod = document.getElementById("deliveryMethod");
-const shippingSection = document.getElementById("shippingSection");
+/* ===========================
+   SHOW / HIDE SHIPPING
+=========================== */
 
-deliveryMethod.addEventListener("change", function(){
+function toggleShipping(){
 
-    if(this.value === "shipping"){
+const delivery=document.querySelector('input[name="delivery"]:checked').value;
 
-        shippingSection.style.display = "block";
+document.getElementById("shippingSection").style.display=
 
-    }else{
+delivery==="Shipping"
 
-        shippingSection.style.display = "none";
+? "block"
 
-    }
+: "none";
 
-});
+}
 
-// Load cart into checkout
-updateCheckout();
+/* ===========================
+   LOAD CHECKOUT
+=========================== */
+
+loadCheckout();
+
+updateCartBadge();
 
 </script>
 
 </body>
 
-</html>
+</html> 
