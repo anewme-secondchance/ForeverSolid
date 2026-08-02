@@ -31,13 +31,13 @@
 
 </button>
 
-<button onclick="window.location='../index.html'">
+<button onclick="location.href='../index.html'">
 
 🏠 Home
 
 </button>
 
-<button onclick="window.location='../cart.html'">
+<button onclick="location.href='../cart.html'">
 
 🛒 Cart
 
@@ -51,7 +51,9 @@
 
 <header>
 
-<img src="../images/IMG_FSLOGO.PNG"
+<img
+
+src="../images/IMG_FSLOGO.PNG"
 
 class="logo"
 
@@ -59,7 +61,7 @@ alt="Forever Solid Logo">
 
 <h1 class="page-title">
 
-Forever Solid Collection
+Forever Solid
 
 </h1>
 
@@ -74,6 +76,26 @@ But You Can Change Who You're Solid To.
 </p>
 
 </header>
+
+<!-- ================= FEATURED ================= -->
+
+<section class="featured-banner">
+
+<h2>
+
+🔥 Featured Forever Solid Collection
+
+</h2>
+
+<p>
+
+Premium Streetwear
+
+Built Different.
+
+</p>
+
+</section>
 
 <!-- ================= SEARCH ================= -->
 
@@ -91,7 +113,7 @@ onkeyup="searchProducts()">
 
 </section>
 
-<!-- ================= FILTERS ================= -->
+<!-- ================= FILTER BUTTONS ================= -->
 
 <section class="filter-section">
 
@@ -143,33 +165,13 @@ Hats
 
 <section
 
-class="product-grid"
+id="shopProducts"
 
-id="productGrid">
+class="product-grid">
 
-<!-- Products will load automatically -->
-
-  <!-- ================= FEATURED COLLECTION ================= -->
-
-<section class="featured-banner">
-
-<h2>
-
-🔥 Featured Forever Solid Collection
-
-</h2>
-
-<p>
-
-Premium Apparel • Quality Materials • Built Different
-
-</p>
+<!-- Products Load Here -->
 
 </section>
-
-<!-- ================= PRODUCT TEMPLATE ================= -->
-
-<div id="shopProducts"></div>
 
 <!-- ================= FOOTER ================= -->
 
@@ -177,7 +179,9 @@ Premium Apparel • Quality Materials • Built Different
 
 <div class="footer-logo">
 
-<img src="../images/IMG_FSLOGO.PNG" alt="Forever Solid Logo">
+<img
+src="../images/IMG_FSLOGO.PNG"
+alt="Forever Solid Logo">
 
 </div>
 
@@ -185,29 +189,61 @@ Premium Apparel • Quality Materials • Built Different
 
 <div>
 
-<h3>Forever Solid</h3>
+<h3>
 
-<a href="../index.html">Home</a>
+Forever Solid
 
-<a href="greenbox.html">Green Box Baby</a>
+</h3>
 
-<a href="../cart.html">Shopping Cart</a>
+<a href="../index.html">
+
+Home
+
+</a>
+
+<a href="greenbox.html">
+
+Green Box Baby
+
+</a>
+
+<a href="../cart.html">
+
+Shopping Cart
+
+</a>
 
 </div>
 
 <div>
 
-<h3>Customer Care</h3>
+<h3>
 
-<a href="../checkout.html">Checkout</a>
+Customer Care
 
-<a href="../receipt.html">Receipt</a>
+</h3>
+
+<a href="../checkout.html">
+
+Checkout
+
+</a>
+
+<a href="../receipt.html">
+
+Receipt
+
+</a>
 
 </div>
 
 <div>
 
-<h3>Designed By</h3>
+<h3>
+
+Designed By
+
+</h3>
 
 <p>
 
@@ -254,12 +290,16 @@ products
 
 html += `
 
-<div class="product-card"
+<div
+class="product-card"
 data-category="${product.category}">
 
 <button
+
 class="favorite-btn"
+
 data-id="${product.id}"
+
 onclick="toggleFavorite('${product.id}')">
 
 🤍
@@ -267,7 +307,9 @@ onclick="toggleFavorite('${product.id}')">
 </button>
 
 <img
+
 src="../${product.image}"
+
 alt="${product.name}">
 
 <h3>
@@ -293,7 +335,9 @@ S-XL $${product.priceSmall}
 </p>
 
 <button
+
 class="buy-btn"
+
 onclick="viewProduct('${product.id}')">
 
 Customize & Order
@@ -316,6 +360,4 @@ updateCartBadge();
 
 </body>
 
-</html>
-
-</section>
+</html>  
