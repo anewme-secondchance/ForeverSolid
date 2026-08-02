@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shopping Cart | Forever Solid</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- HEADER -->
+<!-- ========================= -->
+
+<header>
+
+<div class="logo">
+
+<a href="index.html">
+
+<img src="images/IMG_FSLOGO.PNG" alt="Forever Solid">
+
+</a>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="pages/shop.html">Forever Solid</a></li>
+
+<li><a href="pages/greenbox.html">Green Box Baby</a></li>
+
+<li><a href="cart.html" class="active">Cart</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- ========================= -->
+<!-- PAGE TITLE -->
+<!-- ========================= -->
+
+<section class="cart-header">
+
+<h1>
+
+🛒 Shopping Cart
+
+</h1>
+
+<p>
+
+Review your items before checking out.
+
+</p>
+
+</section>
+
+<!-- ========================= -->
+<!-- CART ITEMS -->
+<!-- ========================= -->
+
+<section class="cart-container">
+
+<div class="cart-items" id="cartItems">
+
+<!-- Products will load here automatically -->
+
+</div>
+
+<!-- ========================= -->
+<!-- ORDER SUMMARY -->
+<!-- ========================= -->
+
+<div class="cart-summary">
+
+<h2>
+
+Order Summary
+
+</h2>
+
+<div class="summary-line">
+
+<span>Items</span>
+
+<strong id="itemCount">
+
+0
+
+</strong>
+
+</div>
+
+<div class="summary-line">
+
+<span>Subtotal</span>
+
+<strong id="subtotal">
+
+$0.00
+
+</strong>
+
+</div>
+
+<div class="summary-line">
+
+<span>Shipping</span>
+
+<strong id="shippingCost">
+
+Calculated at Checkout
+
+</strong>
+
+</div>
+
+<hr>
+
+<div class="summary-total">
+
+<span>Total</span>
+
+<strong id="grandTotal">
+
+$0.00
+
+</strong>
+
+</div>
+
+<button
+class="checkout-button"
+onclick="location.href='checkout.html'">
+
+Proceed To Checkout
+
+</button>
+
+<button
+class="continue-button"
+onclick="location.href='pages/shop.html'">
+
+Continue Shopping
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- RECOMMENDED PRODUCTS -->
+<!-- ========================= -->
+
+<section class="recommended">
+
+<h2>
+
+You May Also Like
+
+</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+
+<img src="images/IMG_FS20.JPG" alt="Forever Solid Hoodie">
+
+<div class="product-info">
+
+<h3>
+
+Forever Solid Hoodie
+
+</h3>
+
+<p class="price">
+
+S-XL $55
+
+<br>
+
+2XL+ $60
+
+</p>
+
+<a href="pages/product.html?id=fs20"
+
+class="buy-btn">
+
+Customize & Order
+
+</a>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<img src="images/IMG_FSHAT1.jpeg"
+
+alt="Forever Solid Hat">
+
+<div class="product-info">
+
+<h3>
+
+Forever Solid Hat
+
+</h3>
+
+<p class="price">
+
+$30
+
+</p>
+
+<a href="pages/product.html?id=hat1"
+
+class="buy-btn">
+
+Customize & Order
+
+</a>
+
+</div>
+
+</div>
+
+<div class="product-card">
+
+<img src="images/IMG_GREENBOX2.JPG"
+
+alt="Green Box Baby">
+
+<div class="product-info">
+
+<h3>
+
+Green Box Baby Tee
+
+</h3>
+
+<p class="price">
+
+S-XL $35
+
+<br>
+
+2XL+ $40
+
+</p>
+
+<a href="pages/product.html?id=gb2"
+
+class="buy-btn">
+
+Customize & Order
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+  <!-- ========================= -->
+<!-- EMPTY CART MESSAGE -->
+<!-- ========================= -->
+
+<section id="emptyCart" class="empty-cart" style="display:none;">
+
+<img src="images/IMG_FSLOGO.PNG" alt="Forever Solid Logo">
+
+<h2>Your Cart is Empty</h2>
+
+<p>
+
+Looks like you haven't added anything yet.
+
+Browse our collections and find your next favorite piece.
+
+</p>
+
+<a href="pages/shop.html" class="big-red-button">
+
+Shop Forever Solid
+
+</a>
+
+<a href="pages/greenbox.html" class="big-green-button">
+
+Shop Green Box Baby
+
+</a>
+
+</section>
+
+<!-- ========================= -->
+<!-- TRUST BADGES -->
+<!-- ========================= -->
+
+<section class="trust-section">
+
+<div class="feature">
+
+🚚
+
+<h3>Fast Shipping</h3>
+
+<p>Quick processing on all orders.</p>
+
+</div>
+
+<div class="feature">
+
+🔒
+
+<h3>Secure Checkout</h3>
+
+<p>Your information stays protected.</p>
+
+</div>
+
+<div class="feature">
+
+⭐
+
+<h3>Premium Quality</h3>
+
+<p>Quality apparel built to last.</p>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer>
+
+<div class="footer-logo">
+
+<img src="images/IMG_FSLOGO.PNG" alt="Forever Solid">
+
+</div>
+
+<div class="footer-links">
+
+<div>
+
+<h3>Shop</h3>
+
+<a href="pages/shop.html">Forever Solid</a>
+
+<a href="pages/greenbox.html">Green Box Baby</a>
+
+</div>
+
+<div>
+
+<h3>Support</h3>
+
+<a href="checkout.html">Checkout</a>
+
+<a href="#">Shipping</a>
+
+<a href="#">Returns</a>
+
+</div>
+
+<div>
+
+<h3>Forever Solid</h3>
+
+<p>Tyler, Texas</p>
+
+<p>Premium Streetwear</p>
+
+<p>Built Different.</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 Forever Solid. All Rights Reserved.
+
+</div>
+
+</footer>
+
+<!-- ========================= -->
+<!-- MOBILE NAVIGATION -->
+<!-- ========================= -->
+
+<nav class="bottom-nav">
+
+<a href="index.html">
+
+🏠
+
+<span>Home</span>
+
+</a>
+
+<a href="pages/shop.html">
+
+👕
+
+<span>Shop</span>
+
+</a>
+
+<a href="cart.html">
+
+🛒
+
+<span>Cart</span>
+
+</a>
+
+<a href="pages/greenbox.html">
+
+💚
+
+<span>Green Box</span>
+
+</a>
+
+<a href="#">
+
+👤
+
+<span>Account</span>
+
+</a>
+
+</nav>
+
+<script src="products.js"></script>
+
+<script src="script.js"></script>
+
+<script>
+
+// Update totals whenever the cart changes
+updateCart();
+
+</script>
+
+</body>
+
+</html>
