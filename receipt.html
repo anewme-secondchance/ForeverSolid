@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Order Receipt | Forever Solid</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="logo">
+
+<a href="index.html">
+
+<img src="images/IMG_FSLOGO.PNG" alt="Forever Solid">
+
+</a>
+
+</div>
+
+</header>
+
+<!-- ================= RECEIPT ================= -->
+
+<section class="receipt-page">
+
+<div class="receipt-card">
+
+<h1 class="glow-title">
+
+Forever Solid
+
+</h1>
+
+<h2>
+
+THANK YOU FOR YOUR ORDER!
+
+</h2>
+
+<p>
+
+Your order has been received.
+
+</p>
+
+<hr>
+
+<div class="receipt-row">
+
+<span>Order Number</span>
+
+<strong id="orderNumber">
+
+FS-100001
+
+</strong>
+
+</div>
+
+<div class="receipt-row">
+
+<span>Date</span>
+
+<strong id="orderDate">
+
+</strong>
+
+</div>
+
+<div class="receipt-row">
+
+<span>Customer</span>
+
+<strong id="customerName">
+
+</strong>
+
+</div>
+
+<div class="receipt-row">
+
+<span>Phone</span>
+
+<strong id="customerPhone">
+
+</strong>
+
+</div>
+
+<div class="receipt-row">
+
+<span>Email</span>
+
+<strong id="customerEmail">
+
+</strong>
+
+</div>
+
+<hr>
+
+<h3>
+
+Items Purchased
+
+</h3>
+
+<div id="receiptItems">
+
+<!-- Items Load Here -->
+
+</div>
+
+<hr>
+
+<div class="receipt-total">
+
+<span>Total</span>
+
+<strong id="receiptTotal">
+
+$0.00
+
+</strong>
+
+</div>
+
+<div class="receipt-method">
+
+<strong>
+
+Pickup / Shipping:
+
+</strong>
+
+<span id="receiptDelivery">
+
+Pickup
+
+</span>
+
+</div>
+
+<p class="thank-you-message">
+
+Thank you for supporting Forever Solid.
+
+We appreciate your business and look forward to serving you again.
+
+</p>
+
+<!-- ================= BUTTONS ================= -->
+
+<div class="receipt-buttons">
+
+<button
+class="order-button"
+onclick="window.print()">
+
+🖨 Print Receipt
+
+</button>
+
+<button
+class="cart-button"
+onclick="sendTextOrder()">
+
+📱 Text Order
+
+</button>
+
+<button
+class="continue-button"
+onclick="location.href='index.html'">
+
+🏠 Return Home
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="footer-logo">
+
+<img src="images/IMG_FSLOGO.PNG" alt="Forever Solid">
+
+</div>
+
+<div class="footer-links">
+
+<div>
+
+<h3>Forever Solid</h3>
+
+<p>Premium Streetwear</p>
+
+<p>Tyler, Texas</p>
+
+</div>
+
+<div>
+
+<h3>Collections</h3>
+
+<a href="pages/shop.html">
+
+Forever Solid
+
+</a>
+
+<a href="pages/greenbox.html">
+
+Green Box Baby
+
+</a>
+
+</div>
+
+<div>
+
+<h3>Customer Care</h3>
+
+<a href="cart.html">
+
+Shopping Cart
+
+</a>
+
+<a href="checkout.html">
+
+Checkout
+
+</a>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 Forever Solid.
+All Rights Reserved.
+
+</div>
+
+</footer>
+
+<script src="products.js"></script>
+
+<script src="script.js"></script>
+
+<script>
+
+// Today's Date
+
+const today = new Date();
+
+document.getElementById("orderDate").innerHTML =
+today.toLocaleDateString();
+
+// Random Order Number
+
+document.getElementById("orderNumber").innerHTML =
+"FS-" + Math.floor(100000 + Math.random()*900000);
+
+// Load Receipt
+
+loadReceipt();
+
+</script>
+
+</body>
+
+</html>  
