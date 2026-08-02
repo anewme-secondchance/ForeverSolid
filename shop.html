@@ -21,76 +21,82 @@
 
 <body>
 
-<!-- ================= TOP NAVIGATION ================= -->
-
-<div class="top-nav">
-
-<button onclick="history.back()">
-
-⬅ Back
-
-</button>
-
-<button onclick="location.href='../index.html'">
-
-🏠 Home
-
-</button>
-
-<button onclick="location.href='../cart.html'">
-
-🛒 Cart
-
-<span id="cartBadge">0</span>
-
-</button>
-
-</div>
 
 <!-- ================= HEADER ================= -->
 
 <header>
 
-<img
+<div class="logo">
 
-src="../images/IMG_FSLOGO.PNG"
+<a href="../index.html">
 
-class="logo"
+<img src="../images/IMG_FSLOGO.PNG" alt="Forever Solid Logo">
 
-alt="Forever Solid Logo">
+</a>
 
-<h1 class="page-title">
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="shop.html" class="active">Forever Solid</a></li>
+
+<li><a href="greenbox.html">Green Box Baby</a></li>
+
+<li><a href="../cart.html">Cart</a></li>
+
+</ul>
+
+</nav>
+
+<div class="nav-icons">
+
+<button onclick="location.href='../cart.html'">
+
+🛒
+
+<span id="cart-count">0</span>
+
+</button>
+
+</div>
+
+<div class="menu-toggle">
+
+☰
+
+</div>
+
+</header>
+
+<div class="mobile-menu">
+
+<a href="../index.html">Home</a>
+
+<a href="shop.html">Forever Solid</a>
+
+<a href="greenbox.html">Green Box Baby</a>
+
+<a href="../cart.html">Cart</a>
+
+</div>
+
+<!-- ================= FEATURED ================= -->
+
+<section class="shop-header">
+
+<h1>
 
 Forever Solid
 
 </h1>
 
-<p class="page-subtitle">
-
-You Can't Change How Solid You Are...
-
-<br>
-
-But You Can Change Who You're Solid To.
-
-</p>
-
-</header>
-
-<!-- ================= FEATURED ================= -->
-
-<section class="featured-banner">
-
-<h2>
-
-🔥 Featured Forever Solid Collection
-
-</h2>
-
 <p>
 
-Premium Streetwear
-
+Premium Streetwear.
 Built Different.
 
 </p>
@@ -161,109 +167,42 @@ Hats
 
 </section>
 
+
+
 <!-- ================= PRODUCTS ================= -->
 
 <section
-
 id="shopProducts"
-
-class="product-grid">
+class="products-grid">
 
 <!-- Products Load Here -->
 
 </section>
-
 <!-- ================= FOOTER ================= -->
 
 <footer>
 
 <div class="footer-logo">
 
-<img
-src="../images/IMG_FSLOGO.PNG"
-alt="Forever Solid Logo">
+<img src="../images/IMG_FSLOGO.PNG" alt="Forever Solid Logo">
 
 </div>
 
-<div class="footer-links">
-
-<div>
-
-<h3>
+<h2 class="footer-brand">
 
 Forever Solid
 
-</h3>
+</h2>
 
-<a href="../index.html">
+<p class="footer-tagline">
 
-Home
-
-</a>
-
-<a href="greenbox.html">
-
-Green Box Baby
-
-</a>
-
-<a href="../cart.html">
-
-Shopping Cart
-
-</a>
-
-</div>
-
-<div>
-
-<h3>
-
-Customer Care
-
-</h3>
-
-<a href="../checkout.html">
-
-Checkout
-
-</a>
-
-<a href="../receipt.html">
-
-Receipt
-
-</a>
-
-</div>
-
-<div>
-
-<h3>
-
-Designed By
-
-</h3>
-
-<p>
-
-TaDie4ENT
+Built Different • Stay Solid
 
 </p>
 
-<p>
+<div class="copyright">
 
-Custom Apps
-
-</p>
-
-<p>
-
-Business Solutions
-
-</p>
-
-</div>
+© 2026 Forever Solid. All Rights Reserved.
 
 </div>
 
@@ -279,8 +218,7 @@ Business Solutions
         LOAD FOREVER SOLID PRODUCTS
 =========================================*/
 
-const container =
-document.getElementById("shopProducts");
+const container = document.getElementById("shopProducts");
 
 let html = "";
 
@@ -290,59 +228,44 @@ products
 
 html += `
 
-<div
-class="product-card"
-data-category="${product.category}">
+<div class="product-card" data-category="${product.category}">
 
-<button
+    <button
+        class="favorite-btn"
+        data-id="${product.id}"
+        onclick="toggleFavorite('${product.id}')">
 
-class="favorite-btn"
+        🤍
 
-data-id="${product.id}"
+    </button>
 
-onclick="toggleFavorite('${product.id}')">
+    <img
+        src="../${product.image}"
+        alt="${product.name}">
 
-🤍
+    <div class="product-info">
 
-</button>
+        <h3>${product.name}</h3>
 
-<img
+        <p>${product.category}</p>
 
-src="../${product.image}"
+      <div class="price">
 
-alt="${product.name}">
+    <strong>S–XL:</strong> $${product.priceSmall}
+    <br>
+    <strong>2XL+:</strong> $${product.priceLarge}
 
-<h3>
+</div>  
 
-${product.name}
+        <button
+            class="buy-btn"
+            onclick="viewProduct('${product.id}')">
 
-</h3>
+            Customize & Order
 
-<p>
+        </button>
 
-${product.category}
-
-</p>
-
-<p>
-
-S-XL $${product.priceSmall}
-
-<br>
-
-2XL+ $${product.priceLarge}
-
-</p>
-
-<button
-
-class="buy-btn"
-
-onclick="viewProduct('${product.id}')">
-
-Customize & Order
-
-</button>
+    </div>
 
 </div>
 
@@ -353,11 +276,10 @@ Customize & Order
 container.innerHTML = html;
 
 updateFavoriteIcons();
-
 updateCartBadge();
 
-</script>
+        </script>
 
 </body>
 
-</html>  
+</html>
