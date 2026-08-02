@@ -2,11 +2,9 @@
         TADIE4ENT BUSINESS APP
 =========================================*/
 
-/*
-=========================================
+/*=========================================
         APP SETTINGS
-=========================================
-*/
+=========================================*/
 
 const APP_MODE = "TRIAL";     // TRIAL or FULL
 
@@ -20,11 +18,9 @@ const STORE_PHONE = "9032629694";
 
 const BUSINESS_PRICE = 750;
 
-/*
-=========================================
+/*=========================================
         LOCAL STORAGE KEYS
-=========================================
-*/
+=========================================*/
 
 const CART_KEY = "fs_cart";
 
@@ -32,11 +28,11 @@ const FAVORITES_KEY = "fs_favorites";
 
 const INSTALL_KEY = "fs_install_date";
 
-/*
-=========================================
-        CART
-=========================================
-*/
+const ORDER_KEY = "lastOrder";
+
+/*=========================================
+        GLOBAL VARIABLES
+=========================================*/
 
 let cart = JSON.parse(
 
@@ -44,119 +40,95 @@ localStorage.getItem(CART_KEY)
 
 ) || [];
 
-/*
-=========================================
-        FAVORITES
-=========================================
-*/
-
 let favorites = JSON.parse(
 
 localStorage.getItem(FAVORITES_KEY)
 
 ) || [];
 
-/*
-=========================================
+/*=========================================
         SAVE CART
-=========================================
-*/
+=========================================*/
 
 function saveCart(){
 
-localStorage.setItem(
+    localStorage.setItem(
 
-CART_KEY,
+        CART_KEY,
 
-JSON.stringify(cart)
+        JSON.stringify(cart)
 
-);
+    );
 
 }
 
-/*
-=========================================
+/*=========================================
         SAVE FAVORITES
-=========================================
-*/
+=========================================*/
 
 function saveFavorites(){
 
-localStorage.setItem(
+    localStorage.setItem(
 
-FAVORITES_KEY,
+        FAVORITES_KEY,
 
-JSON.stringify(favorites)
+        JSON.stringify(favorites)
 
-);
+    );
 
 }
 
-/*
-=========================================
+/*=========================================
         INSTALL DATE
-=========================================
-*/
+=========================================*/
 
 function setInstallDate(){
 
-if(
+    if(!localStorage.getItem(INSTALL_KEY)){
 
-!localStorage.getItem(INSTALL_KEY)
+        localStorage.setItem(
 
-){
+            INSTALL_KEY,
 
-localStorage.setItem(
+            new Date().getTime()
 
-INSTALL_KEY,
+        );
 
-new Date().getTime()
-
-);
+    }
 
 }
 
-}
-
-/*
-=========================================
+/*=========================================
         DAYS USED
-=========================================
-*/
+=========================================*/
 
 function getDaysUsed(){
 
-const install = Number(
+    const install = Number(
 
-localStorage.getItem(INSTALL_KEY)
+        localStorage.getItem(INSTALL_KEY)
 
-);
+    );
 
-const today = new Date().getTime();
+    const today = new Date().getTime();
 
-const days = Math.floor(
+    return Math.floor(
 
-(today-install)/(1000*60*60*24)
+        (today-install)/(1000*60*60*24)
 
-);
-
-return days;
+    );
 
 }
 
-/*
-=========================================
+/*=========================================
         START APP
-=========================================
-*/
+=========================================*/
 
 setInstallDate();
 
-/*
-=========================================
+/*=========================================
         TRIAL CHECK
-=========================================
-*/
+=========================================*/
 
 function checkTrial(){
 
@@ -176,11 +148,9 @@ function checkTrial(){
 
 }
 
-/*
-=========================================
+/*=========================================
         TRIAL EXPIRED PAGE
-=========================================
-*/
+=========================================*/
 
 function showTrialExpired(){
 
@@ -190,9 +160,17 @@ document.body.innerHTML = `
 
 <div class="trial-box">
 
-<h1>TaDie4ENT</h1>
+<h1>
 
-<h2>Your 7-Day Trial Has Ended</h2>
+TaDie4ENT
+
+</h1>
+
+<h2>
+
+Your 7-Day Trial Has Ended
+
+</h2>
 
 <p>
 
@@ -202,7 +180,7 @@ Thank you for trying this custom business app.
 
 <p>
 
-Ready to own your own custom app?
+Ready to own your own custom business app?
 
 </p>
 
@@ -254,31 +232,21 @@ Add-On Services
 
 <h2>
 
-Need an App For Your Business?
+Need An App For Your Business?
 
 </h2>
 
 <p>
 
-✔ Clothing Brands
+✔ Clothing Brands<br>
 
-<br>
+✔ Tattoo Shops<br>
 
-✔ Tattoo Shops
+✔ Lash Studios<br>
 
-<br>
+✔ Restaurants<br>
 
-✔ Lash Studios
-
-<br>
-
-✔ Restaurants
-
-<br>
-
-✔ Churches
-
-<br>
+✔ Churches<br>
 
 ✔ Small Businesses
 
@@ -290,9 +258,7 @@ Need an App For Your Business?
 
 class="big-red-button"
 
-href="sms:${STORE_PHONE}?body=Hi%20TaDie4ENT!%20I'm%20interested%20in%20purchasing%20a%20custom%20business%20app."
-
->
+href="sms:${STORE_PHONE}?body=Hi%20TaDie4ENT!%20I'm%20interested%20in%20purchasing%20a%20custom%20business%20app.">
 
 📱 Text Me
 
@@ -302,9 +268,7 @@ href="sms:${STORE_PHONE}?body=Hi%20TaDie4ENT!%20I'm%20interested%20in%20purchasi
 
 class="big-green-button"
 
-href="mailto:YOUR_EMAIL_HERE"
-
->
+href="mailto:YOUR_EMAIL_HERE">
 
 📧 Email Me
 
@@ -332,19 +296,15 @@ TaDie4ENT
 
 }
 
-/*
-=========================================
-        START TRIAL CHECK
-=========================================
-*/
+/*=========================================
+        START TRIAL
+=========================================*/
 
 checkTrial();
 
-/*
-=========================================
+/*=========================================
         ADD TO CART
-=========================================
-*/
+=========================================*/
 
 function addToCart(){
 
@@ -366,25 +326,25 @@ function addToCart(){
 
     const quantity = parseInt(document.getElementById("quantity").value);
 
-    const price = calculatePrice(product,size);
+    const price = calculatePrice(product, size);
 
     const item = {
 
-        id:product.id,
+        id: product.id,
 
-        name:product.name,
+        name: product.name,
 
-        image:product.image,
+        image: product.image,
 
-        size:size,
+        size: size,
 
-        color:color,
+        color: color,
 
-        quantity:quantity,
+        quantity: quantity,
 
-        price:price,
+        price: price,
 
-        total:price*quantity
+        total: price * quantity
 
     };
 
@@ -392,15 +352,15 @@ function addToCart(){
 
     saveCart();
 
-    alert(product.name + " has been added to your cart!");
+    updateCartBadge();
+
+    alert(product.name + " added to your cart!");
 
 }
 
-/*
-=========================================
-        REMOVE ITEM
-=========================================
-*/
+/*=========================================
+        REMOVE FROM CART
+=========================================*/
 
 function removeFromCart(index){
 
@@ -412,17 +372,15 @@ function removeFromCart(index){
 
 }
 
-/*
-=========================================
-        EMPTY CART
-=========================================
-*/
+/*=========================================
+        CLEAR CART
+=========================================*/
 
 function clearCart(){
 
     if(confirm("Remove all items from your cart?")){
 
-        cart=[];
+        cart = [];
 
         saveCart();
 
@@ -432,11 +390,9 @@ function clearCart(){
 
 }
 
-/*
-=========================================
+/*=========================================
         UPDATE CART
-=========================================
-*/
+=========================================*/
 
 function updateCart(){
 
@@ -452,23 +408,25 @@ function updateCart(){
 
     if(!cartContainer) return;
 
-    cartContainer.innerHTML="";
+    cartContainer.innerHTML = "";
 
-    let total=0;
+    let total = 0;
 
-    if(cart.length===0){
+    if(cart.length === 0){
 
         if(emptyCart){
 
-            emptyCart.style.display="block";
+            emptyCart.style.display = "block";
 
         }
 
-        itemCount.innerHTML="0";
+        itemCount.innerHTML = "0";
 
-        subtotal.innerHTML="$0.00";
+        subtotal.innerHTML = "$0.00";
 
-        grandTotal.innerHTML="$0.00";
+        grandTotal.innerHTML = "$0.00";
+
+        updateCartBadge();
 
         return;
 
@@ -476,7 +434,7 @@ function updateCart(){
 
     if(emptyCart){
 
-        emptyCart.style.display="none";
+        emptyCart.style.display = "none";
 
     }
 
@@ -488,7 +446,7 @@ function updateCart(){
 
         <div class="cart-item">
 
-            <img src="${item.image}" class="cart-image">
+            <img src="${item.image}" class="cart-image" alt="${item.name}">
 
             <div class="cart-details">
 
@@ -502,12 +460,31 @@ function updateCart(){
 
                 <p><strong>Price:</strong> $${item.price}</p>
 
-                <h2>$${item.total}</h2>
+                <h2>$${item.total.toFixed(2)}</h2>
+
+                <div class="quantity-buttons">
+
+                    <button onclick="decreaseQuantity(${index})">
+
+                    ➖
+
+                    </button>
+
+                    <button onclick="increaseQuantity(${index})">
+
+                    ➕
+
+                    </button>
+
+                </div>
 
                 <button
+
+                class="remove-button"
+
                 onclick="removeFromCart(${index})">
 
-                Remove
+                🗑 Remove
 
                 </button>
 
@@ -525,20 +502,22 @@ function updateCart(){
 
     grandTotal.innerHTML = "$" + total.toFixed(2);
 
+    updateCartBadge();
+
 }
 
-/*
-=========================================
-        CHANGE QUANTITY
-=========================================
-*/
+/*=========================================
+        INCREASE QUANTITY
+=========================================*/
 
 function increaseQuantity(index){
 
     cart[index].quantity++;
 
     cart[index].total =
+
     cart[index].price *
+
     cart[index].quantity;
 
     saveCart();
@@ -547,6 +526,10 @@ function increaseQuantity(index){
 
 }
 
+/*=========================================
+        DECREASE QUANTITY
+=========================================*/
+
 function decreaseQuantity(index){
 
     if(cart[index].quantity > 1){
@@ -554,7 +537,9 @@ function decreaseQuantity(index){
         cart[index].quantity--;
 
         cart[index].total =
+
         cart[index].price *
+
         cart[index].quantity;
 
         saveCart();
@@ -565,16 +550,13 @@ function decreaseQuantity(index){
 
 }
 
-/*
-=========================================
+/*=========================================
         CART BADGE
-=========================================
-*/
+=========================================*/
 
 function updateCartBadge(){
 
-    const badge =
-    document.getElementById("cartBadge");
+    const badge = document.getElementById("cartBadge");
 
     if(!badge) return;
 
@@ -590,11 +572,9 @@ function updateCartBadge(){
 
 }
 
-/*
-=========================================
-        UPDATE TOTALS
-=========================================
-*/
+/*=========================================
+        CALCULATE CART TOTAL
+=========================================*/
 
 function calculateCartTotal(){
 
@@ -610,190 +590,13 @@ function calculateCartTotal(){
 
 }
 
-/*
-=========================================
-        REFRESH CART
-=========================================
-*/
-
-function refreshCart(){
-
-    updateCart();
-
-    updateCartBadge();
-
-}
-
-/*
-=========================================
-        LOAD PAGE
-=========================================
-*/
-
-window.onload = function(){
-
-    refreshCart();
-
-};
-
-/*
-=========================================
-        FAVORITES
-=========================================
-*/
-
-function toggleFavorite(productId){
-
-    const index = favorites.indexOf(productId);
-
-    if(index === -1){
-
-        favorites.push(productId);
-
-        alert("❤️ Added to Favorites");
-
-    }else{
-
-        favorites.splice(index,1);
-
-        alert("Removed from Favorites");
-
-    }
-
-    saveFavorites();
-
-    updateFavoriteIcons();
-
-}
-
-/*
-=========================================
-        FAVORITE ICONS
-=========================================
-*/
-
-function updateFavoriteIcons(){
-
-    document.querySelectorAll(".favorite-btn").forEach(button=>{
-
-        const id = button.dataset.id;
-
-        if(favorites.includes(id)){
-
-            button.innerHTML="❤️";
-
-        }else{
-
-            button.innerHTML="🤍";
-
-        }
-
-    });
-
-}
-
-/*
-=========================================
-        SEARCH PRODUCTS
-=========================================
-*/
-
-function searchProducts(){
-
-    const input = document
-    .getElementById("searchBox")
-    .value
-    .toLowerCase();
-
-    document
-    .querySelectorAll(".product-card")
-    .forEach(card=>{
-
-        const name = card.innerText.toLowerCase();
-
-        if(name.includes(input)){
-
-            card.style.display="block";
-
-        }else{
-
-            card.style.display="none";
-
-        }
-
-    });
-
-}
-
-/*
-=========================================
-        FILTER PRODUCTS
-=========================================
-*/
-
-function filterProducts(category){
-
-    document
-    .querySelectorAll(".product-card")
-    .forEach(card=>{
-
-        if(
-
-            category==="All"
-
-        ){
-
-            card.style.display="block";
-
-            return;
-
-        }
-
-        if(
-
-            card.dataset.category===category
-
-        ){
-
-            card.style.display="block";
-
-        }else{
-
-            card.style.display="none";
-
-        }
-
-    });
-
-}
-
-/*
-=========================================
-        BACK TO TOP
-=========================================
-*/
-
-function backToTop(){
-
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
-
-    });
-
-}
-
-/*
-=========================================
+/*=========================================
         PLACE ORDER
-=========================================
-*/
+=========================================*/
 
 function placeOrder(){
 
-    if(cart.length===0){
+    if(cart.length === 0){
 
         alert("Your cart is empty.");
 
@@ -801,13 +604,13 @@ function placeOrder(){
 
     }
 
-    const order={
+    const order = {
 
         orderNumber:
-        "FS"+
-        Math.floor(100000+Math.random()*900000),
+        "FS" + Math.floor(100000 + Math.random() * 900000),
 
-        date:new Date().toLocaleDateString(),
+        date:
+        new Date().toLocaleDateString(),
 
         firstName:
         document.getElementById("firstName").value,
@@ -824,77 +627,88 @@ function placeOrder(){
         delivery:
         document.getElementById("deliveryMethod").value,
 
+        address:
+        document.getElementById("address").value,
+
+        city:
+        document.getElementById("city").value,
+
+        state:
+        document.getElementById("state").value,
+
+        zip:
+        document.getElementById("zip").value,
+
         notes:
         document.getElementById("notes").value,
 
-        items:cart,
+        items:
+        cart,
 
-        total:calculateCartTotal()
+        total:
+        calculateCartTotal()
 
     };
 
     localStorage.setItem(
 
-        "lastOrder",
+        ORDER_KEY,
 
         JSON.stringify(order)
 
     );
 
-    cart=[];
+    cart = [];
 
     saveCart();
 
-    window.location.href="receipt.html";
+    window.location.href = "receipt.html";
 
 }
 
-/*
-=========================================
+/*=========================================
         LOAD RECEIPT
-=========================================
-*/
+=========================================*/
 
 function loadReceipt(){
 
-    const order=
-    JSON.parse(
+    const order = JSON.parse(
 
-    localStorage.getItem("lastOrder")
+        localStorage.getItem(ORDER_KEY)
 
     );
 
     if(!order) return;
 
-    document.getElementById("orderNumber").innerHTML=
+    document.getElementById("orderNumber").innerHTML =
     order.orderNumber;
 
-    document.getElementById("orderDate").innerHTML=
+    document.getElementById("orderDate").innerHTML =
     order.date;
 
-    document.getElementById("customerName").innerHTML=
-    order.firstName+" "+order.lastName;
+    document.getElementById("customerName").innerHTML =
+    order.firstName + " " + order.lastName;
 
-    document.getElementById("customerPhone").innerHTML=
+    document.getElementById("customerPhone").innerHTML =
     order.phone;
 
-    document.getElementById("customerEmail").innerHTML=
+    document.getElementById("customerEmail").innerHTML =
     order.email;
 
-    document.getElementById("receiptDelivery").innerHTML=
+    document.getElementById("receiptDelivery").innerHTML =
     order.delivery;
 
-    document.getElementById("receiptTotal").innerHTML=
-    "$"+order.total.toFixed(2);
+    document.getElementById("receiptTotal").innerHTML =
+    "$" + order.total.toFixed(2);
 
-    const items=
+    const receiptItems =
     document.getElementById("receiptItems");
 
-    items.innerHTML="";
+    receiptItems.innerHTML = "";
 
     order.items.forEach(item=>{
 
-        items.innerHTML+=`
+        receiptItems.innerHTML += `
 
         <div class="receipt-item">
 
@@ -904,9 +718,11 @@ function loadReceipt(){
 
             Color: ${item.color}<br>
 
-            Qty: ${item.quantity}<br>
+            Quantity: ${item.quantity}<br>
 
-            Total: $${item.total}
+            Price: $${item.price}<br>
+
+            Total: $${item.total.toFixed(2)}
 
         </div>
 
@@ -918,16 +734,26 @@ function loadReceipt(){
 
 }
 
-/*
-=========================================
-        SEND ORDER BY TEXT
-=========================================
-*/
+/*=========================================
+        PRINT RECEIPT
+=========================================*/
+
+function printReceipt(){
+
+    window.print();
+
+}
+
+/*=========================================
+        SEND TEXT ORDER
+=========================================*/
 
 function sendTextOrder(){
 
     const order = JSON.parse(
-        localStorage.getItem("lastOrder")
+
+        localStorage.getItem(ORDER_KEY)
+
     );
 
     if(!order){
@@ -939,6 +765,7 @@ function sendTextOrder(){
     }
 
     let message =
+
 `🛍 FOREVER SOLID ORDER
 
 Order #: ${order.orderNumber}
@@ -978,74 +805,198 @@ Total: $${item.total}
     });
 
     message +=
+
 `
+
 Grand Total:
 $${order.total.toFixed(2)}
 
 Thank you!
+
 `;
 
     window.location.href =
+
 `sms:${STORE_PHONE}?body=${encodeURIComponent(message)}`;
 
 }
 
-/*
-=========================================
-        PRINT RECEIPT
-=========================================
-*/
+/*=========================================
+        FAVORITES
+=========================================*/
 
-function printReceipt(){
+function toggleFavorite(productId){
 
-    window.print();
+    const index = favorites.indexOf(productId);
+
+    if(index === -1){
+
+        favorites.push(productId);
+
+        alert("❤️ Added to Favorites");
+
+    }else{
+
+        favorites.splice(index,1);
+
+        alert("Removed from Favorites");
+
+    }
+
+    saveFavorites();
+
+    updateFavoriteIcons();
 
 }
 
-/*
-=========================================
-        CONTACT TADIE4ENT
-=========================================
-*/
+/*=========================================
+        UPDATE FAVORITE ICONS
+=========================================*/
 
-function contactTaDie4ENT(){
+function updateFavoriteIcons(){
 
-    window.location.href=
-`sms:${STORE_PHONE}?body=Hi TaDie4ENT! I'm interested in purchasing a custom business app.`;
+    document.querySelectorAll(".favorite-btn").forEach(button=>{
+
+        const id = button.dataset.id;
+
+        if(favorites.includes(id)){
+
+            button.innerHTML = "❤️";
+
+        }else{
+
+            button.innerHTML = "🤍";
+
+        }
+
+    });
 
 }
 
-/*
-=========================================
-        REQUEST QUOTE
-=========================================
-*/
+/*=========================================
+        SEARCH PRODUCTS
+=========================================*/
 
-function requestQuote(){
+function searchProducts(){
 
-    alert(
+    const input = document
+    .getElementById("searchBox")
+    .value
+    .toLowerCase();
 
-`Thank you for your interest!
+    document
+    .querySelectorAll(".product-card")
+    .forEach(card=>{
 
-Business App
-Starting at $750
+        const name = card.innerText.toLowerCase();
 
-✔ Payment Plans Available
+        if(name.includes(input)){
 
-Text:
-903-262-9694
+            card.style.display = "";
 
-Designed by TaDie4ENT`
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+/*=========================================
+        FILTER PRODUCTS
+=========================================*/
+
+function filterProducts(category){
+
+    document
+    .querySelectorAll(".product-card")
+    .forEach(card=>{
+
+        if(category === "All"){
+
+            card.style.display = "";
+
+            return;
+
+        }
+
+        if(card.dataset.category === category){
+
+            card.style.display = "";
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+/*=========================================
+        BACK TO TOP
+=========================================*/
+
+function backToTop(){
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+}
+
+/*=========================================
+        PRODUCT PRICE
+=========================================*/
+
+function calculatePrice(product,size){
+
+    if(
+
+        size==="2XL" ||
+
+        size==="3XL" ||
+
+        size==="4XL"
+
+    ){
+
+        return product.priceLarge;
+
+    }
+
+    return product.priceSmall;
+
+}
+
+/*=========================================
+        VIEW PRODUCT
+=========================================*/
+
+function viewProduct(productId){
+
+    localStorage.setItem(
+
+        "selectedProduct",
+
+        productId
 
     );
 
+    window.location.href = "product.html?id=" + productId;
+
 }
 
-/*
-=========================================
+/*=========================================
         APP STARTUP
-=========================================
-*/
+=========================================*/
 
 document.addEventListener(
 
@@ -1059,6 +1010,17 @@ function(){
 
     checkTrial();
 
-}
+    if(document.getElementById("cartItems")){
 
-);
+        updateCart();
+
+    }
+
+    if(document.getElementById("receiptItems")){
+
+        loadReceipt();
+
+    }
+
+});
+
