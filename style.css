@@ -293,19 +293,21 @@ nav ul li a:hover{
 
 .hero{
 
-    width:100%;
+width:100%;
 
-    min-height:85vh;
+min-height:85vh;
 
-    display:grid;
+display:grid;
 
-    grid-template-columns:1fr 1fr 1fr;
+grid-template-columns:1fr 1.2fr 1fr;
 
-    align-items:center;
+align-items:center;
 
-    gap:40px;
+justify-items:center;
 
-    padding:60px 6%;
+gap:25px;
+
+padding:40px 4%;
 
 }
 
@@ -2573,5 +2575,312 @@ text-shadow:
 0 0 8px #ff0000,
 0 0 15px #ff0000,
 0 0 30px #ff0000;
+
+}
+
+/*====================================
+        MOBILE RESPONSIVE
+====================================*/
+
+@media screen and (max-width:768px){
+
+.hero{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+padding:30px 15px;
+
+gap:25px;
+
+}
+
+.hero-left img,
+.hero-right img{
+
+width:100%;
+
+max-width:350px;
+
+height:auto;
+
+object-fit:contain;
+
+display:block;
+
+margin:auto;
+
+}
+
+.hero-logo{
+
+font-size:60px;
+
+text-align:center;
+
+}
+
+.hero-quote{
+
+font-size:20px;
+
+padding:0 15px;
+
+text-align:center;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+flex-direction:column;
+
+width:100%;
+
+gap:15px;
+
+}
+
+.hero-buttons a{
+
+width:100%;
+
+text-align:center;
+
+}
+
+}
+
+/*=========================
+     MOBILE HERO CENTER
+=========================*/
+
+.hero-center{
+
+width:100%;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+.hero-logo{
+
+font-size:60px;
+
+margin-bottom:20px;
+
+}
+
+.hero-quote{
+
+font-size:20px;
+
+line-height:1.6;
+
+margin-bottom:30px;
+
+padding:0 10px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+width:100%;
+
+max-width:320px;
+
+}
+
+.hero-buttons a{
+
+width:100%;
+
+text-align:center;
+
+}
+
+/*=========================
+      MOBILE BUTTONS
+=========================*/
+
+.big-red-button,
+.big-green-button{
+
+display:block;
+
+width:100%;
+
+max-width:320px;
+
+margin:10px auto;
+
+padding:16px 20px;
+
+font-size:18px;
+
+font-weight:700;
+
+text-align:center;
+
+border-radius:12px;
+
+text-decoration:none;
+
+box-sizing:border-box;
+
+}
+
+/*=========================
+      MOBILE SPACING
+=========================*/
+
+.hero{
+
+padding:20px 15px 40px;
+
+}
+
+.hero-left{
+
+margin-bottom:20px;
+
+}
+
+.hero-center{
+
+margin-bottom:20px;
+
+}
+
+.hero-right{
+
+margin-top:20px;
+
+}
+
+.hero-left img,
+.hero-right img{
+
+border-radius:15px;
+
+}
+
+/*=========================
+      MOBILE HEADER
+=========================*/
+
+@media screen and (max-width:768px){
+
+header{
+
+padding:15px;
+
+flex-direction:column;
+
+align-items:center;
+
+text-align:center;
+
+}
+
+.logo img{
+
+width:140px;
+
+height:auto;
+
+}
+
+nav ul{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:10px;
+
+padding:0;
+
+margin:15px 0;
+
+list-style:none;
+
+}
+
+nav ul li a{
+
+font-size:15px;
+
+padding:8px 12px;
+
+}
+
+}
+
+/*=========================
+      MOBILE FEATURES
+=========================*/
+
+@media screen and (max-width:768px){
+
+.features{
+
+display:grid;
+
+grid-template-columns:1fr;
+
+gap:20px;
+
+padding:20px;
+
+}
+
+.feature{
+
+padding:25px;
+
+text-align:center;
+
+border-radius:15px;
+
+}
+
+.feature h3{
+
+font-size:22px;
+
+margin:10px 0;
+
+}
+
+.feature p{
+
+font-size:16px;
+
+line-height:1.6;
+
+}
 
 }
