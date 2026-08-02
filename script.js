@@ -1,68 +1,1064 @@
-/* =====================================
-   FOREVER SOLID APP
-   script.js
-===================================== */
+/*=========================================
+        TADIE4ENT BUSINESS APP
+=========================================*/
 
-// Home Buttons
+/*
+=========================================
+        APP SETTINGS
+=========================================
+*/
 
-function openForeverSolid() {
-    window.location.href = "pages/shop.html";
+const APP_MODE = "TRIAL";     // TRIAL or FULL
+
+const TRIAL_DAYS = 7;
+
+const OWNER = "TaDie4ENT";
+
+const STORE_NAME = "Forever Solid";
+
+const STORE_PHONE = "9032629694";
+
+const BUSINESS_PRICE = 750;
+
+/*
+=========================================
+        LOCAL STORAGE KEYS
+=========================================
+*/
+
+const CART_KEY = "fs_cart";
+
+const FAVORITES_KEY = "fs_favorites";
+
+const INSTALL_KEY = "fs_install_date";
+
+/*
+=========================================
+        CART
+=========================================
+*/
+
+let cart = JSON.parse(
+
+localStorage.getItem(CART_KEY)
+
+) || [];
+
+/*
+=========================================
+        FAVORITES
+=========================================
+*/
+
+let favorites = JSON.parse(
+
+localStorage.getItem(FAVORITES_KEY)
+
+) || [];
+
+/*
+=========================================
+        SAVE CART
+=========================================
+*/
+
+function saveCart(){
+
+localStorage.setItem(
+
+CART_KEY,
+
+JSON.stringify(cart)
+
+);
+
 }
 
-function openGreenBox() {
-    window.location.href = "pages/greenbox.html";
+/*
+=========================================
+        SAVE FAVORITES
+=========================================
+*/
+
+function saveFavorites(){
+
+localStorage.setItem(
+
+FAVORITES_KEY,
+
+JSON.stringify(favorites)
+
+);
+
 }
 
-// Bottom Navigation
+/*
+=========================================
+        INSTALL DATE
+=========================================
+*/
 
-function goHome() {
-    window.location.href = "../index.html";
+function setInstallDate(){
+
+if(
+
+!localStorage.getItem(INSTALL_KEY)
+
+){
+
+localStorage.setItem(
+
+INSTALL_KEY,
+
+new Date().getTime()
+
+);
+
 }
 
-function goShop() {
-    window.location.href = "shop.html";
 }
 
-function goOrder() {
-    window.location.href = "order.html";
+/*
+=========================================
+        DAYS USED
+=========================================
+*/
+
+function getDaysUsed(){
+
+const install = Number(
+
+localStorage.getItem(INSTALL_KEY)
+
+);
+
+const today = new Date().getTime();
+
+const days = Math.floor(
+
+(today-install)/(1000*60*60*24)
+
+);
+
+return days;
+
 }
 
-function goPayment() {
-    window.location.href = "payment.html";
+/*
+=========================================
+        START APP
+=========================================
+*/
+
+setInstallDate();
+
+/*
+=========================================
+        TRIAL CHECK
+=========================================
+*/
+
+function checkTrial(){
+
+    if(APP_MODE === "FULL"){
+
+        return;
+
+    }
+
+    const daysUsed = getDaysUsed();
+
+    if(daysUsed >= TRIAL_DAYS){
+
+        showTrialExpired();
+
+    }
+
 }
 
-// Product Page
+/*
+=========================================
+        TRIAL EXPIRED PAGE
+=========================================
+*/
 
-function viewProduct(productId) {
-    localStorage.setItem("selectedProduct", productId);
-    window.location.href = "product.html";
+function showTrialExpired(){
+
+document.body.innerHTML = `
+
+<div class="trial-screen">
+
+<div class="trial-box">
+
+<h1>TaDie4ENT</h1>
+
+<h2>Your 7-Day Trial Has Ended</h2>
+
+<p>
+
+Thank you for trying this custom business app.
+
+</p>
+
+<p>
+
+Ready to own your own custom app?
+
+</p>
+
+<hr>
+
+<h2>
+
+Business App
+
+</h2>
+
+<h1>
+
+Starting at $750
+
+</h1>
+
+<h3>
+
+💳 Payment Plans Available
+
+</h3>
+
+<hr>
+
+<h2>
+
+Add-On Services
+
+</h2>
+
+<ul>
+
+<li>Additional Pages - Starting at $50</li>
+
+<li>New Features - Starting at $75</li>
+
+<li>Online Payments - Starting at $150</li>
+
+<li>Appointment Booking - Starting at $175</li>
+
+<li>Inventory Management - Starting at $250</li>
+
+<li>Maintenance & Updates - Custom Quote</li>
+
+</ul>
+
+<hr>
+
+<h2>
+
+Need an App For Your Business?
+
+</h2>
+
+<p>
+
+✔ Clothing Brands
+
+<br>
+
+✔ Tattoo Shops
+
+<br>
+
+✔ Lash Studios
+
+<br>
+
+✔ Restaurants
+
+<br>
+
+✔ Churches
+
+<br>
+
+✔ Small Businesses
+
+</p>
+
+<div class="trial-buttons">
+
+<a
+
+class="big-red-button"
+
+href="sms:${STORE_PHONE}?body=Hi%20TaDie4ENT!%20I'm%20interested%20in%20purchasing%20a%20custom%20business%20app."
+
+>
+
+📱 Text Me
+
+</a>
+
+<a
+
+class="big-green-button"
+
+href="mailto:YOUR_EMAIL_HERE"
+
+>
+
+📧 Email Me
+
+</a>
+
+</div>
+
+<p style="margin-top:40px;">
+
+Designed by
+
+<strong>
+
+TaDie4ENT
+
+</strong>
+
+</p>
+
+</div>
+
+</div>
+
+`;
+
 }
 
-// Place Order
+/*
+=========================================
+        START TRIAL CHECK
+=========================================
+*/
 
-function placeOrder() {
-    window.location.href = "order.html";
+checkTrial();
+
+/*
+=========================================
+        ADD TO CART
+=========================================
+*/
+
+function addToCart(){
+
+    const productId = localStorage.getItem("selectedProduct");
+
+    const product = getProduct(productId);
+
+    if(!product){
+
+        alert("Product not found.");
+
+        return;
+
+    }
+
+    const size = document.getElementById("size").value;
+
+    const color = document.getElementById("color").value.trim();
+
+    const quantity = parseInt(document.getElementById("quantity").value);
+
+    const price = calculatePrice(product,size);
+
+    const item = {
+
+        id:product.id,
+
+        name:product.name,
+
+        image:product.image,
+
+        size:size,
+
+        color:color,
+
+        quantity:quantity,
+
+        price:price,
+
+        total:price*quantity
+
+    };
+
+    cart.push(item);
+
+    saveCart();
+
+    alert(product.name + " has been added to your cart!");
+
 }
 
-// Green Box
+/*
+=========================================
+        REMOVE ITEM
+=========================================
+*/
 
-function openGreenProduct(productId) {
-    localStorage.setItem("selectedGreenProduct", productId);
-    window.location.href = "product.html";
+function removeFromCart(index){
+
+    cart.splice(index,1);
+
+    saveCart();
+
+    updateCart();
+
 }
 
-// Hats
+/*
+=========================================
+        EMPTY CART
+=========================================
+*/
 
-function openHat(productId) {
-    localStorage.setItem("selectedHat", productId);
-    window.location.href = "product.html";
+function clearCart(){
+
+    if(confirm("Remove all items from your cart?")){
+
+        cart=[];
+
+        saveCart();
+
+        updateCart();
+
+    }
+
 }
 
-// Scroll to Top
+/*
+=========================================
+        UPDATE CART
+=========================================
+*/
 
-function topPage() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+function updateCart(){
+
+    const cartContainer = document.getElementById("cartItems");
+
+    const itemCount = document.getElementById("itemCount");
+
+    const subtotal = document.getElementById("subtotal");
+
+    const grandTotal = document.getElementById("grandTotal");
+
+    const emptyCart = document.getElementById("emptyCart");
+
+    if(!cartContainer) return;
+
+    cartContainer.innerHTML="";
+
+    let total=0;
+
+    if(cart.length===0){
+
+        if(emptyCart){
+
+            emptyCart.style.display="block";
+
+        }
+
+        itemCount.innerHTML="0";
+
+        subtotal.innerHTML="$0.00";
+
+        grandTotal.innerHTML="$0.00";
+
+        return;
+
+    }
+
+    if(emptyCart){
+
+        emptyCart.style.display="none";
+
+    }
+
+    cart.forEach((item,index)=>{
+
+        total += item.total;
+
+        cartContainer.innerHTML += `
+
+        <div class="cart-item">
+
+            <img src="${item.image}" class="cart-image">
+
+            <div class="cart-details">
+
+                <h3>${item.name}</h3>
+
+                <p><strong>Size:</strong> ${item.size}</p>
+
+                <p><strong>Color:</strong> ${item.color}</p>
+
+                <p><strong>Quantity:</strong> ${item.quantity}</p>
+
+                <p><strong>Price:</strong> $${item.price}</p>
+
+                <h2>$${item.total}</h2>
+
+                <button
+                onclick="removeFromCart(${index})">
+
+                Remove
+
+                </button>
+
+            </div>
+
+        </div>
+
+        `;
+
     });
+
+    itemCount.innerHTML = cart.length;
+
+    subtotal.innerHTML = "$" + total.toFixed(2);
+
+    grandTotal.innerHTML = "$" + total.toFixed(2);
+
 }
+
+/*
+=========================================
+        CHANGE QUANTITY
+=========================================
+*/
+
+function increaseQuantity(index){
+
+    cart[index].quantity++;
+
+    cart[index].total =
+    cart[index].price *
+    cart[index].quantity;
+
+    saveCart();
+
+    updateCart();
+
+}
+
+function decreaseQuantity(index){
+
+    if(cart[index].quantity > 1){
+
+        cart[index].quantity--;
+
+        cart[index].total =
+        cart[index].price *
+        cart[index].quantity;
+
+        saveCart();
+
+        updateCart();
+
+    }
+
+}
+
+/*
+=========================================
+        CART BADGE
+=========================================
+*/
+
+function updateCartBadge(){
+
+    const badge =
+    document.getElementById("cartBadge");
+
+    if(!badge) return;
+
+    let totalItems = 0;
+
+    cart.forEach(item=>{
+
+        totalItems += item.quantity;
+
+    });
+
+    badge.innerHTML = totalItems;
+
+}
+
+/*
+=========================================
+        UPDATE TOTALS
+=========================================
+*/
+
+function calculateCartTotal(){
+
+    let total = 0;
+
+    cart.forEach(item=>{
+
+        total += item.total;
+
+    });
+
+    return total;
+
+}
+
+/*
+=========================================
+        REFRESH CART
+=========================================
+*/
+
+function refreshCart(){
+
+    updateCart();
+
+    updateCartBadge();
+
+}
+
+/*
+=========================================
+        LOAD PAGE
+=========================================
+*/
+
+window.onload = function(){
+
+    refreshCart();
+
+};
+
+/*
+=========================================
+        FAVORITES
+=========================================
+*/
+
+function toggleFavorite(productId){
+
+    const index = favorites.indexOf(productId);
+
+    if(index === -1){
+
+        favorites.push(productId);
+
+        alert("❤️ Added to Favorites");
+
+    }else{
+
+        favorites.splice(index,1);
+
+        alert("Removed from Favorites");
+
+    }
+
+    saveFavorites();
+
+    updateFavoriteIcons();
+
+}
+
+/*
+=========================================
+        FAVORITE ICONS
+=========================================
+*/
+
+function updateFavoriteIcons(){
+
+    document.querySelectorAll(".favorite-btn").forEach(button=>{
+
+        const id = button.dataset.id;
+
+        if(favorites.includes(id)){
+
+            button.innerHTML="❤️";
+
+        }else{
+
+            button.innerHTML="🤍";
+
+        }
+
+    });
+
+}
+
+/*
+=========================================
+        SEARCH PRODUCTS
+=========================================
+*/
+
+function searchProducts(){
+
+    const input = document
+    .getElementById("searchBox")
+    .value
+    .toLowerCase();
+
+    document
+    .querySelectorAll(".product-card")
+    .forEach(card=>{
+
+        const name = card.innerText.toLowerCase();
+
+        if(name.includes(input)){
+
+            card.style.display="block";
+
+        }else{
+
+            card.style.display="none";
+
+        }
+
+    });
+
+}
+
+/*
+=========================================
+        FILTER PRODUCTS
+=========================================
+*/
+
+function filterProducts(category){
+
+    document
+    .querySelectorAll(".product-card")
+    .forEach(card=>{
+
+        if(
+
+            category==="All"
+
+        ){
+
+            card.style.display="block";
+
+            return;
+
+        }
+
+        if(
+
+            card.dataset.category===category
+
+        ){
+
+            card.style.display="block";
+
+        }else{
+
+            card.style.display="none";
+
+        }
+
+    });
+
+}
+
+/*
+=========================================
+        BACK TO TOP
+=========================================
+*/
+
+function backToTop(){
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+}
+
+/*
+=========================================
+        PLACE ORDER
+=========================================
+*/
+
+function placeOrder(){
+
+    if(cart.length===0){
+
+        alert("Your cart is empty.");
+
+        return;
+
+    }
+
+    const order={
+
+        orderNumber:
+        "FS"+
+        Math.floor(100000+Math.random()*900000),
+
+        date:new Date().toLocaleDateString(),
+
+        firstName:
+        document.getElementById("firstName").value,
+
+        lastName:
+        document.getElementById("lastName").value,
+
+        phone:
+        document.getElementById("phone").value,
+
+        email:
+        document.getElementById("email").value,
+
+        delivery:
+        document.getElementById("deliveryMethod").value,
+
+        notes:
+        document.getElementById("notes").value,
+
+        items:cart,
+
+        total:calculateCartTotal()
+
+    };
+
+    localStorage.setItem(
+
+        "lastOrder",
+
+        JSON.stringify(order)
+
+    );
+
+    cart=[];
+
+    saveCart();
+
+    window.location.href="receipt.html";
+
+}
+
+/*
+=========================================
+        LOAD RECEIPT
+=========================================
+*/
+
+function loadReceipt(){
+
+    const order=
+    JSON.parse(
+
+    localStorage.getItem("lastOrder")
+
+    );
+
+    if(!order) return;
+
+    document.getElementById("orderNumber").innerHTML=
+    order.orderNumber;
+
+    document.getElementById("orderDate").innerHTML=
+    order.date;
+
+    document.getElementById("customerName").innerHTML=
+    order.firstName+" "+order.lastName;
+
+    document.getElementById("customerPhone").innerHTML=
+    order.phone;
+
+    document.getElementById("customerEmail").innerHTML=
+    order.email;
+
+    document.getElementById("receiptDelivery").innerHTML=
+    order.delivery;
+
+    document.getElementById("receiptTotal").innerHTML=
+    "$"+order.total.toFixed(2);
+
+    const items=
+    document.getElementById("receiptItems");
+
+    items.innerHTML="";
+
+    order.items.forEach(item=>{
+
+        items.innerHTML+=`
+
+        <div class="receipt-item">
+
+            <strong>${item.name}</strong><br>
+
+            Size: ${item.size}<br>
+
+            Color: ${item.color}<br>
+
+            Qty: ${item.quantity}<br>
+
+            Total: $${item.total}
+
+        </div>
+
+        <hr>
+
+        `;
+
+    });
+
+}
+
+/*
+=========================================
+        SEND ORDER BY TEXT
+=========================================
+*/
+
+function sendTextOrder(){
+
+    const order = JSON.parse(
+        localStorage.getItem("lastOrder")
+    );
+
+    if(!order){
+
+        alert("No order found.");
+
+        return;
+
+    }
+
+    let message =
+`🛍 FOREVER SOLID ORDER
+
+Order #: ${order.orderNumber}
+
+Customer:
+${order.firstName} ${order.lastName}
+
+Phone:
+${order.phone}
+
+Email:
+${order.email}
+
+Delivery:
+${order.delivery}
+
+--------------------------------
+`;
+
+    order.items.forEach(item=>{
+
+        message +=
+
+`${item.name}
+
+Size: ${item.size}
+
+Color: ${item.color}
+
+Qty: ${item.quantity}
+
+Total: $${item.total}
+
+------------------------------
+`;
+
+    });
+
+    message +=
+`
+Grand Total:
+$${order.total.toFixed(2)}
+
+Thank you!
+`;
+
+    window.location.href =
+`sms:${STORE_PHONE}?body=${encodeURIComponent(message)}`;
+
+}
+
+/*
+=========================================
+        PRINT RECEIPT
+=========================================
+*/
+
+function printReceipt(){
+
+    window.print();
+
+}
+
+/*
+=========================================
+        CONTACT TADIE4ENT
+=========================================
+*/
+
+function contactTaDie4ENT(){
+
+    window.location.href=
+`sms:${STORE_PHONE}?body=Hi TaDie4ENT! I'm interested in purchasing a custom business app.`;
+
+}
+
+/*
+=========================================
+        REQUEST QUOTE
+=========================================
+*/
+
+function requestQuote(){
+
+    alert(
+
+`Thank you for your interest!
+
+Business App
+Starting at $750
+
+✔ Payment Plans Available
+
+Text:
+903-262-9694
+
+Designed by TaDie4ENT`
+
+    );
+
+}
+
+/*
+=========================================
+        APP STARTUP
+=========================================
+*/
+
+document.addEventListener(
+
+"DOMContentLoaded",
+
+function(){
+
+    updateCartBadge();
+
+    updateFavoriteIcons();
+
+    checkTrial();
+
+}
+
+);
