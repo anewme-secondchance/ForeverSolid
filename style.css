@@ -387,18 +387,25 @@ text-shadow:
 
 .hero-quote{
 
-    font-size:22px;
+font-size:26px;
 
-    line-height:1.8;
+font-weight:600;
 
-    font-weight:600;
+line-height:1.8;
 
-    letter-spacing:1px;
+letter-spacing:2px;
 
-    margin-bottom:40px;
+text-transform:uppercase;
+
+text-align:center;
+
+max-width:700px;
+
+margin:20px auto 40px;
+
+color:white;
 
 }
-
 /*=========================================
             HERO BUTTONS
 =========================================*/
@@ -1296,7 +1303,23 @@ nav{
 .hero-left img,
 .hero-right img{
 
-    max-width:350px;
+width:100%;
+
+max-width:420px;
+
+height:600px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+border:3px solid #b30000;
+
+box-shadow:
+0 0 20px #b30000,
+0 0 40px rgba(255,0,0,.45);
+
+transition:.4s;
 
 }
 
@@ -2527,5 +2550,28 @@ width:100%;
 font-size:16px;
 
 }
+
+}
+
+.hero-logo{
+
+font-family:'Great Vibes', cursive;
+
+font-size:90px;
+
+font-weight:normal;
+
+color:#ffffff;
+
+text-align:center;
+
+margin-bottom:25px;
+
+line-height:1;
+
+text-shadow:
+0 0 8px #ff0000,
+0 0 15px #ff0000,
+0 0 30px #ff0000;
 
 }
