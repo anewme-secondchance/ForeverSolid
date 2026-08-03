@@ -767,6 +767,32 @@ margin:-40px auto 25px;
 object-fit:contain;
 
 }
+
+.hero-person{
+
+width:100%;
+
+max-width:430px;
+
+height:auto;
+
+object-fit:contain;
+
+background:transparent;
+
+border:none;
+
+box-shadow:none;
+
+display:block;
+
+}
+
+.hero-person:hover{
+
+transform:scale(1.02);
+
+}
 @keyframes logoGlow{
 
 from{
