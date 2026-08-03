@@ -774,9 +774,19 @@ box-shadow:
                 HERO QUOTE
 ==================================================*/
 
+/*==================================================
+                HERO QUOTE
+==================================================*/
+
 .hero-quote{
 
-max-width:850px;
+max-width:900px;
+
+margin:40px auto;
+
+padding:0 20px;
+
+text-align:center;
 
 font-size:30px;
 
@@ -784,14 +794,16 @@ font-weight:700;
 
 line-height:1.35;
 
+letter-spacing:1px;
+
 text-transform:uppercase;
 
-margin-bottom:40px;
+color:#ffffff;
 
-color:#fff;
+text-shadow:
+0 0 3px rgba(255,255,255,.15);
 
 }
-
 
 /*==================================================
                 HERO BUTTONS
@@ -803,9 +815,11 @@ display:flex;
 
 flex-direction:column;
 
+align-items:center;
+
 gap:20px;
 
-align-items:center;
+margin-top:15px;
 
 width:100%;
 
@@ -816,7 +830,7 @@ width:100%;
 
 width:100%;
 
-max-width:340px;
+max-width:360px;
 
 }
 
@@ -1554,15 +1568,70 @@ max-width:320px;
 
 }
 
-/*=========================================
-            PHONES
-=========================================*/
 
-@media screen and (max-width:600px){
+/*==================================================
+                MOBILE
+==================================================*/
+
+@media screen and (max-width:768px){
 
 .hero{
 
-padding:20px 15px 50px;
+padding:25px 15px 40px;
+
+}
+
+.hero-models{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+grid-template-areas:
+
+"left right"
+
+"logo logo";
+
+align-items:end;
+
+justify-items:center;
+
+gap:15px;
+
+max-width:100%;
+
+margin:0 auto;
+
+}
+
+.hero-left{
+
+grid-area:left;
+
+}
+
+.hero-right{
+
+grid-area:right;
+
+}
+
+.hero-logo-img{
+
+grid-area:logo;
+
+max-width:320px;
+
+width:90%;
+
+margin:20px auto;
+
+justify-self:center;
+
+filter:
+drop-shadow(0 0 3px #ff0000)
+drop-shadow(0 0 8px #ff0000);
 
 }
 
@@ -1573,95 +1642,42 @@ width:100%;
 
 max-width:180px;
 
-height:380px;
+height:340px;
 
-object-fit:contain;
+object-fit:cover;
 
-display:block;
-
-background:transparent;
-
-border:none;
-
-box-shadow:none;
-
-}
-        
-.hero-left img,
-.hero-right img{
-
-height:650px;
-width:auto;
-
-display:block;
-
-object-fit:contain;
-
-background:transparent;
-
-border:none;
-box-shadow:none;
-
-}
-
-.hero-left img{
-
-margin-right:-25px;
-
-}
-
-.hero-right img{
-
-margin-left:-25px;
-
-}
-
-height:auto;
-
-object-fit:contain;
-
-}
-
-.hero-logo-img{
-
-max-width:320px;
-
-margin:-180px auto 20px;
-
-filter:
-drop-shadow(0 0 4px #ff0000)
-drop-shadow(0 0 8px #ff0000);
+object-position:center top;
 
 }
 
 .hero-quote{
 
-font-size:20px;
+font-size:18px;
 
-line-height:1.3;
+line-height:1.35;
 
-max-width:340px;
+padding:0 15px;
 
-margin:0 auto 30px;
-
-padding:0;
+margin:25px auto;
 
 }
 
 .hero-buttons{
 
-gap:18px;
+width:100%;
+
+padding:0 15px;
+
+gap:15px;
 
 }
 
 .hero-buttons .big-red-button,
 .hero-buttons .big-green-button{
 
-max-width:330px;
+max-width:340px;
 
-font-size:18px;
-
-padding:18px 20px;
+width:100%;
 
 }
 
