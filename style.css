@@ -623,15 +623,15 @@ color:#ff3b3b;
 /*==================================================
                     HOME HERO
 ==================================================*/
-/*=========================================
-            HERO SECTION
-=========================================*/
+/*==================================================
+                HERO SECTION
+==================================================*/
 
 .hero{
 
 width:100%;
 
-padding:30px 20px 60px;
+padding:40px 20px 60px;
 
 display:flex;
 
@@ -641,11 +641,14 @@ align-items:center;
 
 text-align:center;
 
+overflow:hidden;
+
 }
 
-/*=========================================
-            MODELS
-=========================================*/
+
+/*==================================================
+                HERO MODELS
+==================================================*/
 
 .hero-models{
 
@@ -655,18 +658,20 @@ justify-content:center;
 
 align-items:flex-end;
 
-gap:0;
+gap:25px;
 
 width:100%;
 
-max-width:900px;
+max-width:950px;
 
-margin-bottom:-80px;
+margin:0 auto -40px;
 
 }
 
 .hero-left,
 .hero-right{
+
+flex:1;
 
 display:flex;
 
@@ -676,40 +681,22 @@ align-items:flex-end;
 
 }
 
-.hero-left{
-
-z-index:1;
-
-}
-
-.hero-right{
-
-margin-left:-50px;
-
-z-index:2;
-
-}
-
 .hero-left img,
 .hero-right img{
 
-width:100%;
+width:320px;
 
-max-width:420px;
-
-height:auto;
+height:650px;
 
 object-fit:contain;
 
+display:block;
+
+background:transparent;
+
 border:none;
 
-border-radius:0;
-
-background:none;
-
 box-shadow:none;
-
-filter:drop-shadow(0 0 30px rgba(255,0,0,.55));
 
 transition:.35s;
 
@@ -720,123 +707,39 @@ transition:.35s;
 
 transform:scale(1.03);
 
-filter:drop-shadow(0 0 45px rgba(255,0,0,.85));
-
 }
 
-/*=========================================
-        FOREVER SOLID TITLE
-=========================================*/
 
-.hero-logo{
+/*==================================================
+                FOREVER SOLID LOGO
+==================================================*/
 
-font-family:'Great Vibes',cursive;
-
-font-size:110px;
-
-font-weight:400;
-
-color:#ff1a1a;
-
-line-height:1;
-
-margin:0 0 25px;
-
-text-shadow:
-0 0 8px #ff0000,
-0 0 18px #ff0000,
-0 0 35px #ff0000,
-0 0 60px #ff0000,
-0 0 90px rgba(255,0,0,.9);
-
-animation:logoGlow 3s ease-in-out infinite alternate;
-
-}
 .hero-logo-img{
 
 display:block;
 
 width:100%;
-max-width:780px;
+
+max-width:760px;
 
 height:auto;
 
+margin:-80px auto 25px;
+
 object-fit:contain;
-
-margin:-120px auto 20px;
-
-position:relative;
-
-z-index:20;
-
-pointer-events:none;
-
-}
-
-.hero-models{
-
-position:relative;
 
 z-index:10;
 
 }
 
-.hero-person{
 
-height:650px;
-
-width:auto;
-
-display:block;
-
-object-fit:contain;
-
-background:transparent;
-
-border:none;
-
-box-shadow:none;
-
-}
-
-.hero-person:hover{
-
-transform:scale(1.02);
-
-}
-@keyframes logoGlow{
-
-from{
-
-text-shadow:
-0 0 8px #ff0000,
-0 0 18px #ff0000,
-0 0 35px #ff0000,
-0 0 60px #ff0000;
-
-}
-
-to{
-
-text-shadow:
-0 0 12px #ff3333,
-0 0 25px #ff3333,
-0 0 50px #ff3333,
-0 0 90px #ff3333,
-0 0 120px rgba(255,0,0,.95);
-
-}
-
-}
-/*=========================================
-            HERO QUOTE
-=========================================*/
+/*==================================================
+                HERO QUOTE
+==================================================*/
 
 .hero-quote{
 
 max-width:850px;
-
-margin:0 auto 45px;
 
 font-size:30px;
 
@@ -844,22 +747,18 @@ font-weight:700;
 
 line-height:1.35;
 
-letter-spacing:1px;
-
-text-align:center;
-
 text-transform:uppercase;
+
+margin-bottom:40px;
 
 color:#fff;
 
-text-shadow:
-
-0 0 6px rgba(255,255,255,.15);
-
 }
-/*=========================================
-            BUTTONS
-=========================================*/
+
+
+/*==================================================
+                HERO BUTTONS
+==================================================*/
 
 .hero-buttons{
 
@@ -867,14 +766,22 @@ display:flex;
 
 flex-direction:column;
 
-gap:18px;
+gap:20px;
 
 align-items:center;
+
+width:100%;
 
 }
 
 .hero-buttons .big-red-button,
 .hero-buttons .big-green-button{
+
+width:100%;
+
+max-width:340px;
+
+}
 
 width:100%;
 
