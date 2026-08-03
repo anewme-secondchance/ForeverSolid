@@ -1542,24 +1542,27 @@ padding:20px 15px 50px;
 
 }
 
-.hero-models{
-
-display:flex;
-
-justify-content:center;
-
-align-items:flex-end;
-
-gap:10px;
+.hero-left img,
+.hero-right img{
 
 width:100%;
 
-max-width:950px;
+max-width:180px;
 
-margin:0 auto -85px;
+height:380px;
+
+object-fit:contain;
+
+display:block;
+
+background:transparent;
+
+border:none;
+
+box-shadow:none;
 
 }
-
+        
 .hero-left img,
 .hero-right img{
 
@@ -1595,11 +1598,15 @@ object-fit:contain;
 
 }
 
-.hero-logo{
+.hero-logo-img{
 
-font-size:72px;
+max-width:320px;
 
-margin-bottom:15px;
+margin:-180px auto 20px;
+
+filter:
+drop-shadow(0 0 4px #ff0000)
+drop-shadow(0 0 8px #ff0000);
 
 }
 
