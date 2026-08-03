@@ -679,16 +679,22 @@ justify-content:center;
 
 align-items:flex-end;
 
+overflow:hidden;
+
 }
 
 .hero-left img,
 .hero-right img{
 
-width:320px;
+width:100%;
+
+max-width:320px;
 
 height:650px;
 
-object-fit:contain;
+object-fit:cover;
+
+object-position:center top;
 
 display:block;
 
