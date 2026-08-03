@@ -620,16 +620,16 @@ color:#ff3b3b;
 
 }
 
+
 /*==================================================
                     HOME HERO
-==================================================*/
-/*==================================================
-                HERO SECTION
 ==================================================*/
 
 .hero{
 
 width:100%;
+
+background:#000;
 
 padding:40px 20px 60px;
 
@@ -639,12 +639,15 @@ flex-direction:column;
 
 align-items:center;
 
+justify-content:center;
+
 text-align:center;
 
 overflow:hidden;
 
-}
+position:relative;
 
+}
 
 /*==================================================
                 HERO MODELS
@@ -652,98 +655,119 @@ overflow:hidden;
 
 .hero-models{
 
-display:flex;
+display:grid;
 
-justify-content:center;
+grid-template-columns:1fr auto 1fr;
 
-align-items:flex-end;
-
-gap:25px;
+align-items:end;
 
 width:100%;
 
-max-width:950px;
+max-width:1200px;
 
-margin:0 auto -40px;
+margin:0 auto;
+
+position:relative;
+
+z-index:5;
 
 }
 
 .hero-left,
 .hero-right{
 
-flex:1;
-
 display:flex;
 
 justify-content:center;
 
 align-items:flex-end;
 
-overflow:visible;
+min-height:650px;
 
 }
+
 
 /*==================================================
                 FOREVER SOLID LOGO
 ==================================================*/
 
+/*==================================================
+            FOREVER SOLID LOGO
+==================================================*/
+
 .hero-logo-img{
+
+grid-column:2;
+
+grid-row:1;
 
 display:block;
 
 width:100%;
 
-max-width:760px;
+max-width:520px;
 
 height:auto;
 
-margin:-470px auto 40px;
+justify-self:center;
+
+align-self:center;
 
 position:relative;
 
 z-index:100;
 
+margin-top:120px;
+
 pointer-events:none;
 
 filter:
-drop-shadow(0 0 8px #ff0000)
-drop-shadow(0 0 20px #ff0000)
-drop-shadow(0 0 40px #ff0000)
-drop-shadow(0 0 70px #ff0000);
+drop-shadow(0 0 3px #ff0000)
+drop-shadow(0 0 8px #ff0000);
+
+transition:.35s;
 
 }
+
+/*==================================================
+                MODEL IMAGES
+==================================================*/
 
 .hero-left img,
 .hero-right img{
 
-width:320px;
+width:100%;
+
+max-width:340px;
 
 height:650px;
 
-object-fit:contain;
-
 display:block;
+
+object-fit:cover;
+
+object-position:center top;
 
 border-radius:20px;
 
 transition:.35s;
 
-filter:
-drop-shadow(0 0 10px #ff0000)
-drop-shadow(0 0 25px #ff0000)
-drop-shadow(0 0 50px rgba(255,0,0,.85));
+border:3px solid rgba(255,0,0,.75);
+
+box-shadow:
+0 0 12px rgba(255,0,0,.55),
+0 0 28px rgba(255,0,0,.45);
 
 }
 
 .hero-left img:hover,
 .hero-right img:hover{
 
-transform:translateY(-8px);
+transform:translateY(-6px);
 
-filter:
-drop-shadow(0 0 15px #ff0000)
-drop-shadow(0 0 35px #ff0000)
-drop-shadow(0 0 70px #ff0000);
+box-shadow:
+0 0 20px rgba(255,0,0,.85),
+0 0 40px rgba(255,0,0,.65);
 
 }
 /*==================================================
