@@ -697,11 +697,11 @@ max-width:760px;
 
 height:auto;
 
-margin:-120px auto 20px;
+margin:-500px auto 40px;
 
 position:relative;
 
-z-index:20;
+z-index:100;
 
 pointer-events:none;
 
