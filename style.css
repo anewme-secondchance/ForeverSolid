@@ -1337,43 +1337,61 @@ color:var(--green-light);
                 SIMPLE FOOTER
 ==================================================*/
 
+/*==================================================
+                SIMPLE FOOTER
+==================================================*/
+
 footer{
 
-text-align:center;
+width:100%;
 
-padding:30px 20px;
+background:#050505;
 
 border-top:2px solid var(--red);
 
-background:#050505;
+text-align:center;
+
+padding:40px 20px 90px;
+
+}
+
+.footer-logo{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+margin-bottom:20px;
 
 }
 
 .footer-logo img{
 
-width:80px;
+width:100%;
 
-margin:auto;
+max-width:450px;
 
-margin-bottom:15px;
+height:auto;
+
+object-fit:contain;
 
 }
 
 .footer-brand{
 
-font-size:26px;
-
-margin-bottom:8px;
+display:none;
 
 }
 
 .footer-tagline{
 
-font-size:15px;
+font-size:18px;
 
-color:#999;
+color:#d9d9d9;
 
-margin-bottom:10px;
+margin-bottom:15px;
 
 }
 
