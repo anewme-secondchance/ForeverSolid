@@ -644,20 +644,19 @@ color:#ff3b3b;
 
     grid-template-columns:1fr 1fr;
 
-    align-items:end;
-
     width:100%;
 
     max-width:1200px;
 
-    margin:0 auto;
+    height:720px;
 
-    background:#000;
+    margin:0 auto;
 
     overflow:hidden;
 
-}
+    background:#000;
 
+}
 .hero-half{
 
     position:relative;
@@ -668,13 +667,15 @@ color:#ff3b3b;
 
 .hero-half img{
 
-    display:block;
-
     width:100%;
 
-    height:auto;
+    height:720px;
 
     object-fit:cover;
+
+    object-position:center top;
+
+    display:block;
 
 }
 /*================ BLACK FADE ================*/
