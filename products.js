@@ -2,6 +2,8 @@
         FOREVER SOLID SHIRTS
 =========================================*/
 
+const products = [
+
 {
     id: "fs1",
     brand: "Forever Solid",
@@ -389,17 +391,25 @@
 {
     id: "gb6",
     brand: "Green Box Baby",
-    name: "Green Box Baby Forever Solid Quote Tee",
-    category: "Shirts",
-    image: "images/IMG_GREENBOX6.jpg",
-    description: "You Can't Change How Solid You Are Tee",
-    priceSmall: 35,
+    name: "Green Box Baby Shorts",
+    category: "Shorts",
+    image: "IMG_GREENBOX6.jpg",
+    description: "Green Box Baby Premium Shorts",
+    priceSmall: 30,
     priceLarge: 40,
     stock: 50,
     featured: false,
     newArrival: false,
     bestSeller: false
-},
+}
+
+];
+
+
+
+/*=========================================
+        PRODUCT HELPERS
+=========================================*/
 /*=========================================
         PRODUCT HELPERS
 =========================================*/
