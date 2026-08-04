@@ -690,20 +690,15 @@ overflow:hidden;
 
 .hero-left{
 
-margin-right:-70px;
-
-z-index:2;
+margin-right:0;
 
 }
 
 .hero-right{
 
-margin-left:-70px;
-
-z-index:1;
+margin-left:0;
 
 }
-
 /*========================
         PHOTOS
 ========================*/
@@ -716,7 +711,9 @@ height:100%;
 
 display:block;
 
-object-fit:cover;
+object-fit:contain;
+
+object-position:center top;
 
 transition:.35s;
 
@@ -738,34 +735,6 @@ object-position:left top;
     CENTER FADE
 ========================*/
 
-.hero-banner::before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-
-left:50%;
-
-transform:translateX(-50%);
-
-width:180px;
-
-height:100%;
-
-background:linear-gradient(
-90deg,
-transparent,
-rgba(0,0,0,.45),
-rgba(0,0,0,.45),
-transparent);
-
-z-index:5;
-
-pointer-events:none;
-
-}
 
 /*========================
     BOTTOM FADE
