@@ -22,68 +22,48 @@
 <body>
 
 <!-- ========================= -->
-<!-- TOP NAVIGATION -->
-<!-- ========================= -->
-
-<div class="top-nav">
-
-<button onclick="history.back()">
-
-⬅ Back
-
-</button>
-
-<button onclick="location.href='index.html'">
-
-🏠 Home
-
-</button>
-
-<button onclick="location.href='cart.html'">
-
-🛒 Cart
-
-<span id="cartBadge">
-
-0
-
-</span>
-
-</button>
-
-</div>
-
-<!-- ========================= -->
 <!-- HEADER -->
 <!-- ========================= -->
 
 <header>
 
-<div class="logo">
+<nav class="top-nav">
 
-<a href="index.html">
+<a href="receipt.html">
 
-<img src="images/IMG_FSLOGO.PNG"
-
-alt="Forever Solid Logo">
+Receipt
 
 </a>
 
-</div>
+<a href="cart.html">
 
-<h1 class="page-title">
+Cart
+
+</a>
+
+</nav>
+
+</header>
+
+<!-- ========================= -->
+<!-- PAGE HEADER -->
+<!-- ========================= -->
+
+<section class="shop-header">
+
+<h1>
 
 Shopping Cart
 
 </h1>
 
-<p class="page-subtitle">
+<p>
 
 Review your order before checkout.
 
 </p>
 
-</header>
+</section>
 
 <!-- ========================= -->
 <!-- CART -->
@@ -92,9 +72,7 @@ Review your order before checkout.
 <section class="cart-container">
 
 <div
-
 id="cartItems"
-
 class="cart-items">
 
 <!-- Cart Products Load Here -->
@@ -180,9 +158,7 @@ $0.00
 </div>
 
 <button
-
 class="order-button"
-
 onclick="location.href='checkout.html'">
 
 Proceed To Checkout
@@ -190,10 +166,8 @@ Proceed To Checkout
 </button>
 
 <button
-
 class="cart-button"
-
-onclick="location.href='pages/shop.html'">
+onclick="location.href='shop.html'">
 
 Continue Shopping
 
@@ -239,17 +213,17 @@ Start shopping and come back here to review your order.
 
 <a
 
-href="pages/shop.html"
+href="shop.html"
 
 class="big-red-button">
 
-👕 Shop Forever Solid
+🔥 Shop Forever Solid
 
 </a>
 
 <a
 
-href="pages/greenbox.html"
+href="greenbox.html"
 
 class="big-green-button">
 
@@ -291,7 +265,7 @@ Forever Solid Hoodie
 
 <p>
 
-S-XL $55
+S–XL $55
 
 <br>
 
@@ -301,7 +275,7 @@ S-XL $55
 
 <a
 
-href="pages/product.html?id=fs20"
+href="product.html?id=fs20"
 
 class="buy-btn">
 
@@ -333,7 +307,7 @@ $30
 
 <a
 
-href="pages/product.html?id=hat1"
+href="product.html?id=hat1"
 
 class="buy-btn">
 
@@ -359,7 +333,7 @@ Green Box Baby Tee
 
 <p>
 
-S-XL $35
+S–XL $35
 
 <br>
 
@@ -369,7 +343,7 @@ S-XL $35
 
 <a
 
-href="pages/product.html?id=gb2"
+href="product.html?id=gb2"
 
 class="buy-btn">
 
@@ -437,7 +411,7 @@ Premium Quality
 
 <p>
 
-Built Different.
+Built Different. Stay Solid.
 
 </p>
 
@@ -451,113 +425,23 @@ Built Different.
 
 <footer>
 
-<div class="footer-logo">
+<img
 
-<img src="images/IMG_FSLOGO.PNG"
+src="images/IMG_FSREDLOGO.png"
 
-alt="Forever Solid Logo">
+alt="Forever Solid"
 
-</div>
+class="footer-logo">
 
-<div class="footer-links">
+<p class="footer-tagline">
 
-<div>
-
-<h3>
-
-Collections
-
-</h3>
-
-<a href="pages/shop.html">
-
-Forever Solid
-
-</a>
-
-<a href="pages/greenbox.html">
-
-Green Box Baby
-
-</a>
-
-</div>
-
-<div>
-
-<h3>
-
-Customer Care
-
-</h3>
-
-<a href="checkout.html">
-
-Checkout
-
-</a>
-
-<a href="receipt.html">
-
-Receipt
-
-</a>
-
-<a href="#">
-
-Shipping Information
-
-</a>
-
-</div>
-
-<div>
-
-<h3>
-
-Designed By
-
-</h3>
-
-<p>
-
-TaDie4ENT
+Built Different • Stay Solid
 
 </p>
-
-<p>
-
-Business Apps Starting at $750
-
-</p>
-
-<p>
-
-Payment Plans Available
-
-</p>
-
-<p>
-
-📱903-262-9694
-
-</p>
-
-</div>
-
-</div>
 
 <div class="copyright">
 
-© 2026 Forever Solid
-
-<br><br>
-
-Designed by <strong>TaDie4ENT</strong>
-
-<br>
-
-Custom Apps • Websites • Business Solutions
+© 2026 Forever Solid. All Rights Reserved.
 
 </div>
 
@@ -577,11 +461,11 @@ Custom Apps • Websites • Business Solutions
 
 </a>
 
-<a href="pages/shop.html">
+<a href="greenbox.html">
 
-👕
+💚
 
-<span>Shop</span>
+<span>Green Box</span>
 
 </a>
 
@@ -593,33 +477,45 @@ Custom Apps • Websites • Business Solutions
 
 </a>
 
-<a href="pages/greenbox.html">
+<a href="#top">
 
-💚
+⬆️
 
-<span>Green Box</span>
-
-</a>
-
-<a href="#">
-
-❤️
-
-<span>Favorites</span>
+<span>Top</span>
 
 </a>
 
 </nav>
 
+<!-- ========================= -->
+<!-- BACK TO TOP -->
+<!-- ========================= -->
+
+<button
+id="topButton"
+onclick="window.scrollTo({top:0,behavior:'smooth'})">
+
+↑
+
+</button>
+
+<!-- ========================= -->
+<!-- SCRIPTS -->
+<!-- ========================= -->
+
 <script src="products.js"></script>
+
+<script src="trial.js"></script>
 
 <script src="script.js"></script>
 
 <script>
 
-loadCart();
+updateCart();
 
 updateCartBadge();
+
+updateFavoriteIcons();
 
 </script>
 
