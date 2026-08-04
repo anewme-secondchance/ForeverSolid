@@ -309,6 +309,11 @@ function addToCart(){
 
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+const price = Number(document.getElementById("productPrice").innerHTML);
+
+const quantity = Number(document.getElementById("quantity").value);
+
+
 const item = {
 
 id: product.id,
@@ -317,13 +322,15 @@ name: product.name,
 
 image: product.image,
 
-price: document.getElementById("productPrice").innerHTML,
+price: price,
+
+total: price * quantity,
 
 size: document.getElementById("size").value,
 
 color: document.getElementById("color").value,
 
-quantity: document.getElementById("quantity").value,
+quantity: quantity,
 
 delivery: document.querySelector('input[name="delivery"]:checked').value,
 
