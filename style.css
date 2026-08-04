@@ -387,13 +387,15 @@ display:flex;
 
 align-items:center;
 
-justify-content:space-between;
-
 padding:18px 5%;
 
 }
 
+header nav{
 
+width:100%;
+
+}
 /*==================================================
                     LOGO
 ==================================================*/
