@@ -21,6 +21,12 @@
 
 <body>
 
+<!-- ========================= -->
+<!-- HEADER -->
+<!-- ========================= -->
+
+<header>
+
 <div class="top-nav">
 
 <button onclick="history.back()">
@@ -29,51 +35,55 @@
 
 </button>
 
-<button onclick="location.href='index.html'">
+<a href="receipt.html">
 
-🏠 Home
+Receipt
 
-</button>
+</a>
 
-<button onclick="location.href='cart.html'">
+<a href="cart.html">
 
 🛒 Cart
 
-<span id="cartBadge">0</span>
+<span id="cartBadge">
 
-</button>
+0
 
-</div>
-
-<header>
-
-<div class="logo">
-
-<a href="index.html">
-
-<img src="images/IMG_FSLOGO.PNG" alt="Forever Solid Logo">
+</span>
 
 </a>
 
 </div>
 
-<h1 class="page-title">
+</header>
+
+<!-- ========================= -->
+<!-- PAGE HEADER -->
+<!-- ========================= -->
+
+<section class="shop-header">
+
+<h1>
 
 Privacy Policy
 
 </h1>
 
-<p class="page-subtitle">
+<p>
 
 Your privacy matters to us.
 
 </p>
 
-</header>
+</section>
+
+<!-- ========================= -->
+<!-- PRIVACY POLICY -->
+<!-- ========================= -->
 
 <section class="policy-container">
 
-<h2>
+ <h2>
 
 Information We Collect
 
@@ -97,7 +107,7 @@ We use your information only to process orders, communicate with you about your 
 
 </p>
 
- <h2>
+<h2>
 
 Information Security
 
@@ -171,117 +181,26 @@ Phone: (903) 262-9694
 
 </section>
 
-  <!-- ========================= -->
+ <!-- ========================= -->
 <!-- FOOTER -->
 <!-- ========================= -->
 
 <footer>
 
-<div class="footer-logo">
+<img
+src="images/IMG_FSREDLOGO.png"
+alt="Forever Solid"
+class="footer-logo">
 
-<img src="images/IMG_FSLOGO.PNG" alt="Forever Solid Logo">
+<p class="footer-tagline">
 
-</div>
-
-<div class="footer-links">
-
-<div>
-
-<h3>
-
-Shop
-
-</h3>
-
-<a href="pages/shop.html">
-
-Forever Solid
-
-</a>
-
-<a href="pages/greenbox.html">
-
-Green Box Baby
-
-</a>
-
-</div>
-
-<div>
-
-<h3>
-
-Customer Care
-
-</h3>
-
-<a href="shipping.html">
-
-Shipping Policy
-
-</a>
-
-<a href="returns.html">
-
-Returns & Exchanges
-
-</a>
-
-<a href="terms.html">
-
-Terms & Conditions
-
-</a>
-
-</div>
-
-<div>
-
-<h3>
-
-Contact
-
-</h3>
-
-<p>
-
-Forever Solid
+Built Different • Stay Solid
 
 </p>
-
-<p>
-
-Tyler, Texas
-
-</p>
-
-<p>
-
-📱 (903) 262-9694
-
-</p>
-
-<p>
-
-Designed by <strong>TaDie4ENT</strong>
-
-</p>
-
-</div>
-
-</div>
 
 <div class="copyright">
 
-© 2026 Forever Solid
-
-<br><br>
-
-Designed by <strong>TaDie4ENT</strong>
-
-<br>
-
-Custom Apps • Websites • Business Solutions
+© 2026 Forever Solid. All Rights Reserved.
 
 </div>
 
@@ -301,23 +220,15 @@ Custom Apps • Websites • Business Solutions
 
 </a>
 
-<a href="pages/shop.html">
+<a href="shop.html">
 
-👕
+🔥
 
-<span>Shop</span>
-
-</a>
-
-<a href="cart.html">
-
-🛒
-
-<span>Cart</span>
+<span>Forever Solid</span>
 
 </a>
 
-<a href="pages/greenbox.html">
+<a href="greenbox.html">
 
 💚
 
@@ -325,23 +236,43 @@ Custom Apps • Websites • Business Solutions
 
 </a>
 
-<a href="contact.html">
+<a href="#top">
 
-📞
+⬆️
 
-<span>Contact</span>
+<span>Top</span>
 
 </a>
 
 </nav>
 
+<!-- ========================= -->
+<!-- BACK TO TOP -->
+<!-- ========================= -->
+
+<button
+id="topButton"
+onclick="window.scrollTo({top:0,behavior:'smooth'})">
+
+↑
+
+</button>
+
+<!-- ========================= -->
+<!-- SCRIPTS -->
+<!-- ========================= -->
+
 <script src="products.js"></script>
+
+<script src="trial.js"></script>
 
 <script src="script.js"></script>
 
 <script>
 
 updateCartBadge();
+
+updateFavoriteIcons();
 
 </script>
 
