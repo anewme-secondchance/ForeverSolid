@@ -7,23 +7,40 @@
     </url>
 
     <url>
-        <loc>https://YOUR-DOMAIN.com/pages/shop.html</loc>
+        <loc>https://YOUR-DOMAIN.com/shop.html</loc>
     </url>
 
     <url>
-        <loc>https://YOUR-DOMAIN.com/pages/greenbox.html</loc>
+        <loc>https://YOUR-DOMAIN.com/greenbox.html</loc>
     </url>
 
     <url>
-        <loc>https://YOUR-DOMAIN.com/pages/product.html</loc>
+        <loc>https://YOUR-DOMAIN.com/product.html</loc>
     </url>
 
     <url>
-        <loc>https://YOUR-DOMAIN.com/pages/order.html</loc>
+        <loc>https://YOUR-DOMAIN.com/cart.html</loc>
+    </url>
+
+        <url>
+        <loc>https://YOUR-DOMAIN.com/checkout.html</loc>
     </url>
 
     <url>
-        <loc>https://YOUR-DOMAIN.com/pages/payment.html</loc>
+        <loc>https://YOUR-DOMAIN.com/receipt.html</loc>
+    </url>
+
+    <url>
+        <loc>https://YOUR-DOMAIN.com/privacy.html</loc>
+    </url>
+
+    <url>
+        <loc>https://YOUR-DOMAIN.com/terms.html</loc>
+    </url>
+
+    <url>
+        <loc>https://YOUR-DOMAIN.com/404.html</loc>
     </url>
 
 </urlset>
+
