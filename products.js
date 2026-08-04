@@ -311,20 +311,13 @@
     newArrival: false,
     bestSeller: false
 },
-/*=========================================
-        GREEN BOX BABY PRODUCTS
-=========================================*/
-/*=========================================
-        GREEN BOX BABY PRODUCTS
-=========================================*/
-
 {
     id: "gb1",
     brand: "Green Box Baby",
-    name: "Green Box Baby Classic Tee",
+    name: "Green Box Baby Black Graphic Tee",
     category: "Shirts",
-    image: "IMG_GREENBOX1.jpg",
-    description: "Green Box Baby Premium T-Shirt",
+    image: "images/IMG_GREENBOX1.jpg",
+    description: "Green Box Baby Graphic Collection",
     priceSmall: 35,
     priceLarge: 40,
     stock: 50,
@@ -336,10 +329,10 @@
 {
     id: "gb2",
     brand: "Green Box Baby",
-    name: "Green Box Baby Signature Tee",
+    name: "Green Box Baby Classic Black Tee",
     category: "Shirts",
-    image: "IMG_GREENBOX2.jpg",
-    description: "Green Box Baby Signature Collection",
+    image: "images/IMG_GREENBOX2.jpg",
+    description: "Green Box Baby Classic Collection",
     priceSmall: 35,
     priceLarge: 40,
     stock: 50,
@@ -351,10 +344,10 @@
 {
     id: "gb3",
     brand: "Green Box Baby",
-    name: "Green Box Baby Graphic Tee",
+    name: "Green Box Baby Green Logo Tee",
     category: "Shirts",
-    image: "IMG_GREENBOX3.jpg",
-    description: "Green Box Baby Graphic Collection",
+    image: "images/IMG_GREENBOX3.jpg",
+    description: "Green Box Baby Signature Tee",
     priceSmall: 35,
     priceLarge: 40,
     stock: 50,
@@ -366,10 +359,10 @@
 {
     id: "gb4",
     brand: "Green Box Baby",
-    name: "Green Box Baby Premium Tee",
+    name: "Green Box Baby Blue Collection Tee",
     category: "Shirts",
-    image: "IMG_GREENBOX4.jpg",
-    description: "Green Box Baby Premium Collection",
+    image: "images/IMG_GREENBOX4.jpg",
+    description: "Green Box Baby Premium Graphic Tee",
     priceSmall: 35,
     priceLarge: 40,
     stock: 50,
@@ -381,12 +374,12 @@
 {
     id: "gb5",
     brand: "Green Box Baby",
-    name: "Green Box Baby Hoodie",
-    category: "Hoodies",
-    image: "IMG_GREENBOX5.jpg",
-    description: "Green Box Baby Premium Hoodie",
-    priceSmall: 55,
-    priceLarge: 60,
+    name: "Green Box Baby Story Tee",
+    category: "Shirts",
+    image: "images/IMG_GREENBOX5.jpg",
+    description: "Green Box Baby Story Collection",
+    priceSmall: 35,
+    priceLarge: 40,
     stock: 50,
     featured: false,
     newArrival: false,
@@ -396,18 +389,17 @@
 {
     id: "gb6",
     brand: "Green Box Baby",
-    name: "Green Box Baby Shorts",
-    category: "Shorts",
-    image: "IMG_GREENBOX6.jpg",
-    description: "Green Box Baby Premium Shorts",
-    priceSmall: 30,
+    name: "Green Box Baby Forever Solid Quote Tee",
+    category: "Shirts",
+    image: "images/IMG_GREENBOX6.jpg",
+    description: "You Can't Change How Solid You Are Tee",
+    priceSmall: 35,
     priceLarge: 40,
     stock: 50,
     featured: false,
     newArrival: false,
     bestSeller: false
 },
-
 /*=========================================
         PRODUCT HELPERS
 =========================================*/
