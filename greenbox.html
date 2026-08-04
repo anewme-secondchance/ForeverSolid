@@ -5,83 +5,77 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Green Box Baby Collection</title>
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800&display=swap"
-rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet"
-href="../style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<!-- ================= TOP NAV ================= -->
-
-<div class="top-nav">
-
-<button onclick="history.back()">
-
-⬅ Back
-
-</button>
-
-<button onclick="window.location='../index.html'">
-
-🏠 Home
-
-</button>
-
-<button onclick="window.location='../cart.html'">
-
-🛒 Cart
-
-<span id="cartBadge">0</span>
-
-</button>
-
-</div>
-
-<!-- ================= HEADER ================= -->
+<!-- ========================= -->
+<!-- HEADER -->
+<!-- ========================= -->
 
 <header>
 
+<nav class="top-nav">
+
+<a href="receipt.html">
+
+Receipt
+
+</a>
+
+<a href="cart.html">
+
+Cart
+
+</a>
+
+</nav>
+
+</header>
+
+<!-- ========================= -->
+<!-- PAGE HEADER -->
+<!-- ========================= -->
+
+<section class="shop-header">
+
 <img
 
-src="../images/IMG_GREENBOX.PNG"
+src="images/IMG_GREENBOX.PNG"
 
-class="logo"
+class="hero-logo-img"
 
 alt="Green Box Baby Logo">
 
-<h1 class="page-title">
+<h1>
 
 Green Box Baby
 
 </h1>
 
-<p class="page-subtitle">
+<p>
 
-Premium Streetwear
-
+Premium Streetwear.
 Built Different.
 
 </p>
 
-</header>
+</section>
 
-<!-- ================= SEARCH ================= -->
+<!-- ========================= -->
+<!-- SEARCH ========================= -->
 
 <section class="search-section">
 
@@ -97,7 +91,9 @@ onkeyup="searchProducts()">
 
 </section>
 
-<!-- ================= FILTERS ================= -->
+<!-- ========================= -->
+<!-- FILTERS -->
+<!-- ========================= -->
 
 <section class="filter-section">
 
@@ -139,6 +135,10 @@ Sets
 
 </section>
 
+<!-- ========================= -->
+<!-- PRODUCTS -->
+<!-- ========================= -->
+
 <section
 
 id="greenProducts"
@@ -147,7 +147,13 @@ class="product-grid">
 
 <!-- Products Load Here -->
 
-  <!-- ================= FEATURED ================= -->
+  <!-- Products Load Here -->
+
+</section>
+
+<!-- ========================= -->
+<!-- FEATURED -->
+<!-- ========================= -->
 
 <section class="featured-banner">
 
@@ -165,60 +171,97 @@ Premium Apparel • Built Different • Stand Out
 
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
 
 <footer>
 
-<div class="footer-logo">
+<img
 
-<img src="../images/IMG_GREENBOX.PNG"
-alt="Green Box Baby">
+src="images/IMG_GREENBOX.PNG"
 
-</div>
+alt="Green Box Baby"
 
-<div class="footer-links">
+class="footer-logo">
 
-<div>
+<p class="footer-tagline">
 
-<h3>Green Box Baby</h3>
+Built Different • Stay Solid
 
-<a href="../index.html">Home</a>
+</p>
 
-<a href="shop.html">Forever Solid</a>
+<div class="copyright">
 
-<a href="../cart.html">Shopping Cart</a>
-
-</div>
-
-<div>
-
-<h3>Customer Care</h3>
-
-<a href="../checkout.html">Checkout</a>
-
-<a href="../receipt.html">Receipt</a>
-
-</div>
-
-<div>
-
-<h3>Designed By</h3>
-
-<p>TaDie4ENT</p>
-
-<p>Custom Apps</p>
-
-<p>Business Solutions</p>
-
-</div>
+© 2026 Green Box Baby. All Rights Reserved.
 
 </div>
 
 </footer>
 
-<script src="../products.js"></script>
+<!-- ========================= -->
+<!-- MOBILE NAVIGATION -->
+<!-- ========================= -->
 
-<script src="../script.js"></script>
+<nav class="bottom-nav">
+
+<a href="index.html">
+
+🏠
+
+<span>Home</span>
+
+</a>
+
+<a href="shop.html">
+
+🔥
+
+<span>Forever Solid</span>
+
+</a>
+
+<a href="cart.html">
+
+🛒
+
+<span>Cart</span>
+
+</a>
+
+<a href="#top">
+
+⬆️
+
+<span>Top</span>
+
+</a>
+
+</nav>
+
+<!-- ========================= -->
+<!-- BACK TO TOP -->
+<!-- ========================= -->
+
+<button
+
+id="topButton"
+
+onclick="window.scrollTo({top:0,behavior:'smooth'})">
+
+↑
+
+</button>
+
+<!-- ========================= -->
+<!-- SCRIPTS -->
+<!-- ========================= -->
+
+<script src="products.js"></script>
+
+<script src="trial.js"></script>
+
+<script src="script.js"></script>
 
 <script>
 
@@ -226,8 +269,7 @@ alt="Green Box Baby">
         LOAD GREEN BOX PRODUCTS
 =========================================*/
 
-const container =
-document.getElementById("greenProducts");
+const container = document.getElementById("greenProducts");
 
 let html = "";
 
@@ -237,8 +279,7 @@ products
 
 html += `
 
-<div class="product-card"
-data-category="${product.category}">
+<div class="product-card" data-category="${product.category}">
 
 <button
 class="favorite-btn"
@@ -250,20 +291,12 @@ onclick="toggleFavorite('${product.id}')">
 </button>
 
 <img
-src="../${product.image}"
+src="${product.image}"
 alt="${product.name}">
 
-<h3>
+<h3>${product.name}</h3>
 
-${product.name}
-
-</h3>
-
-<p>
-
-${product.category}
-
-</p>
+<p>${product.category}</p>
 
 <p>
 
@@ -300,5 +333,3 @@ updateCartBadge();
 </body>
 
 </html>
-
-</section>
