@@ -305,56 +305,54 @@ checkTrial();
 /*=========================================
         ADD TO CART
 =========================================*/
-
 function addToCart(){
 
-    const productId = localStorage.getItem("selectedProduct");
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    const product = getProduct(productId);
+const item = {
 
-    if(!product){
+id: product.id,
 
-        alert("Product not found.");
+name: product.name,
 
-        return;
+image: product.image,
 
-    }
+price: document.getElementById("productPrice").innerHTML,
 
-    const size = document.getElementById("size").value;
+size: document.getElementById("size").value,
 
-    const color = document.getElementById("color").value.trim();
+color: document.getElementById("color").value,
 
-    const quantity = parseInt(document.getElementById("quantity").value);
+quantity: document.getElementById("quantity").value,
 
-    const price = calculatePrice(product, size);
+delivery: document.querySelector('input[name="delivery"]:checked').value,
 
-    const item = {
+address: document.getElementById("address").value,
 
-        id: product.id,
+city: document.getElementById("city").value,
 
-        name: product.name,
+state: document.getElementById("state").value,
 
-        image: product.image,
+zip: document.getElementById("zip").value,
 
-        size: size,
+notes: document.getElementById("notes").value
 
-        color: color,
+};
 
-        quantity: quantity,
 
-        price: price,
+cart.push(item);
 
-        total: price * quantity
 
-    };
+localStorage.setItem(
+"cart",
+JSON.stringify(cart)
+);
 
-    cart.push(item);
 
-    saveCart();
+alert("Added to Cart!");
 
-    updateCartBadge();
 
-    alert(product.name + " added to your cart!");
+window.location.href = "cart.html";
 
 }
 
