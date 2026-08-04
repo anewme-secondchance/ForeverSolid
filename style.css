@@ -650,15 +650,13 @@ overflow:hidden;
 
 display:flex;
 
-align-items:flex-start;
-
-justify-content:center;
-
 width:100%;
 
 max-width:1200px;
 
 margin:0 auto;
+
+overflow:hidden;
 
 background:#000;
 
@@ -948,21 +946,19 @@ min-height:620px;
 
 .hero-half{
 
-display:flex;
+flex:1;
 
-align-items:flex-start;
-
-justify-content:center;
+overflow:hidden;
 
 }
 
 .hero-half img{
 
+display:block;
+
 width:100%;
 
 height:auto;
-
-object-fit:contain;
 
 }
 
