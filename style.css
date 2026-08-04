@@ -1570,7 +1570,7 @@ max-width:320px;
 
 .hero{
 
-padding:25px 15px 40px;
+padding:10px 15px 30px;
 
 }
 
@@ -1581,20 +1581,18 @@ display:grid;
 grid-template-columns:1fr 1fr;
 
 grid-template-areas:
-
 "left right"
-
 "logo logo";
 
 align-items:end;
 
 justify-items:center;
 
-gap:15px;
+gap:10px;
 
 max-width:100%;
 
-margin:0 auto;
+margin:-15px auto 0;
 
 }
 
@@ -1614,11 +1612,11 @@ grid-area:right;
 
 grid-area:logo;
 
-max-width:320px;
+max-width:340px;
 
-width:90%;
+width:95%;
 
-margin:20px auto;
+margin:-10px auto 10px;
 
 justify-self:center;
 
