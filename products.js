@@ -1,15 +1,19 @@
 /*=========================================
-        FOREVER SOLID SHIRTS
+        FOREVER SOLID PRODUCTS
 =========================================*/
 
 const products = [
+
+/*=========================================
+        FOREVER SOLID SHIRTS
+=========================================*/
 
 {
     id: "fs1",
     brand: "Forever Solid",
     name: "Butler College Tee",
     category: "Shirts",
-    image: "IMG_FS3.png",
+    image: "IMG_FS3.png"
     description: "Forever Solid College Collection Tee",
     priceSmall: 35,
     priceLarge: 40,
@@ -135,6 +139,8 @@ const products = [
     newArrival: false,
     bestSeller: false
 },
+
+
 
 /*=========================================
         FOREVER SOLID HOODIES
@@ -318,7 +324,7 @@ const products = [
     brand: "Green Box Baby",
     name: "Green Box Baby Black Graphic Tee",
     category: "Shirts",
-    image: "images/IMG_GREENBOX1.jpg",
+  image: "IMG_GREENBOX1.jpg"
     description: "Green Box Baby Graphic Collection",
     priceSmall: 35,
     priceLarge: 40,
@@ -333,7 +339,7 @@ const products = [
     brand: "Green Box Baby",
     name: "Green Box Baby Classic Black Tee",
     category: "Shirts",
-    image: "images/IMG_GREENBOX2.jpg",
+    image "IMG_GREENBOX2.jpg",
     description: "Green Box Baby Classic Collection",
     priceSmall: 35,
     priceLarge: 40,
@@ -348,7 +354,7 @@ const products = [
     brand: "Green Box Baby",
     name: "Green Box Baby Green Logo Tee",
     category: "Shirts",
-    image: "images/IMG_GREENBOX3.jpg",
+    image: "IMG_GREENBOX3.jpg",
     description: "Green Box Baby Signature Tee",
     priceSmall: 35,
     priceLarge: 40,
@@ -363,7 +369,7 @@ const products = [
     brand: "Green Box Baby",
     name: "Green Box Baby Blue Collection Tee",
     category: "Shirts",
-    image: "images/IMG_GREENBOX4.jpg",
+    image: "IMG_GREENBOX4.jpg",
     description: "Green Box Baby Premium Graphic Tee",
     priceSmall: 35,
     priceLarge: 40,
@@ -378,7 +384,7 @@ const products = [
     brand: "Green Box Baby",
     name: "Green Box Baby Story Tee",
     category: "Shirts",
-    image: "images/IMG_GREENBOX5.jpg",
+    image: "IMG_GREENBOX5.jpg",
     description: "Green Box Baby Story Collection",
     priceSmall: 35,
     priceLarge: 40,
