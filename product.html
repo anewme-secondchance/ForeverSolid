@@ -294,6 +294,64 @@ onclick="buyNow()">
 
 </section>
 
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer>
+
+<img
+src="images/IMG_FSREDLOGO.png"
+alt="Forever Solid"
+class="footer-logo">
+
+<p class="footer-tagline">
+
+Built Different • Stay Solid
+
+</p>
+
+<div class="copyright">
+
+© 2026 Forever Solid. All Rights Reserved.
+
+</div>
+
+</footer>
+
+ <!-- ========================= -->
+<!-- MOBILE NAVIGATION -->
+<!-- ========================= -->
+
+<nav class="bottom-nav">
+
+<a href="index.html">
+
+🏠
+
+<span>Home</span>
+
+</a>
+
+
+<a href="#top">
+
+⬆️
+
+<span>Top</span>
+
+</a>
+
+</nav>
+
+<button
+id="topButton"
+onclick="window.scrollTo({top:0,behavior:'smooth'})">
+
+↑
+
+</button>
+ 
  <!-- ========================= -->
 <!-- SCRIPTS -->
 <!-- ========================= -->
@@ -316,19 +374,25 @@ const productId = params.get("id");
 
 const product = products.find(p => p.id === productId);
 
-if(product){
+if(!product){
 
-document.getElementById("productImage").src =
-product.image;
+    location.href = "shop.html";
 
-document.getElementById("productName").innerHTML =
-product.name;
+}
 
-document.getElementById("productDescription").innerHTML =
-product.description || "Premium Streetwear";
+else{
 
-document.getElementById("productPrice").innerHTML =
-product.priceSmall;
+    document.getElementById("productImage").src =
+    product.image;
+
+    document.getElementById("productName").innerHTML =
+    product.name;
+
+    document.getElementById("productDescription").innerHTML =
+    product.description || "Premium Streetwear";
+
+    document.getElementById("productPrice").innerHTML =
+    product.priceSmall;
 
 }
 
