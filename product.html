@@ -15,13 +15,17 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<!-- ================= TOP NAV ================= -->
+<!-- ========================= -->
+<!-- HEADER -->
+<!-- ========================= -->
+
+<header>
 
 <div class="top-nav">
 
@@ -31,31 +35,59 @@
 
 </button>
 
-<button onclick="location.href='../index.html'">
+<a href="receipt.html">
 
-🏠 Home
+Receipt
 
-</button>
+</a>
 
-<button onclick="location.href='../cart.html'">
+<a href="cart.html">
 
 🛒 Cart
 
-<span id="cartBadge">0</span>
+<span id="cartBadge">
 
-</button>
+0
+
+</span>
+
+</a>
 
 </div>
 
-<header>
+</header>
 
-<img src="../images/IMG_FSLOGO.PNG"
+<!-- ========================= -->
+<!-- PAGE HEADER -->
+<!-- ========================= -->
 
-class="logo"
+<section class="shop-header">
+
+<img
+
+src="images/IMG_FSREDLOGO.png"
+
+class="hero-logo-img"
 
 alt="Forever Solid">
 
-</header>
+<h1>
+
+Product Details
+
+</h1>
+
+<p>
+
+Customize your order before adding it to your cart.
+
+</p>
+
+</section>
+
+<!-- ========================= -->
+<!-- PRODUCT PAGE -->
+<!-- ========================= -->
 
 <section class="product-page">
 
@@ -73,7 +105,7 @@ alt="Product">
 
 <div class="product-details">
 
-<h1 id="productName">
+ <h1 id="productName">
 
 Loading...
 
@@ -126,11 +158,8 @@ Color
 </label>
 
 <input
-
 type="text"
-
 id="color"
-
 placeholder="Type Desired Color">
 
 <label>
@@ -140,16 +169,12 @@ Quantity
 </label>
 
 <input
-
 type="number"
-
 id="quantity"
-
 value="1"
-
 min="1">
 
- <label>
+<label>
 
 Pickup or Shipping
 
@@ -239,11 +264,8 @@ Special Instructions
 </label>
 
 <textarea
-
 id="notes"
-
 rows="4"
-
 placeholder="Anything you'd like us to know?">
 
 </textarea>
@@ -251,9 +273,7 @@ placeholder="Anything you'd like us to know?">
 <div class="product-buttons">
 
 <button
-
 class="cart-button"
-
 onclick="addToCart()">
 
 🛒 Add To Cart
@@ -261,9 +281,7 @@ onclick="addToCart()">
 </button>
 
 <button
-
 class="order-button"
-
 onclick="buyNow()">
 
 ⚡ Buy Now
@@ -276,11 +294,15 @@ onclick="buyNow()">
 
 </section>
 
-<!-- ================= SCRIPTS ================= -->
+ <!-- ========================= -->
+<!-- SCRIPTS -->
+<!-- ========================= -->
 
-<script src="../products.js"></script>
+<script src="products.js"></script>
 
-<script src="../script.js"></script>
+<script src="trial.js"></script>
+
+<script src="script.js"></script>
 
 <script>
 
@@ -297,7 +319,7 @@ const product = products.find(p => p.id === productId);
 if(product){
 
 document.getElementById("productImage").src =
-"../" + product.image;
+product.image;
 
 document.getElementById("productName").innerHTML =
 product.name;
@@ -320,12 +342,12 @@ const size=this.value;
 
 if(size==="2XL" || size==="3XL" || size==="4XL"){
 
-document.getElementById("productPrice").innerHTML=
+document.getElementById("productPrice").innerHTML =
 product.priceLarge;
 
 }else{
 
-document.getElementById("productPrice").innerHTML=
+document.getElementById("productPrice").innerHTML =
 product.priceSmall;
 
 }
@@ -340,7 +362,7 @@ function toggleShipping(){
 
 const method=document.querySelector('input[name="delivery"]:checked').value;
 
-document.getElementById("shippingSection").style.display=
+document.getElementById("shippingSection").style.display =
 
 method==="Shipping" ? "block" : "none";
 
@@ -386,7 +408,7 @@ notes:document.getElementById("notes").value
 
 localStorage.setItem("cart",JSON.stringify(cart));
 
-location.href="../cart.html";
+location.href="cart.html";
 
 }
 
@@ -398,14 +420,16 @@ function buyNow(){
 
 addToCart();
 
-location.href="../checkout.html";
+location.href="checkout.html";
 
 }
 
 updateCartBadge();
 
+updateFavoriteIcons();
+
 </script>
 
 </body>
 
-</html>  
+</html>
