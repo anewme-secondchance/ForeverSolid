@@ -767,80 +767,6 @@ color:#ff3b3b;
 }
 
 /*==================================================
-                TABLET
-==================================================*/
-
-@media(max-width:900px){
-
-@media(max-width:900px){
-
-.hero-logo-img{
-
-    width:320px;
-
-    margin:-95px auto 20px;
-
-}
-
-.hero-quote{
-
-    font-size:24px;
-
-}
-
-}
-
-/*==================================================
-                PHONE
-==================================================*/
-
-@media(max-width:768px){
-
-.hero{
-
-    padding:10px 0 40px;
-
-}
-
-.hero-banner{
-
-    max-width:100%;
-
-}
-
-.hero-banner::after{
-
-    height:120px;
-
-}
-
-.hero-logo-img{
-
-    width:220px;
-
-    margin:-60px auto 15px;
-
-}
-
-.hero-quote{
-
-    font-size:18px;
-
-    padding:0 15px;
-
-    margin-bottom:25px;
-
-}
-
-.hero-buttons{
-
-    padding:0 15px;
-
-}
-
-}
-
-/*==================================================
                 PHONE
 ==================================================*/
 
@@ -854,12 +780,35 @@ padding:10px 0 35px;
 
 .hero-banner{
 
-min-height:520px;
+height:520px;
 
 width:100%;
 
+overflow:hidden;
+
 }
 
+.hero-half{
+
+position:relative;
+
+overflow:hidden;
+
+}   
+
+.hero-half img{
+
+width:100%;
+
+height:520px;
+
+object-fit:cover;
+
+object-position:center top;
+
+display:block;
+
+}        
 
 .hero-left{
 
