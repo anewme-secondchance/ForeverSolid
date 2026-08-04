@@ -648,25 +648,17 @@ overflow:hidden;
 
 .hero-banner{
 
-position:relative;
-
 display:flex;
 
-justify-content:center;
-
 align-items:flex-start;
+
+justify-content:center;
 
 width:100%;
 
 max-width:1200px;
 
-height:auto;
-
-min-height:720px;
-
 margin:0 auto;
-
-overflow:visible;
 
 background:#000;
 
@@ -676,22 +668,15 @@ background:#000;
       PHOTO HALVES
 ========================*/
 
-.hero-half{
+.hero-half img{
 
-position:relative;
+display:block;
 
-flex:1;
+width:100%;
 
-display:flex;
-
-justify-content:center;
-
-align-items:flex-start;
-
-overflow:visible;
+height:auto;
 
 }
-
 /* overlap the photos */
 
 .hero-left{
