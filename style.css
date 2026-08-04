@@ -676,7 +676,7 @@ width:100%;
 
 max-width:900px;
 
-height:900px;
+height:520px;
 
 margin:0 auto 0;
 
@@ -702,21 +702,19 @@ height:100%;
 
 display:block;
 
-object-fit:contain;
-
-object-position:center top;
+object-fit:cover;
 
 }
 
 .hero-left img{
 
-object-position:right center;
+object-position:left top;
 
 }
 
 .hero-right img{
 
-object-position:left center;
+object-position:right top;
 
 }
 
