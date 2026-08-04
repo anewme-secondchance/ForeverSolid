@@ -644,17 +644,23 @@ color:#ff3b3b;
 
     grid-template-columns:1fr 1fr;
 
+    align-items:end;
+
     width:100%;
 
     max-width:1200px;
 
     margin:0 auto;
 
+    background:#000;
+
     overflow:hidden;
 
 }
 
 .hero-half{
+
+    position:relative;
 
     overflow:hidden;
 
@@ -668,8 +674,9 @@ color:#ff3b3b;
 
     height:auto;
 
-}
+    object-fit:cover;
 
+}
 /*================ BLACK FADE ================*/
 
 .hero-banner::after{
@@ -819,51 +826,6 @@ color:#ff3b3b;
 .hero-buttons{
 
     padding:0 15px;
-
-}
-
-}
-/*==================================================
-        RESPONSIVE HERO
-==================================================*/
-
-@media screen and (max-width:991px){
-
-.hero-banner{
-
-min-height:620px;
-
-}
-
-.hero-half{
-
-flex:1;
-
-overflow:hidden;
-
-}
-
-.hero-half img{
-
-display:block;
-
-width:100%;
-
-height:auto;
-
-}
-
-.hero-logo-img{
-
-max-width:260px;
-
-margin:-90px auto 20px;
-
-}
-
-.hero-quote{
-
-font-size:24px;
 
 }
 
