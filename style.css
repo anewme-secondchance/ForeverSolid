@@ -629,6 +629,51 @@ color:#ff3b3b;
 
 }
 
+.top-nav{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+width:100%;
+
+}
+
+.top-nav a{
+
+color:#fff;
+
+font-size:22px;
+
+font-weight:300;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+text-decoration:none;
+
+text-shadow:
+0 0 3px #ff0000,
+0 0 8px #ff0000;
+
+transition:.3s;
+
+}
+
+.top-nav a:hover{
+
+color:#ff4d4d;
+
+text-shadow:
+0 0 6px #ff0000,
+0 0 12px #ff0000,
+0 0 20px #ff0000;
+
+}
+
 /*==================================================
                     HOME HERO
 ==================================================*/
