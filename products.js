@@ -392,30 +392,13 @@ const products = [
     featured: false,
     newArrival: false,
     bestSeller: false
-},
-
-{
-    id: "gb6",
-    brand: "Green Box Baby",
-    name: "Green Box Baby Shorts",
-    category: "Shorts",
-    image: "IMG_GREENBOX6.jpg",
-    description: "Green Box Baby Premium Shorts",
-    priceSmall: 30,
-    priceLarge: 40,
-    stock: 50,
-    featured: false,
-    newArrival: false,
-    bestSeller: false
 }
 
 ];
 
 
 
-/*=========================================
-        PRODUCT HELPERS
-=========================================*/
+
 /*=========================================
         PRODUCT HELPERS
 =========================================*/
