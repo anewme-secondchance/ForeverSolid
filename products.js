@@ -4,10 +4,6 @@
 
 const products = [
 
-/*=========================================
-        FOREVER SOLID PRODUCTS
-=========================================*/
-
 {
     id: "fs1",
     brand: "Forever Solid",
@@ -300,10 +296,8 @@ const products = [
     featured: false,
     newArrival: false,
     bestSeller: false
-}
-/*=========================================
-        GREEN BOX BABY PRODUCTS
-=========================================*/
+},
+
 
 /*=========================================
         GREEN BOX BABY PRODUCTS
