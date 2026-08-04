@@ -1566,8 +1566,6 @@ max-width:320px;
                 MOBILE
 ==================================================*/
 
-@media screen and (max-width:768px){
-
 .hero{
 
 padding:10px 15px 30px;
@@ -1581,7 +1579,9 @@ display:grid;
 grid-template-columns:1fr 1fr;
 
 grid-template-areas:
+
 "left right"
+
 "logo logo";
 
 align-items:end;
@@ -1592,7 +1592,7 @@ gap:10px;
 
 max-width:100%;
 
-margin:-15px auto 0;
+margin:-80px auto 0;
 
 }
 
@@ -1638,6 +1638,8 @@ height:340px;
 object-fit:cover;
 
 object-position:center top;
+
+margin-top:-40px;
 
 }
 
