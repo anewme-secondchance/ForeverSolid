@@ -1417,28 +1417,21 @@ padding:40px 20px 90px;
             FS LOGO
 =========================================*/
 
-.footer-fs{
+.footer-logo{
 
-font-family:'Great Vibes',cursive;
+display:block;
 
-font-size:100px;
+width:100%;
 
-font-weight:400;
+max-width:220px;
 
-color:#ff1a1a;
+height:auto;
 
-line-height:1;
+margin:0 auto 20px;
 
-margin-bottom:20px;
-
-text-shadow:
-0 0 8px #ff0000,
-0 0 18px #ff0000,
-0 0 35px #ff0000,
-0 0 60px #ff0000,
-0 0 90px rgba(255,0,0,.9);
-
-animation:logoGlow 3s ease-in-out infinite alternate;
+filter:
+drop-shadow(0 0 3px #ff0000)
+drop-shadow(0 0 8px #ff0000);
 
 }
 
