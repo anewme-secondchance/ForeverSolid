@@ -714,20 +714,18 @@ color:#ff3b3b;
 
     display:block;
 
-    width:320px;
+    width:420px;
 
-    max-width:85%;
+    max-width:95%;
 
-    margin:-90px auto 20px;
+    margin:-120px auto 20px;
 
     position:relative;
 
     z-index:20;
 
     filter:
-
     drop-shadow(0 0 5px red)
-
     drop-shadow(0 0 12px red);
 
 }
@@ -774,11 +772,13 @@ color:#ff3b3b;
 
 @media(max-width:900px){
 
+@media(max-width:900px){
+
 .hero-logo-img{
 
-    width:250px;
+    width:320px;
 
-    margin:-75px auto 20px;
+    margin:-95px auto 20px;
 
 }
 
