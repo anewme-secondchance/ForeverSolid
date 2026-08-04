@@ -896,9 +896,11 @@ margin-left:-20px;
 
 .hero-logo-img{
 
-max-width:240px;
+    width:380px;
 
-margin:-70px auto 20px;
+    max-width:95%;
+
+    margin:-120px auto 20px;
 
 }
 
