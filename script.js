@@ -52,13 +52,10 @@ localStorage.getItem(FAVORITES_KEY)
 
 function saveCart(){
 
-    localStorage.setItem(
-
-        CART_KEY,
-
-        JSON.stringify(cart)
-
-    );
+  localStorage.setItem(
+"fs_cart",
+JSON.stringify(cart)
+); 
 
 }
 
@@ -306,8 +303,8 @@ checkTrial();
         ADD TO CART
 =========================================*/
 function addToCart(){
-
-const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        
+const cart = JSON.parse(localStorage.getItem("fs_cart")) || [];
 
 const price = Number(document.getElementById("productPrice").innerHTML);
 
