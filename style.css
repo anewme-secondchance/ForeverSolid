@@ -657,14 +657,23 @@ color:#ff3b3b;
 ========================*/
 
 .hero-banner{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:0;
-    width:100%;
-    max-width:1100px;
-    margin:0 auto;
-    overflow:hidden;
-    background:#000;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:0;
+
+width:100%;
+
+max-width:1100px;
+
+margin:0 auto;
+
+overflow:hidden;
+
+background:#000;
+
 }
 
 .hero-half{
