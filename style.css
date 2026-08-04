@@ -950,6 +950,144 @@ max-width:320px;
 }
 
 /*==================================================
+        RESPONSIVE HERO
+==================================================*/
+
+@media screen and (max-width:991px){
+
+.hero-banner{
+
+min-height:620px;
+
+}
+
+.hero-half{
+
+display:flex;
+
+align-items:flex-start;
+
+justify-content:center;
+
+}
+
+.hero-half img{
+
+width:100%;
+
+height:auto;
+
+object-fit:contain;
+
+}
+
+.hero-logo-img{
+
+max-width:260px;
+
+margin:-90px auto 20px;
+
+}
+
+.hero-quote{
+
+font-size:24px;
+
+}
+
+}
+
+/*==================================================
+                PHONE
+==================================================*/
+
+@media screen and (max-width:768px){
+
+.hero{
+
+padding:10px 0 35px;
+
+}
+
+.hero-banner{
+
+min-height:520px;
+
+width:100%;
+
+}
+
+.hero-half{
+
+width:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:flex-start;
+
+}
+
+.hero-half img{
+
+width:100%;
+
+height:auto;
+
+object-fit:contain;
+
+}
+
+.hero-left{
+
+margin-right:-20px;
+
+}
+
+.hero-right{
+
+margin-left:-20px;
+
+}
+
+.hero-logo-img{
+
+max-width:240px;
+
+margin:-70px auto 20px;
+
+}
+
+.hero-quote{
+
+font-size:18px;
+
+line-height:1.35;
+
+padding:0 15px;
+
+}
+
+.hero-buttons{
+
+width:100%;
+
+padding:0 20px;
+
+}
+
+.hero-buttons .big-red-button,
+.hero-buttons .big-green-button{
+
+max-width:340px;
+
+width:100%;
+
+}
+
+}
+/*==================================================
                 SHOP PAGE
 ==================================================*/
 
@@ -1567,182 +1705,3 @@ color:#777;
 
 }
 
-/*==================================================
-            RESPONSIVE HERO
-==================================================*/
-
-@media screen and (max-width:991px){
-
-.hero{
-
-padding:15px 20px 40px;
-
-}
-
-.hero-banner{
-
-display:flex;
-
-justify-content:center;
-
-align-items:flex-end;
-
-width:100%;
-
-max-width:900px;
-
-height:520px;
-
-margin:0 auto 20px;
-
-overflow:hidden;
-
-}
-
-.hero-half{
-
-width:50%;
-
-height:100%;
-
-overflow:hidden;
-
-}
-
-.hero-half img{
-
-width:100%;
-
-height:100%;
-
-display:block;
-
-object-fit:cover;
-
-}
-
-.hero-left img{
-
-object-position:right center;
-
-}
-
-.hero-right img{
-
-object-position:left center;
-
-}
-
-.hero-logo-img{
-
-display:block;
-
-width:220px;
-
-margin:25px auto;
-
-}
-
-.hero-quote{
-
-font-size:22px;
-
-max-width:700px;
-
-padding:0 20px;
-
-}
-
-.hero-buttons .big-red-button,
-.hero-buttons .big-green-button{
-
-max-width:340px;
-
-}
-
-}
-
-/*==================================================
-                PHONE
-==================================================*/
-
-@media screen and (max-width:768px){
-
-.hero{
-
-padding:10px 10px 35px;
-
-}
-
-.hero-banner{
-
-height:360px;
-
-max-width:420px;
-
-}
-
-.hero-half{
-
-width:50%;
-
-}
-
-.hero-half img{
-
-object-fit:cover;
-
-}
-
-.hero-left img{
-
-object-position:right center;
-
-}
-
-.hero-right img{
-
-object-position:left center;
-
-}
-
-.hero-logo-img{
-
-width:170px;
-
-margin:20px auto;
-
-}
-
-.hero-quote{
-
-font-size:18px;
-
-padding:0 12px;
-
-margin:15px auto;
-
-}
-
-.hero-buttons{
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-gap:15px;
-
-}
-
-.hero-buttons .big-red-button,
-.hero-buttons .big-green-button{
-
-width:100%;
-
-max-width:320px;
-
-}
-
-}
