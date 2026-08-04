@@ -22,8 +22,10 @@
 <body>
 
 <!-- ========================= -->
-<!-- TOP NAVIGATION -->
+<!-- HEADER -->
 <!-- ========================= -->
+
+<header>
 
 <div class="top-nav">
 
@@ -33,51 +35,47 @@
 
 </button>
 
-<button onclick="location.href='index.html'">
+<a href="receipt.html">
 
-🏠 Home
+Receipt
 
-</button>
+</a>
 
-<button onclick="location.href='cart.html'">
+<a href="cart.html">
 
 🛒 Cart
 
-<span id="cartBadge">0</span>
+<span id="cartBadge">
 
-</button>
+0
 
-</div>
-
-<!-- ========================= -->
-<!-- HEADER -->
-<!-- ========================= -->
-
-<header>
-
-<div class="logo">
-
-<a href="index.html">
-
-<img src="images/IMG_FSLOGO.PNG" alt="Forever Solid Logo">
+</span>
 
 </a>
 
 </div>
 
-<h1 class="page-title">
+</header>
+
+<!-- ========================= -->
+<!-- PAGE HEADER -->
+<!-- ========================= -->
+
+<section class="shop-header">
+
+<h1>
 
 Terms & Conditions
 
 </h1>
 
-<p class="page-subtitle">
+<p>
 
 Please read these terms before using our website or placing an order.
 
 </p>
 
-</header>
+</section>
 
 <!-- ========================= -->
 <!-- TERMS -->
@@ -85,7 +83,7 @@ Please read these terms before using our website or placing an order.
 
 <section class="policy-container">
 
-<h2>
+  <h2>
 
 Acceptance of Terms
 
@@ -231,117 +229,26 @@ Designed by <strong>TaDie4ENT</strong>
 
 </section>
 
-<!-- ========================= -->
+  <!-- ========================= -->
 <!-- FOOTER -->
 <!-- ========================= -->
 
 <footer>
 
-<div class="footer-logo">
+<img
+src="images/IMG_FSREDLOGO.png"
+alt="Forever Solid"
+class="footer-logo">
 
-<img src="images/IMG_FSLOGO.PNG" alt="Forever Solid Logo">
+<p class="footer-tagline">
 
-</div>
-
-<div class="footer-links">
-
-<div>
-
-<h3>
-
-Collections
-
-</h3>
-
-<a href="pages/shop.html">
-
-Forever Solid
-
-</a>
-
-<a href="pages/greenbox.html">
-
-Green Box Baby
-
-</a>
-
-</div>
-
-<div>
-
-<h3>
-
-Policies
-
-</h3>
-
-<a href="privacy.html">
-
-Privacy Policy
-
-</a>
-
-<a href="shipping.html">
-
-Shipping Policy
-
-</a>
-
-<a href="returns.html">
-
-Returns Policy
-
-</a>
-
-</div>
-
-<div>
-
-<h3>
-
-Designed By
-
-</h3>
-
-<p>
-
-TaDie4ENT
+Built Different • Stay Solid
 
 </p>
-
-<p>
-
-Business Apps Starting at $750
-
-</p>
-
-<p>
-
-Payment Plans Available
-
-</p>
-
-<p>
-
-📱 (903) 262-9694
-
-</p>
-
-</div>
-
-</div>
 
 <div class="copyright">
 
-© 2026 Forever Solid
-
-<br><br>
-
-Designed by <strong>TaDie4ENT</strong>
-
-<br>
-
-Custom Apps • Websites • Business Solutions
+© 2026 Forever Solid. All Rights Reserved.
 
 </div>
 
@@ -361,23 +268,15 @@ Custom Apps • Websites • Business Solutions
 
 </a>
 
-<a href="pages/shop.html">
+<a href="shop.html">
 
-👕
+🔥
 
-<span>Shop</span>
-
-</a>
-
-<a href="cart.html">
-
-🛒
-
-<span>Cart</span>
+<span>Forever Solid</span>
 
 </a>
 
-<a href="pages/greenbox.html">
+<a href="greenbox.html">
 
 💚
 
@@ -385,15 +284,31 @@ Custom Apps • Websites • Business Solutions
 
 </a>
 
-<a href="contact.html">
+<a href="#top">
 
-📞
+⬆️
 
-<span>Contact</span>
+<span>Top</span>
 
 </a>
 
 </nav>
+
+<!-- ========================= -->
+<!-- BACK TO TOP -->
+<!-- ========================= -->
+
+<button
+id="topButton"
+onclick="window.scrollTo({top:0,behavior:'smooth'})">
+
+↑
+
+</button>
+
+<!-- ========================= -->
+<!-- SCRIPTS -->
+<!-- ========================= -->
 
 <script src="products.js"></script>
 
@@ -405,8 +320,10 @@ Custom Apps • Websites • Business Solutions
 
 updateCartBadge();
 
+updateFavoriteIcons();
+
 </script>
 
 </body>
 
-</html>  
+</html>
