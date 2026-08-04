@@ -1,22 +1,16 @@
 /*=========================================
-        FOREVER SOLID PRODUCTS
+        FOREVER SOLID SHIRTS
 =========================================*/
-
-const products = [
 
 {
     id: "fs1",
     brand: "Forever Solid",
-    name: "Forever Solid White Long Sleeve",
-    category: "Long Sleeve",
-    image: "images/IMG_FS1.jpg",
-    gallery: [
-        "images/IMG_FS1.jpg",
-        "images/IMG_FS2.jpg"
-    ],
-    description: "Premium Forever Solid Long Sleeve Collection",
-    priceSmall: 40,
-    priceLarge: 45,
+    name: "Butler College Tee",
+    category: "Shirts",
+    image: "IMG_FS3.png",
+    description: "Forever Solid College Collection Tee",
+    priceSmall: 35,
+    priceLarge: 40,
     stock: 50,
     featured: false,
     newArrival: false,
@@ -26,10 +20,10 @@ const products = [
 {
     id: "fs2",
     brand: "Forever Solid",
-    name: "Butler College Tee",
+    name: "Green Box Baby Tee",
     category: "Shirts",
-    image: "images/IMG_FS3.png",
-    description: "Forever Solid College Collection Tee",
+    image: "IMG_FS4.jpg",
+    description: "Green Box Baby Premium Tee",
     priceSmall: 35,
     priceLarge: 40,
     stock: 50,
@@ -41,10 +35,10 @@ const products = [
 {
     id: "fs3",
     brand: "Forever Solid",
-    name: "Green Box Baby Tee",
+    name: "Forever Solid Kids Collection Tee",
     category: "Shirts",
-    image: "images/IMG_FS4.jpg",
-    description: "Green Box Baby Premium Collection",
+    image: "IMG_FS9.jpg",
+    description: "Forever Solid Kids Collection",
     priceSmall: 35,
     priceLarge: 40,
     stock: 50,
@@ -56,16 +50,12 @@ const products = [
 {
     id: "fs4",
     brand: "Forever Solid",
-    name: "Forever Solid Orange Hoodie",
-    category: "Hoodies",
-    image: "images/IMG_FS7.jpg",
-    gallery: [
-        "images/IMG_FS7.jpg",
-        "images/IMG_FS8.jpg"
-    ],
-    description: "Premium Forever Solid Hoodie",
-    priceSmall: 55,
-    priceLarge: 60,
+    name: "Forever Solid Pink Quote Tee",
+    category: "Shirts",
+    image: "IMG_FS11.jpg",
+    description: "Forever Solid Quote Collection",
+    priceSmall: 35,
+    priceLarge: 40,
     stock: 50,
     featured: false,
     newArrival: false,
@@ -75,14 +65,10 @@ const products = [
 {
     id: "fs5",
     brand: "Forever Solid",
-    name: "Forever Solid Kids Collection",
+    name: "Forever Solid Cream Quote Tee",
     category: "Shirts",
-    image: "images/IMG_FS9.jpg",
-    gallery: [
-        "images/IMG_FS9.jpg",
-        "images/IMG_FS10.jpg"
-    ],
-    description: "Forever Solid Kids Collection",
+    image: "IMG_FS22.jpg",
+    description: "Forever Solid Quote Collection Tee",
     priceSmall: 35,
     priceLarge: 40,
     stock: 50,
@@ -91,91 +77,20 @@ const products = [
     bestSeller: false
 },
 
-  {
+/*=========================================
+        FOREVER SOLID LONG SLEEVES
+=========================================*/
+
+{
     id: "fs6",
     brand: "Forever Solid",
-    name: "Forever Solid Pink Quote Tee & Hat Collection",
-    category: "Sets",
-    image: "images/IMG_FS11.jpg",
-    description: "Forever Solid Quote Collection",
-    priceSmall: 45,
-    priceLarge: 50,
-    stock: 50,
-    featured: false,
-    newArrival: false,
-    bestSeller: false
-},
-
-{
-    id: "fs7",
-    brand: "Forever Solid",
-    name: "Forever Solid Baby Collection",
-    category: "Baby",
-    image: "images/IMG_FS12.jpg",
-    description: "Forever Solid Baby Collection",
-    priceSmall: 30,
-    priceLarge: 35,
-    stock: 50,
-    featured: false,
-    newArrival: false,
-    bestSeller: false
-},
-
-{
-    id: "fs8",
-    brand: "Forever Solid",
-    name: "LLHawk Forever Solid Tee",
-    category: "Shirts",
-    image: "images/IMG_FS13.jpg",
-    description: "Forever Solid LLHawk Collection",
-    priceSmall: 35,
-    priceLarge: 40,
-    stock: 50,
-    featured: false,
-    newArrival: false,
-    bestSeller: false
-},
-
-{
-    id: "fs9",
-    brand: "Forever Solid",
-    name: "Forever Solid Short Set",
-    category: "Short Sets",
-    image: "images/IMG_FS15.jpg",
-    gallery: [
-        "images/IMG_FS15.jpg",
-        "images/IMG_FS16.jpg"
-    ],
-    description: "Forever Solid Matching Short Set",
-    priceSmall: 55,
-    priceLarge: 65,
-    stock: 50,
-    featured: false,
-    newArrival: false,
-    bestSeller: false
-},
-
-{
-    id: "fs10",
-    brand: "Forever Solid",
-    name: "Forever Solid Baby Collection Black",
-    category: "Baby",
-    image: "images/IMG_FS17.jpg",
-    description: "Forever Solid Black Baby Collection",
-    priceSmall: 30,
-    priceLarge: 35,
-    stock: 50,
-    featured: false,
-    newArrival: false,
-    bestSeller: false
-},
-
-{
-    id: "fs11",
-    brand: "Forever Solid",
-    name: "Forever Solid White & Green Long Sleeve",
+    name: "Forever Solid White Long Sleeve",
     category: "Long Sleeve",
-    image: "images/IMG_FS18.jpg",
+    image: "IMG_FS1.jpg",
+    gallery: [
+        "IMG_FS1.jpg",
+        "IMG_FS2.jpg"
+    ],
     description: "Premium Forever Solid Long Sleeve Collection",
     priceSmall: 40,
     priceLarge: 45,
@@ -186,14 +101,29 @@ const products = [
 },
 
 {
-    id: "fs12",
+    id: "fs7",
+    brand: "Forever Solid",
+    name: "Forever Solid White & Green Long Sleeve",
+    category: "Long Sleeve",
+    image: "IMG_FS18.jpg",
+    description: "Premium Forever Solid Long Sleeve Collection",
+    priceSmall: 40,
+    priceLarge: 45,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},
+
+{
+    id: "fs8",
     brand: "Forever Solid",
     name: "Streetz Dead Long Sleeve",
     category: "Long Sleeve",
-    image: "images/IMG_FS19.jpg",
+    image: "IMG_FS19.jpg",
     gallery: [
-        "images/IMG_FS19.jpg",
-        "images/IMG_FS20.jpg"
+        "IMG_FS19.jpg",
+        "IMG_FS20.jpg"
     ],
     description: "Streetz Dead Forever Solid Collection",
     priceSmall: 40,
@@ -202,17 +132,25 @@ const products = [
     featured: false,
     newArrival: false,
     bestSeller: false
-},      
-        
+},
+
+/*=========================================
+        FOREVER SOLID HOODIES
+=========================================*/
+
 {
-    id: "fs13",
+    id: "fs9",
     brand: "Forever Solid",
-    name: "Forever Solid Cream Quote Tee",
-    category: "Shirts",
-    image: "images/IMG_FS22.jpg",
-    description: "Forever Solid Quote Collection Tee",
-    priceSmall: 35,
-    priceLarge: 40,
+    name: "Forever Solid Orange Hoodie",
+    category: "Hoodies",
+    image: "IMG_FS7.jpg",
+    gallery: [
+        "IMG_FS7.jpg",
+        "IMG_FS8.jpg"
+    ],
+    description: "Premium Forever Solid Hoodie Collection",
+    priceSmall: 55,
+    priceLarge: 60,
     stock: 50,
     featured: false,
     newArrival: false,
@@ -220,11 +158,11 @@ const products = [
 },
 
 {
-    id: "fs14",
+    id: "fs10",
     brand: "Forever Solid",
     name: "Forever Solid Red Hoodie",
     category: "Hoodies",
-    image: "images/IMG_FS23.jpg",
+    image: "IMG_FS23.jpg",
     description: "Premium Forever Solid Red Hoodie",
     priceSmall: 55,
     priceLarge: 60,
@@ -235,11 +173,64 @@ const products = [
 },
 
 {
-    id: "fs15",
+    id: "fs11",
+    brand: "Forever Solid",
+    name: "Forever Solid Hoodie Collection",
+    category: "Hoodies",
+    image: "IMG_FSHMP1.jpg",
+    description: "Premium Forever Solid Hoodie Collection",
+    priceSmall: 55,
+    priceLarge: 60,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},
+
+/*=========================================
+        FOREVER SOLID SETS
+=========================================*/
+
+{
+    id: "fs12",
+    brand: "Forever Solid",
+    name: "Forever Solid Short Set",
+    category: "Short Sets",
+    image: "IMG_FS14.jpg",
+    description: "Premium Forever Solid Matching Short Set",
+    priceSmall: 55,
+    priceLarge: 65,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},
+
+{
+    id: "fs13",
+    brand: "Forever Solid",
+    name: "Forever Solid Navy Short Set",
+    category: "Short Sets",
+    image: "IMG_FS15.jpg",
+    gallery: [
+        "IMG_FS15.jpg",
+        "IMG_FS16.jpg"
+    ],
+    description: "Forever Solid Matching Shorts Set",
+    priceSmall: 55,
+    priceLarge: 65,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},
+
+{
+    id: "fs14",
     brand: "Forever Solid",
     name: "Forever Solid Red Shorts",
-    category: "Shorts",
-    image: "images/IMG_FS24.jpg",
+    category: "Short Sets",
+    image: "IMG_FS24.jpg",
     description: "Premium Forever Solid Red Shorts",
     priceSmall: 30,
     priceLarge: 40,
@@ -250,12 +241,12 @@ const products = [
 },
 
 {
-    id: "fs16",
+    id: "fs15",
     brand: "Forever Solid",
     name: "Forever Solid Red Hoodie & Shorts Set",
     category: "Short Sets",
-    image: "images/IMG_FS25.jpg",
-    description: "Premium Matching Hoodie & Shorts Set",
+    image: "IMG_FS25.jpg",
+    description: "Premium Matching Hoodie and Shorts Set",
     priceSmall: 70,
     priceLarge: 80,
     stock: 50,
@@ -264,19 +255,42 @@ const products = [
     bestSeller: false
 },
 
+/*=========================================
+        FOREVER SOLID HATS
+=========================================*/
+
 {
-    id: "fs17",
+    id: "fs16",
     brand: "Forever Solid",
     name: "Forever Solid Trucker Hat",
     category: "Hats",
-    image: "images/IMG_FSHAT1.jpg",
+    image: "IMG_FSHAT1.jpg",
     gallery: [
-        "images/IMG_FSHAT1.jpg",
-        "images/IMG_FSHAT2.jpg"
+        "IMG_FSHAT1.jpg",
+        "IMG_FSHAT2.jpg"
     ],
-    description: "Forever Solid Premium Hat",
+    description: "Premium Forever Solid Hat Collection",
     priceSmall: 30,
     priceLarge: 30,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},
+
+/*=========================================
+        FOREVER SOLID BABY COLLECTION
+=========================================*/
+
+{
+    id: "fs17",
+    brand: "Forever Solid",
+    name: "Forever Solid Baby Collection",
+    category: "Baby",
+    image: "IMG_FS12.jpg",
+    description: "Forever Solid Baby Collection",
+    priceSmall: 30,
+    priceLarge: 35,
     stock: 50,
     featured: false,
     newArrival: false,
@@ -286,19 +300,20 @@ const products = [
 {
     id: "fs18",
     brand: "Forever Solid",
-    name: "Forever Solid Hoodie Collection",
-    category: "Hoodies",
-    image: "images/IMG_FSHMP1.jpg",
-    description: "Forever Solid Premium Hoodie Collection",
-    priceSmall: 55,
-    priceLarge: 60,
+    name: "Forever Solid Baby Black Collection",
+    category: "Baby",
+    image: "IMG_FS17.jpg",
+    description: "Forever Solid Baby Collection",
+    priceSmall: 30,
+    priceLarge: 35,
     stock: 50,
     featured: false,
     newArrival: false,
     bestSeller: false
 },
-
-
+/*=========================================
+        GREEN BOX BABY PRODUCTS
+=========================================*/
 /*=========================================
         GREEN BOX BABY PRODUCTS
 =========================================*/
@@ -308,7 +323,7 @@ const products = [
     brand: "Green Box Baby",
     name: "Green Box Baby Classic Tee",
     category: "Shirts",
-    image: "images/IMG_GREENBOX1.jpg",
+    image: "IMG_GREENBOX1.jpg",
     description: "Green Box Baby Premium T-Shirt",
     priceSmall: 35,
     priceLarge: 40,
@@ -323,7 +338,7 @@ const products = [
     brand: "Green Box Baby",
     name: "Green Box Baby Signature Tee",
     category: "Shirts",
-    image: "images/IMG_GREENBOX2.jpg",
+    image: "IMG_GREENBOX2.jpg",
     description: "Green Box Baby Signature Collection",
     priceSmall: 35,
     priceLarge: 40,
@@ -338,7 +353,7 @@ const products = [
     brand: "Green Box Baby",
     name: "Green Box Baby Graphic Tee",
     category: "Shirts",
-    image: "images/IMG_GREENBOX3.jpg",
+    image: "IMG_GREENBOX3.jpg",
     description: "Green Box Baby Graphic Collection",
     priceSmall: 35,
     priceLarge: 40,
@@ -353,7 +368,7 @@ const products = [
     brand: "Green Box Baby",
     name: "Green Box Baby Premium Tee",
     category: "Shirts",
-    image: "images/IMG_GREENBOX4.jpg",
+    image: "IMG_GREENBOX4.jpg",
     description: "Green Box Baby Premium Collection",
     priceSmall: 35,
     priceLarge: 40,
@@ -368,7 +383,7 @@ const products = [
     brand: "Green Box Baby",
     name: "Green Box Baby Hoodie",
     category: "Hoodies",
-    image: "images/IMG_GREENBOX5.jpg",
+    image: "IMG_GREENBOX5.jpg",
     description: "Green Box Baby Premium Hoodie",
     priceSmall: 55,
     priceLarge: 60,
@@ -383,7 +398,7 @@ const products = [
     brand: "Green Box Baby",
     name: "Green Box Baby Shorts",
     category: "Shorts",
-    image: "images/IMG_GREENBOX6.jpg",
+    image: "IMG_GREENBOX6.jpg",
     description: "Green Box Baby Premium Shorts",
     priceSmall: 30,
     priceLarge: 40,
@@ -391,10 +406,8 @@ const products = [
     featured: false,
     newArrival: false,
     bestSeller: false
-}
+},
 
-];
-  
 /*=========================================
         PRODUCT HELPERS
 =========================================*/
