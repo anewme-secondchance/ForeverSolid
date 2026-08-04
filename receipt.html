@@ -20,7 +20,12 @@
 </head>
 
 <body>
-<!-- ================= TOP NAVIGATION ================= -->
+
+<!-- ========================= -->
+<!-- HEADER -->
+<!-- ========================= -->
+
+<header>
 
 <div class="top-nav">
 
@@ -30,25 +35,33 @@
 
 </button>
 
-<button onclick="window.location='index.html'">
+<a href="receipt.html">
 
-🏠 Home
+Receipt
 
-</button>
+</a>
 
-<button onclick="window.location='cart.html'">
+<a href="cart.html">
 
 🛒 Cart
 
-<span id="cartBadge">0</span>
+<span id="cartBadge">
 
-</button>
+0
+
+</span>
+
+</a>
 
 </div>
-<!-- ================= HEADER ================= -->
-<!-- ================= RECEIPT HEADER ================= -->
 
-<section class="receipt-header">
+</header>
+
+<!-- ========================= -->
+<!-- PAGE HEADER -->
+<!-- ========================= -->
+
+<section class="shop-header">
 
 <h1>
 
@@ -63,27 +76,16 @@ Thank you for shopping with Forever Solid.
 </p>
 
 </section>
-<header>
 
-<div class="logo">
-
-<a href="index.html">
-
-<img src="images/IMG_FSLOGO.PNG" alt="Forever Solid">
-
-</a>
-
-</div>
-
-</header>
-
-<!-- ================= RECEIPT ================= -->
+<!-- ========================= -->
+<!-- RECEIPT -->
+<!-- ========================= -->
 
 <section class="receipt-page">
 
 <div class="receipt-card">
 
-<h1 class="glow-title">
+ <h1 class="glow-title">
 
 Forever Solid
 
@@ -207,7 +209,9 @@ We appreciate your business and look forward to serving you again.
 
 </p>
 
-<!-- ================= BUTTONS ================= -->
+<!-- ========================= -->
+<!-- RECEIPT BUTTONS -->
+<!-- ========================= -->
 
 <div class="receipt-buttons">
 
@@ -241,88 +245,103 @@ onclick="location.href='index.html'">
 
 </section>
 
-<!-- ================= FOOTER ================= -->
+ <!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
 
 <footer>
 
-<div class="footer-logo">
+<img
+src="images/IMG_FSREDLOGO.png"
+alt="Forever Solid"
+class="footer-logo">
 
-<img src="images/IMG_FSLOGO.PNG" alt="Forever Solid">
+<p class="footer-tagline">
 
-</div>
+Built Different • Stay Solid
 
-<div class="footer-links">
-
-<div>
-
-<h3>Forever Solid</h3>
-
-<p>Premium Streetwear</p>
-
-<p>Tyler, Texas</p>
-
-</div>
-
-<div>
-
-<h3>Collections</h3>
-
-<a href="pages/shop.html">
-
-Forever Solid
-
-</a>
-
-<a href="pages/greenbox.html">
-
-Green Box Baby
-
-</a>
-
-</div>
-
-<div>
-
-<h3>Customer Care</h3>
-
-<a href="cart.html">
-
-Shopping Cart
-
-</a>
-
-<a href="checkout.html">
-
-Checkout
-
-</a>
-
-</div>
-
-</div>
+</p>
 
 <div class="copyright">
 
-© 2026 Forever Solid.
-All Rights Reserved.
+© 2026 Forever Solid. All Rights Reserved.
 
 </div>
 
 </footer>
 
+<!-- ========================= -->
+<!-- MOBILE NAVIGATION -->
+<!-- ========================= -->
+
+<nav class="bottom-nav">
+
+<a href="index.html">
+
+🏠
+
+<span>Home</span>
+
+</a>
+
+<a href="shop.html">
+
+🔥
+
+<span>Forever Solid</span>
+
+</a>
+
+<a href="greenbox.html">
+
+💚
+
+<span>Green Box</span>
+
+</a>
+
+<a href="#top">
+
+⬆️
+
+<span>Top</span>
+
+</a>
+
+</nav>
+
+<!-- ========================= -->
+<!-- BACK TO TOP -->
+<!-- ========================= -->
+
+<button
+id="topButton"
+onclick="window.scrollTo({top:0,behavior:'smooth'})">
+
+↑
+
+</button>
+
+<!-- ========================= -->
+<!-- SCRIPTS -->
+<!-- ========================= -->
+
 <script src="products.js"></script>
+
+<script src="trial.js"></script>
 
 <script src="script.js"></script>
 
 <script>
 
-
-// Load Receipt
-
 loadReceipt();
+
+updateCartBadge();
+
+updateFavoriteIcons();
 
 </script>
 
 </body>
 
-</html>  
+</html> 
