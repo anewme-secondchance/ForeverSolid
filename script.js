@@ -268,7 +268,7 @@ href="sms:${STORE_PHONE}?body=Hi%20TaDie4ENT!%20I'm%20interested%20in%20purchasi
 
 class="big-green-button"
 
-href="mailto:YOUR_EMAIL_HERE">
+href="mailto:tysharrettaturner@gmail.com"
 
 📧 Email Me
 
@@ -873,36 +873,6 @@ function updateFavoriteIcons(){
 
 }
 
-/*=========================================
-        SEARCH PRODUCTS
-=========================================*/
-
-function searchProducts(){
-
-    const input = document
-    .getElementById("searchBox")
-    .value
-    .toLowerCase();
-
-    document
-    .querySelectorAll(".product-card")
-    .forEach(card=>{
-
-        const name = card.innerText.toLowerCase();
-
-        if(name.includes(input)){
-
-            card.style.display = "";
-
-        }else{
-
-            card.style.display = "none";
-
-        }
-
-    });
-
-}
 
 /*=========================================
         FILTER PRODUCTS
