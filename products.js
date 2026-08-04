@@ -12,7 +12,11 @@ const products = [
     image: "images/IMG_FS1.jpeg",
     description: "Premium Forever Solid T-Shirt",
     priceSmall: 35,
-    priceLarge: 40
+    priceLarge: 40,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
 {
@@ -23,7 +27,11 @@ const products = [
     image: "images/IMG_FS2.jpeg",
     description: "Premium Signature Collection",
     priceSmall: 35,
-    priceLarge: 40
+    priceLarge: 40,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
 {
@@ -34,7 +42,11 @@ const products = [
     image: "images/IMG_FS3.PNG",
     description: "Graphic Collection",
     priceSmall: 35,
-    priceLarge: 40
+    priceLarge: 40,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
 {
@@ -45,7 +57,11 @@ const products = [
     image: "images/IMG_FS4.JPG",
     description: "Premium Cotton Tee",
     priceSmall: 35,
-    priceLarge: 40
+    priceLarge: 40,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
 {
@@ -56,7 +72,11 @@ const products = [
     image: "images/IMG_FS5.JPG",
     description: "Limited Edition",
     priceSmall: 35,
-    priceLarge: 40
+    priceLarge: 40,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
 {
@@ -67,10 +87,14 @@ const products = [
     image: "images/IMG_FS6.JPG",
     description: "Collection Series",
     priceSmall: 35,
-    priceLarge: 40
+    priceLarge: 40,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
-        {
+{
     id: "fs7",
     brand: "Forever Solid",
     name: "Forever Solid Premium Tee",
@@ -78,7 +102,11 @@ const products = [
     image: "images/IMG_FS7.JPG",
     description: "Premium Forever Solid Collection",
     priceSmall: 35,
-    priceLarge: 40
+    priceLarge: 40,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
 {
@@ -89,7 +117,11 @@ const products = [
     image: "images/IMG_FS8.JPG",
     description: "Graphic Collection",
     priceSmall: 35,
-    priceLarge: 40
+    priceLarge: 40,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
 {
@@ -100,7 +132,11 @@ const products = [
     image: "images/IMG_FS9.JPG",
     description: "Street Collection",
     priceSmall: 35,
-    priceLarge: 40
+    priceLarge: 40,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
 {
@@ -111,7 +147,11 @@ const products = [
     image: "images/IMG_FS10.JPG",
     description: "Signature Collection",
     priceSmall: 35,
-    priceLarge: 40
+    priceLarge: 40,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
 {
@@ -122,7 +162,11 @@ const products = [
     image: "images/IMG_FS11.JPG",
     description: "Premium Hoodie",
     priceSmall: 55,
-    priceLarge: 60
+    priceLarge: 60,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
 {
@@ -133,7 +177,11 @@ const products = [
     image: "images/IMG_FS12.JPG",
     description: "Premium Shorts",
     priceSmall: 30,
-    priceLarge: 40
+    priceLarge: 40,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
 {
@@ -144,7 +192,11 @@ const products = [
     image: "images/IMG_FS13.JPG",
     description: "Matching Set",
     priceSmall: 55,
-    priceLarge: 65
+    priceLarge: 65,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
 {
@@ -155,7 +207,11 @@ const products = [
     image: "images/IMG_FS14.JPG",
     description: "Premium Matching Set",
     priceSmall: 70,
-    priceLarge: 80
+    priceLarge: 80,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
 {
@@ -166,7 +222,11 @@ const products = [
     image: "images/IMG_FSHAT1.jpeg",
     description: "Forever Solid Hat",
     priceSmall: 30,
-    priceLarge: 30
+    priceLarge: 30,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
         /*=========================================
@@ -181,7 +241,11 @@ const products = [
     image: "images/IMG_GREENBOX1.JPG",
     description: "Green Box Baby Premium T-Shirt",
     priceSmall: 35,
-    priceLarge: 40
+    priceLarge: 40,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
 {
@@ -192,7 +256,11 @@ const products = [
     image: "images/IMG_GREENBOX2.JPG",
     description: "Signature Collection",
     priceSmall: 35,
-    priceLarge: 40
+    priceLarge: 40,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
 {
@@ -203,7 +271,11 @@ const products = [
     image: "images/IMG_GREENBOX3.jpeg",
     description: "Graphic Collection",
     priceSmall: 35,
-    priceLarge: 40
+    priceLarge: 40,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
 {
@@ -214,7 +286,11 @@ const products = [
     image: "images/IMG_GREENBOX4.jpeg",
     description: "Premium Collection",
     priceSmall: 35,
-    priceLarge: 40
+    priceLarge: 40,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
 {
@@ -225,18 +301,25 @@ const products = [
     image: "images/IMG_GREENBOX5.jpeg",
     description: "Premium Hoodie",
     priceSmall: 55,
-    priceLarge: 60
+    priceLarge: 60,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
 {
     id: "gb6",
-    brand: "Green Box Baby",
-    name: "Green Box Baby Shorts",
+    brand: "Green Box Baby Shorts",
     category: "Shorts",
     image: "images/IMG_GREENBOX6.jpeg",
     description: "Premium Shorts",
     priceSmall: 30,
-    priceLarge: 40
+    priceLarge: 40,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
 {
@@ -247,7 +330,11 @@ const products = [
     image: "images/IMG_GREENBOX7.jpeg",
     description: "Matching T-Shirt & Shorts Set",
     priceSmall: 55,
-    priceLarge: 65
+    priceLarge: 65,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 },
 
 {
@@ -258,11 +345,15 @@ const products = [
     image: "images/IMG_GREENBOX8.jpeg",
     description: "Matching Hoodie & Shorts Set",
     priceSmall: 70,
-    priceLarge: 80
+    priceLarge: 80,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
 }
 
-        ];
-
+];
+  
 /*=========================================
         PRODUCT HELPERS
 =========================================*/
@@ -307,10 +398,38 @@ function searchProductList(searchText){
 
 }
 
+function getFeaturedProducts(){
+
+    return products.filter(product => product.featured);
+
+}
+
+function getBestSellers(){
+
+    return products.filter(product => product.bestSeller);
+
+}
+
+function getNewArrivals(){
+
+    return products.filter(product => product.newArrival);
+
+}
+
 /*=========================================
         APP READY
 =========================================*/
 
+console.log("===================================");
+
 console.log("Forever Solid Products Loaded");
 
 console.log("Total Products:", products.length);
+
+console.log("Forever Solid:",
+    getProductsByBrand("Forever Solid").length);
+
+console.log("Green Box Baby:",
+    getProductsByBrand("Green Box Baby").length);
+
+console.log("===================================");
