@@ -431,60 +431,67 @@ nav ul{
 
 display:flex;
 
+justify-content:space-between;
+
 align-items:center;
-
-gap:28px;
-
-}
-
-nav ul li a{
-
-font-size:16px;
-
-font-weight:600;
-
-color:#fff;
-
-position:relative;
-
-transition:.3s;
-
-}
-
-nav ul li a:hover,
-nav ul li a.active{
-
-color:#ff4d4d;
-
-}
-
-nav ul li a::after{
-
-content:"";
-
-position:absolute;
-
-left:0;
-
-bottom:-6px;
-
-width:0;
-
-height:2px;
-
-background:#ff3b3b;
-
-transition:.3s;
-
-}
-
-nav ul li a:hover::after,
-nav ul li a.active::after{
 
 width:100%;
 
 }
 
+nav ul li{
+
+flex:1;
+
+}
+
+nav ul li:first-child{
+
+text-align:left;
+
+}
+
+nav ul li:last-child{
+
+text-align:right;
+
+}
+
+nav ul li a{
+
+font-size:22px;
+
+font-weight:300;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+color:#fff;
+
+transition:.3s;
+
+text-shadow:
+
+0 0 3px #ff0000,
+
+0 0 8px #ff0000;
+
+}
+
+nav ul li a:hover{
+
+color:#ff4d4d;
+
+text-shadow:
+
+0 0 6px #ff0000,
+
+0 0 12px #ff0000,
+
+0 0 20px #ff0000;
+
+}
 
 /*==================================================
                 HEADER ICONS
@@ -858,6 +865,60 @@ max-width:340px;
 width:100%;
 
 }
+
+}
+
+header{
+
+padding:18px 20px;
+
+}
+
+nav ul{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+width:100%;
+
+}
+
+nav ul li{
+
+flex:1;
+
+}
+
+nav ul li:first-child{
+
+text-align:left;
+
+}
+
+nav ul li:last-child{
+
+text-align:right;
+
+}
+
+nav ul li a{
+
+font-size:18px;
+
+font-weight:300;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+color:#fff;
+
+text-shadow:
+0 0 3px #ff0000,
+0 0 8px #ff0000;
 
 }
 /*==================================================
