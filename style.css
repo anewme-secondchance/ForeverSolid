@@ -664,17 +664,25 @@ margin:0 auto 25px;
 
 .hero-banner{
 
+position:relative;
+
 display:flex;
+
+justify-content:center;
+
+align-items:flex-end;
 
 width:100%;
 
 max-width:900px;
 
-height:650px;
+height:700px;
 
-margin:0 auto;
+margin:0 auto 0;
 
 overflow:hidden;
+
+background:#000;
 
 }
 
