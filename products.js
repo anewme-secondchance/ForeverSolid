@@ -3,24 +3,79 @@
 =========================================*/
 
 const products = [
-/*=========================================
-        FOREVER SOLID T-SHIRT COLLECTION
+
+
+        /*=========================================
+        FOREVER SOLID T-SHIRTS
 =========================================*/
 
 {
-    id: "fs-shirt",
+    id: "fs1",
     brand: "Forever Solid",
-    name: "Forever Solid T-Shirt Collection",
+    name: "T-Shirt",
     category: "Shirts",
-    gallery: [
-        "images/IMG_FS3.png",
-        "images/IMG_FS4.jpg",
-        "images/IMG_FS9.jpg",
-        "images/IMG_FS11.jpg",
-        "images/IMG_FS22.jpg"
-    ],
     image: "images/IMG_FS3.png",
-    description: "Customize your Forever Solid T-Shirt Collection",
+    description: "Customize your T-Shirt",
+    priceSmall: 35,
+    priceLarge: 40,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},
+
+{
+    id: "fs2",
+    brand: "Forever Solid",
+    name: "T-Shirt",
+    category: "Shirts",
+    image: "images/IMG_FS4.jpg",
+    description: "Customize your T-Shirt",
+    priceSmall: 35,
+    priceLarge: 40,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},
+
+{
+    id: "fs3",
+    brand: "Forever Solid",
+    name: "T-Shirt",
+    category: "Shirts",
+    image: "images/IMG_FS9.jpg",
+    description: "Customize your T-Shirt",
+    priceSmall: 35,
+    priceLarge: 40,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},
+
+{
+    id: "fs4",
+    brand: "Forever Solid",
+    name: "T-Shirt",
+    category: "Shirts",
+    image: "images/IMG_FS11.jpg",
+    description: "Customize your T-Shirt",
+    priceSmall: 35,
+    priceLarge: 40,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},
+
+{
+    id: "fs5",
+    brand: "Forever Solid",
+    name: "T-Shirt",
+    category: "Shirts",
+    image: "images/IMG_FS22.jpg",
+    description: "Customize your T-Shirt",
     priceSmall: 35,
     priceLarge: 40,
     stock: 50,
@@ -30,20 +85,238 @@ const products = [
 },
 
 /*=========================================
+        FOREVER SOLID LONG SLEEVES
+=========================================*/
+
+{
+    id: "fs6",
+    brand: "Forever Solid",
+    name: "Long Sleeve",
+    category: "Long Sleeve",
+    image: "images/IMG_FS1.jpg",
+    description: "Customize your Long Sleeve",
+    priceSmall: 40,
+    priceLarge: 45,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},
+
+{
+    id: "fs7",
+    brand: "Forever Solid",
+    name: "Long Sleeve",
+    category: "Long Sleeve",
+    image: "images/IMG_FS2.jpg",
+    description: "Customize your Long Sleeve",
+    priceSmall: 40,
+    priceLarge: 45,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},
+
+{
+    id: "fs8",
+    brand: "Forever Solid",
+    name: "Long Sleeve",
+    category: "Long Sleeve",
+    image: "images/IMG_FS18.jpg",
+    description: "Customize your Long Sleeve",
+    priceSmall: 40,
+    priceLarge: 45,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},
+
+{
+    id: "fs9",
+    brand: "Forever Solid",
+    name: "Long Sleeve",
+    category: "Long Sleeve",
+    image: "images/IMG_FS19.jpg",
+    description: "Customize your Long Sleeve",
+    priceSmall: 40,
+    priceLarge: 45,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},
+
+{
+    id: "fs10",
+    brand: "Forever Solid",
+    name: "Long Sleeve",
+    category: "Long Sleeve",
+    image: "images/IMG_FS20.jpg",
+    description: "Customize your Long Sleeve",
+    priceSmall: 40,
+    priceLarge: 45,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},  
+
+/*=========================================
+        FOREVER SOLID HOODIES
+=========================================*/
+
+{
+    id: "fs11",
+    brand: "Forever Solid",
+    name: "Hoodie",
+    category: "Hoodies",
+    image: "images/IMG_FS7.jpg",
+    description: "Customize your Hoodie",
+    priceSmall: 55,
+    priceLarge: 60,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},
+
+{
+    id: "fs12",
+    brand: "Forever Solid",
+    name: "Hoodie",
+    category: "Hoodies",
+    image: "images/IMG_FS8.jpg",
+    description: "Customize your Hoodie",
+    priceSmall: 55,
+    priceLarge: 60,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},
+
+{
+    id: "fs13",
+    brand: "Forever Solid",
+    name: "Hoodie",
+    category: "Hoodies",
+    image: "images/IMG_FS23.jpg",
+    description: "Customize your Hoodie",
+    priceSmall: 55,
+    priceLarge: 60,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},
+
+{
+    id: "fs14",
+    brand: "Forever Solid",
+    name: "Hoodie",
+    category: "Hoodies",
+    image: "images/IMG_FSHMP1.jpg",
+    description: "Customize your Hoodie",
+    priceSmall: 55,
+    priceLarge: 60,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},        
+
+ /*=========================================
+        FOREVER SOLID SHORTS & SETS
+=========================================*/
+
+{
+    id: "fs15",
+    brand: "Forever Solid",
+    name: "Short Set",
+    category: "Short Sets",
+    image: "images/IMG_FS14.jpg",
+    description: "Customize your Short Set",
+    priceSmall: 55,
+    priceLarge: 65,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},
+
+{
+    id: "fs16",
+    brand: "Forever Solid",
+    name: "Short Set",
+    category: "Short Sets",
+    image: "images/IMG_FS15.jpg",
+    description: "Customize your Short Set",
+    priceSmall: 55,
+    priceLarge: 65,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},
+
+{
+    id: "fs17",
+    brand: "Forever Solid",
+    name: "Short Set",
+    category: "Short Sets",
+    image: "images/IMG_FS16.jpg",
+    description: "Customize your Short Set",
+    priceSmall: 55,
+    priceLarge: 65,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},
+
+{
+    id: "fs18",
+    brand: "Forever Solid",
+    name: "Shorts",
+    category: "Shorts",
+    image: "images/IMG_FS24.jpg",
+    description: "Customize your Shorts",
+    priceSmall: 30,
+    priceLarge: 40,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},
+
+{
+    id: "fs19",
+    brand: "Forever Solid",
+    name: "Hoodie & Shorts Set",
+    category: "Sets",
+    image: "images/IMG_FS25.jpg",
+    description: "Customize your Hoodie & Shorts Set",
+    priceSmall: 70,
+    priceLarge: 80,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},       
+
+/*=========================================
         FOREVER SOLID PARENT + BABY MATCHING
 =========================================*/
 
 {
-    id: "fs-family",
+    id: "fs20",
     brand: "Forever Solid",
-    name: "Forever Solid Parent + Baby Matching Set",
+    name: "Parent + Baby Matching Set",
     category: "Family Matching",
-    gallery: [
-        "images/IMG_FS12.jpg",
-        "images/IMG_FS17.jpg"
-    ],
     image: "images/IMG_FS12.jpg",
-    description: "Matching parent t-shirt and baby onesie collection. Customize your sizes, colors, and design.",
+    description: "Customize your Parent + Baby Matching Set",
     priceSmall: 45,
     priceLarge: 50,
     stock: 50,
@@ -52,61 +325,20 @@ const products = [
     bestSeller: false
 },
 
-        /*=========================================
-        FOREVER SOLID HOODIES & LONG SLEEVES
-=========================================*/
-
 {
-    id: "fs-outerwear",
+    id: "fs21",
     brand: "Forever Solid",
-    name: "Forever Solid Hoodies & Long Sleeve Collection",
-    category: "Hoodies & Long Sleeve",
-    gallery: [
-        "images/IMG_FS1.jpg",
-        "images/IMG_FS2.jpg",
-        "images/IMG_FS7.jpg",
-        "images/IMG_FS8.jpg",
-        "images/IMG_FS18.jpg",
-        "images/IMG_FS19.jpg",
-        "images/IMG_FS20.jpg",
-        "images/IMG_FS23.jpg",
-        "images/IMG_FSHMP1.jpg"
-    ],
-    image: "images/IMG_FS7.jpg",
-    description: "Customize your Forever Solid hoodie or long sleeve. Choose style, color, and size.",
-    priceSmall: 40,
-    priceLarge: 60,
+    name: "Parent + Baby Matching Set",
+    category: "Family Matching",
+    image: "images/IMG_FS17.jpg",
+    description: "Customize your Parent + Baby Matching Set",
+    priceSmall: 45,
+    priceLarge: 50,
     stock: 50,
     featured: false,
     newArrival: false,
     bestSeller: false
-},
-
-        /*=========================================
-        FOREVER SOLID SHORTS & SETS
-=========================================*/
-
-{
-    id: "fs-sets",
-    brand: "Forever Solid",
-    name: "Forever Solid Shorts & Sets Collection",
-    category: "Shorts & Sets",
-    gallery: [
-        "images/IMG_FS14.jpg",
-        "images/IMG_FS15.jpg",
-        "images/IMG_FS16.jpg",
-        "images/IMG_FS24.jpg",
-        "images/IMG_FS25.jpg"
-    ],
-    image: "images/IMG_FS14.jpg",
-    description: "Customize your Forever Solid shorts, short sets, or hoodie sets. Choose style, color, and size.",
-    priceSmall: 30,
-    priceLarge: 80,
-    stock: 50,
-    featured: false,
-    newArrival: false,
-    bestSeller: false
-},
+},        
 /*=========================================
         GREEN BOX BABY PRODUCTS
 =========================================*/
