@@ -1104,13 +1104,15 @@ box-shadow:
 
 .product-card img{
 
-width:100%;
+    width:100%;
 
-aspect-ratio:1/1;
+    height:350px;
 
-object-fit:cover;
+    object-fit:contain;
 
-transition:.35s;
+    background:#111;
+
+    transition:.35s;
 
 }
 
