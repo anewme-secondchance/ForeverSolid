@@ -297,12 +297,12 @@ const products = [
 {
     id: "fs20",
     brand: "Forever Solid",
-    name: "Parent + Baby Matching Set",
-    category: "Family Matching",
+    name: "Baby Onesies",
+    category: "Baby Onesies",
     image: "images/IMG_FS12.jpg",
-    description: "Customize your Parent + Baby Matching Set",
-    priceSmall: 45,
-    priceLarge: 50,
+    description: "Text us for sizes and pricing.",
+    priceSmall: 0,
+    priceLarge: 0,
     stock: 50,
     featured: false,
     newArrival: false,
@@ -315,14 +315,15 @@ const products = [
     name: "Parent + Baby Matching Set",
     category: "Family Matching",
     image: "images/IMG_FS17.jpg",
-    description: "Customize your Parent + Baby Matching Set",
-    priceSmall: 45,
-    priceLarge: 50,
+    description: "Text us for sizes and pricing.",
+    priceSmall: 0,
+    priceLarge: 0,
     stock: 50,
     featured: false,
     newArrival: false,
     bestSeller: false
-},        
+},
+
 /*=========================================
         GREEN BOX BABY PRODUCTS
 =========================================*/
