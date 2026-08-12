@@ -167,20 +167,6 @@ const products = [
         FOREVER SOLID HOODIES
 =========================================*/
 
-{
-    id: "fs11",
-    brand: "Forever Solid",
-    name: "Hoodie",
-    category: "Hoodies",
-    image: "images/IMG_FS7.jpg",
-    description: "Customize your Hoodie",
-    priceSmall: 55,
-    priceLarge: 60,
-    stock: 50,
-    featured: false,
-    newArrival: false,
-    bestSeller: false
-},
 
 {
     id: "fs12",
