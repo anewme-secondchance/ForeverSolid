@@ -1640,9 +1640,3 @@ color:#777;
 
 }
 
-/* Fix Forever Solid orange hoodie images */
-.product-card img,
-.product-image img {
-    object-fit: contain;
-    transform: rotate(0deg);
-}
