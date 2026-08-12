@@ -181,7 +181,24 @@ const products = [
     bestSeller: false
 },
 
-
+{
+    id: "fs12",
+    brand: "Forever Solid",
+    name: "Hoodie",
+    category: "Hoodies",
+    image: "images/IMG_FS7.jpg",
+    gallery: [
+        "images/IMG_FS7.jpg",
+        "images/IMG_FS8.jpg"
+    ],
+    description: "Customize your Hoodie",
+    priceSmall: 55,
+    priceLarge: 60,
+    stock: 50,
+    featured: false,
+    newArrival: false,
+    bestSeller: false
+},
 
  /*=========================================
         FOREVER SOLID SHORTS & SETS
