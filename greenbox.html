@@ -265,15 +265,6 @@ html += `
 
 <div class="product-card" data-category="${product.category}">
 
-<button
-class="favorite-btn"
-data-id="${product.id}"
-onclick="toggleFavorite('${product.id}')">
-
-🤍
-
-</button>
-
 <img
 src="${product.image}"
 alt="${product.name}">
@@ -281,16 +272,6 @@ alt="${product.name}">
 <h3>${product.name}</h3>
 
 <p>${product.category}</p>
-
-<p>
-
-S-XL $${product.priceSmall}
-
-<br>
-
-2XL+ $${product.priceLarge}
-
-</p>
 
 <button
 class="buy-btn"
