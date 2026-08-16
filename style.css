@@ -1667,14 +1667,15 @@ color:#777;
 
 .greenbox-logo{
 
-    height:250px;
+    height:auto;
 
     width:100%;
 
-    object-fit:cover;
+    max-width:100%;
+
+    object-fit:contain;
 
 }
-
 }
 
 @media screen and (max-width:768px){
