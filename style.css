@@ -769,11 +769,11 @@ text-shadow:
 
     display:block;
 
-    width:420px;
+    width:100%;
 
-    max-width:95%;
+    max-width:1400px;
 
-   margin:-40px auto 20px;
+    margin:-40px auto 20px;
 
     position:relative;
 
@@ -784,7 +784,6 @@ text-shadow:
     drop-shadow(0 0 12px red);
 
 }
-
 /*================ QUOTE ================*/
 
 .hero-quote{
