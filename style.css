@@ -1655,9 +1655,9 @@ color:#777;
 
     max-width:1400px;
 
-    height:450px;
+     height:auto;
 
-    object-fit:cover;
+    object-fit:contain;
 
     margin:0 auto 20px;
 
