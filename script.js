@@ -22,9 +22,7 @@ const BUSINESS_PRICE = 750;
         LOCAL STORAGE KEYS
 =========================================*/
 
-const CART_KEY = "fs_cart";
-
-const FAVORITES_KEY = "fs_favorites";
+const CART_KEY = "cart";
 
 const INSTALL_KEY = "fs_install_date";
 
@@ -823,57 +821,7 @@ Thank you!
 
 }
 
-/*=========================================
-        FAVORITES
-=========================================*/
 
-function toggleFavorite(productId){
-
-    const index = favorites.indexOf(productId);
-
-    if(index === -1){
-
-        favorites.push(productId);
-
-        alert("❤️ Added to Favorites");
-
-    }else{
-
-        favorites.splice(index,1);
-
-        alert("Removed from Favorites");
-
-    }
-
-    saveFavorites();
-
-    updateFavoriteIcons();
-
-}
-
-/*=========================================
-        UPDATE FAVORITE ICONS
-=========================================*/
-
-function updateFavoriteIcons(){
-
-    document.querySelectorAll(".favorite-btn").forEach(button=>{
-
-        const id = button.dataset.id;
-
-        if(favorites.includes(id)){
-
-            button.innerHTML = "❤️";
-
-        }else{
-
-            button.innerHTML = "🤍";
-
-        }
-
-    });
-
-}
 
 
 /*=========================================
