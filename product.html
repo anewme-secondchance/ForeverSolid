@@ -452,6 +452,10 @@ image:product.image,
 
 price:document.getElementById("productPrice").innerHTML,
 
+ total:
+Number(document.getElementById("productPrice").innerHTML) *
+Number(document.getElementById("quantity").value),
+
 size:document.getElementById("size").value,
 
 color:document.getElementById("color").value,
