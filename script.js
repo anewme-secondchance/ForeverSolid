@@ -50,11 +50,10 @@ localStorage.getItem(FAVORITES_KEY)
 
 function saveCart(){
 
-  localStorage.setItem(
-"fs_cart",
+ localStorage.setItem(
+"cart",
 JSON.stringify(cart)
-); 
-
+);
 }
 
 /*=========================================
