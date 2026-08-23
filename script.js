@@ -28,6 +28,7 @@ const INSTALL_KEY = "fs_install_date";
 
 const ORDER_KEY = "lastOrder";
 
+const FAVORITES_KEY = "favorites";
 /*=========================================
         GLOBAL VARIABLES
 =========================================*/
