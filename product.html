@@ -449,6 +449,8 @@ quantity:document.getElementById("quantity").value,
 
 delivery:document.querySelector('input[name="delivery"]:checked').value,
 
+ shipping: document.querySelector('input[name="delivery"]:checked').value === "Shipping" ? 6.99 : 0,
+ 
 address:document.getElementById("address").value,
 
 city:document.getElementById("city").value,
