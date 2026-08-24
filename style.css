@@ -1431,14 +1431,53 @@ font-weight:700;
 
 .checkout-container{
 
-width:min(900px,92%);
+width:min(1200px,92%);
 
 margin:auto;
 
 padding:60px 0;
 
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:40px;
+
+align-items:start;
+
 }
 
+.checkout-form,
+.checkout-summary{
+
+background:#111;
+
+border:2px solid #333;
+
+border-radius:22px;
+
+padding:30px;
+
+}
+.checkout-form label{
+
+display:block;
+
+margin-top:15px;
+
+margin-bottom:8px;
+
+font-weight:600;
+
+}
+
+
+.checkout-form input,
+.checkout-form textarea{
+
+width:100%;
+
+}
 .checkout-container form{
 
 display:grid;
@@ -1750,5 +1789,15 @@ grid-template-columns:1fr;
     z-index:9999;
 
     border-radius:20px;
+
+}
+
+@media screen and (max-width:768px){
+
+.checkout-container{
+
+grid-template-columns:1fr;
+
+}
 
 }
