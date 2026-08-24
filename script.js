@@ -328,7 +328,9 @@ color: document.getElementById("color").value,
 quantity: quantity,
 
 delivery: document.querySelector('input[name="delivery"]:checked').value,
-
+        
+shipping: document.querySelector('input[name="delivery"]:checked').value === "Shipping" ? 6.99 : 0,
+        
 address: document.getElementById("address").value,
 
 city: document.getElementById("city").value,
@@ -410,7 +412,9 @@ function updateCart(){
 
     cartContainer.innerHTML = "";
 
-    let total = 0;
+   let total = 0;
+
+let shipping = 0;
 
     if(cart.length === 0){
 
@@ -441,7 +445,9 @@ function updateCart(){
     cart.forEach((item,index)=>{
 
         total += item.total;
-
+            
+shipping += item.shipping || 0;
+            
         cartContainer.innerHTML += `
 
         <div class="cart-item">
@@ -500,7 +506,7 @@ function updateCart(){
 
     subtotal.innerHTML = "$" + total.toFixed(2);
 
-    grandTotal.innerHTML = "$" + total.toFixed(2);
+   grandTotal.innerHTML = "$" + (total + shipping).toFixed(2);
 
     updateCartBadge();
 
@@ -646,7 +652,10 @@ function placeOrder(){
         cart,
 
         total:
-        calculateCartTotal()
+        calculateCartTotal(),
+
+shipping:
+cart.reduce((sum,item)=>sum + (item.shipping || 0),0)
 
     };
 
@@ -700,6 +709,13 @@ function loadReceipt(){
 
     document.getElementById("receiptTotal").innerHTML =
     "$" + order.total.toFixed(2);
+
+  if(document.getElementById("receiptShipping")){
+
+document.getElementById("receiptShipping").innerHTML =
+"$" + (order.shipping || 0).toFixed(2);
+
+}      
 
     const receiptItems =
     document.getElementById("receiptItems");
