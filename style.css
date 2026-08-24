@@ -1325,7 +1325,23 @@ margin-top:30px;
 
 }
 
+.trust-section{
 
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    gap:30px;
+
+    text-align:center;
+
+    width:90%;
+
+    margin:auto;
+
+}
 /*==================================================
                     CART
 ==================================================*/
@@ -1527,12 +1543,38 @@ color:var(--green-light);
 /*==================================================
             BOTTOM NAVIGATION
 ==================================================*/
+.bottom-nav{
 
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:row;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    background:#050505;
+
+    border-top:2px solid red;
+
+    padding:10px 0;
+
+    z-index:9999;
+
+}
 .bottom-nav a{
 
 display:flex;
 
-flex-direction:column;
+flex-direction:row;
 
 align-items:center;
 
