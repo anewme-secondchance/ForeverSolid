@@ -86,7 +86,7 @@ src=""
 
 alt="Product"
 
-onclick="this.classList.toggle('full-image')">
+onclick="openFullImage(this)">
 
 </div>
 
@@ -483,6 +483,12 @@ updateCartBadge();
 
 updateFavoriteIcons();
 
+ function openFullImage(img){
+
+    img.classList.toggle("full-image");
+
+}
+ 
 </script>
 
 </body>
