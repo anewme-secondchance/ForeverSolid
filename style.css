@@ -1687,24 +1687,26 @@ grid-template-columns:1fr;
 
 }
 
-.product-image img.full-image{
+.product-images img.full-image{
 
-position:fixed;
+    position:fixed;
 
-top:50%;
+    top:50%;
 
-left:50%;
+    left:50%;
 
-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%);
 
-width:95vw;
+    width:95vw;
 
-height:95vh;
+    height:95vh;
 
-object-fit:contain;
+    object-fit:contain;
 
-background:#000;
+    background:#000;
 
-z-index:9999;
+    z-index:9999;
+
+    border-radius:20px;
 
 }
