@@ -475,7 +475,29 @@ location.href="cart.html";
 
 function buyNow(){
 
-addToCart();
+const cart=JSON.parse(localStorage.getItem("cart")) || [];
+
+cart.push({
+
+id:product.id,
+
+name:product.name,
+
+image:product.image,
+
+price:document.getElementById("productPrice").innerHTML,
+
+size:document.getElementById("size").value,
+
+color:document.getElementById("color").value,
+
+quantity:document.getElementById("quantity").value,
+
+delivery:document.querySelector('input[name="delivery"]:checked').value
+
+});
+
+localStorage.setItem("cart",JSON.stringify(cart));
 
 location.href="checkout.html";
 
