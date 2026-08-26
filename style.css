@@ -1789,7 +1789,8 @@ grid-template-columns:1fr;
     z-index:9999;
 
     border-radius:20px;
-
+.product-images img{
+    cursor:pointer;
 }
 
 @media screen and (max-width:768px){
