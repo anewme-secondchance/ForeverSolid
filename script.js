@@ -553,13 +553,17 @@ function calculateCartTotal(){
 
     let total = 0;
 
+    let shipping = 0;
+
     cart.forEach(item=>{
 
         total += item.total;
 
+        shipping += item.shipping || 0;
+
     });
 
-    return total;
+    return total + shipping;
 
 }
 
@@ -597,8 +601,8 @@ function placeOrder(){
         email:
         document.getElementById("email").value,
 
-        delivery:
-        document.getElementById("deliveryMethod").value,
+       delivery:
+document.querySelector('input[name="delivery"]:checked').value,
 
         address:
         document.getElementById("address").value,
