@@ -24,6 +24,8 @@ const BUSINESS_PRICE = 750;
 
 const CART_KEY = "cart";
 
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
 const INSTALL_KEY = "fs_install_date";
 
 const ORDER_KEY = "lastOrder";
@@ -269,7 +271,7 @@ checkTrial();
 =========================================*/
 function addToCart(){
         
-const cart = JSON.parse(localStorage.getItem("cart")) || [];
+cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const price = Number(document.getElementById("productPrice").innerHTML);
 
