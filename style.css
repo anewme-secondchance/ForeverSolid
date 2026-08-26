@@ -1768,31 +1768,6 @@ grid-template-columns:1fr;
 
 }
 
-.product-images img.full-image{
-
-    position:fixed;
-
-    top:50%;
-
-    left:50%;
-
-    transform:translate(-50%,-50%);
-
-    width:95vw;
-
-    height:95vh;
-
-    object-fit:contain;
-
-    background:#000;
-
-    z-index:9999;
-
-    border-radius:20px;
-.product-images img{
-    cursor:pointer;
-}
-
 @media screen and (max-width:768px){
 
 .checkout-container{
