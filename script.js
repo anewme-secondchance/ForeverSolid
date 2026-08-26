@@ -302,7 +302,7 @@ checkTrial();
 =========================================*/
 function addToCart(){
         
-const cart = JSON.parse(localStorage.getItem("fs_cart")) || [];
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const price = Number(document.getElementById("productPrice").innerHTML);
 
@@ -971,3 +971,4 @@ window.addEventListener("load", function () {
     }
 
 });
+
