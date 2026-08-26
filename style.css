@@ -1802,3 +1802,29 @@ grid-template-columns:1fr;
 }
 
 }
+
+.product-images img{
+    cursor:pointer;
+}
+
+.product-images img.full-image{
+
+    position:fixed !important;
+
+    top:50% !important;
+
+    left:50% !important;
+
+    transform:translate(-50%,-50%) !important;
+
+    width:95vw !important;
+
+    height:95vh !important;
+
+    object-fit:contain !important;
+
+    background:#000;
+
+    z-index:999999 !important;
+
+}
