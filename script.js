@@ -28,23 +28,6 @@ const INSTALL_KEY = "fs_install_date";
 
 const ORDER_KEY = "lastOrder";
 
-const FAVORITES_KEY = "favorites";
-/*=========================================
-        GLOBAL VARIABLES
-=========================================*/
-
-let cart = JSON.parse(
-
-localStorage.getItem(CART_KEY)
-
-) || [];
-
-let favorites = JSON.parse(
-
-localStorage.getItem(FAVORITES_KEY)
-
-) || [];
-
 /*=========================================
         SAVE CART
 =========================================*/
@@ -55,22 +38,6 @@ function saveCart(){
 "cart",
 JSON.stringify(cart)
 );
-}
-
-/*=========================================
-        SAVE FAVORITES
-=========================================*/
-
-function saveFavorites(){
-
-    localStorage.setItem(
-
-        FAVORITES_KEY,
-
-        JSON.stringify(favorites)
-
-    );
-
 }
 
 /*=========================================
@@ -941,8 +908,6 @@ document.addEventListener(
 function(){
 
     updateCartBadge();
-
-    updateFavoriteIcons();
 
     checkTrial();
 
