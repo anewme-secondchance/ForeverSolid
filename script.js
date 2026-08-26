@@ -681,7 +681,7 @@ function loadReceipt(){
     order.delivery;
 
     document.getElementById("receiptTotal").innerHTML =
-    "$" + order.total.toFixed(2);
+"$" + Number(order.total || 0).toFixed(2);
 
   if(document.getElementById("receiptShipping")){
 
