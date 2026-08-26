@@ -509,7 +509,15 @@ updateFavoriteIcons();
 
  function openFullImage(img){
 
-    img.classList.toggle("full-image");
+    if(img.classList.contains("full-image")){
+
+        img.classList.remove("full-image");
+
+    } else {
+
+        img.classList.add("full-image");
+
+    }
 
 }
  
