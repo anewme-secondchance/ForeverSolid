@@ -2246,3 +2246,22 @@ font-weight:400;
 letter-spacing:1px;
 
 }
+
+/* =====================================
+ GREEN BOX BABY TEXT STYLE
+===================================== */
+
+.green-title{
+
+color:#00ff33;
+
+font-weight:400;
+
+letter-spacing:3px;
+
+text-shadow:
+0 0 5px #00ff33,
+0 0 15px #00ff33,
+0 0 30px #00ff33;
+
+}
