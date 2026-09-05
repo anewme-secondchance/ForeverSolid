@@ -19,15 +19,19 @@
 
 </head>
 
+
 <body>
+
 
 <!-- ========================= -->
 <!-- HEADER -->
 <!-- ========================= -->
 
+
 <header>
 
 <nav class="top-nav">
+
 
 <button onclick="history.back()">
 
@@ -35,11 +39,13 @@
 
 </button>
 
+
 <a href="receipt.html">
 
 Receipt
 
 </a>
+
 
 <a href="cart.html">
 
@@ -47,15 +53,19 @@ Receipt
 
 </a>
 
+
 </nav>
 
 </header>
+
 
 <!-- ========================= -->
 <!-- PAGE HEADER -->
 <!-- ========================= -->
 
+
 <section class="shop-header">
+
 
 <img
 
@@ -65,14 +75,12 @@ class="hero-logo-img"
 
 alt="Green Box Baby Logo">
 
+
 <h1>
 
 Green Box Baby
 
 </h1>
-
-</section>
-
 
 <!-- ========================= -->
 <!-- FILTERS -->
@@ -86,11 +94,13 @@ All
 
 </button>
 
+
 <button onclick="filterProducts('Shirts')">
 
 Shirts
 
 </button>
+
 
 <button onclick="filterProducts('Hoodies')">
 
@@ -98,11 +108,13 @@ Hoodies
 
 </button>
 
+
 <button onclick="filterProducts('T-Shirts')">
 
 T-Shirts
 
 </button>
+
 
 <button onclick="filterProducts('Shorts')">
 
@@ -110,11 +122,13 @@ Shorts
 
 </button>
 
+
 <button onclick="filterProducts('Sets')">
 
 Sets
 
 </button>
+
 
 </section>
 
@@ -122,12 +136,14 @@ Sets
 <!-- PRODUCTS -->
 <!-- ========================= -->
 
+
 <section
 id="greenProducts"
 class="products-grid">
 
-</section>
 
+</section>
+</section>
 
 <!-- ========================= -->
 <!-- FOOTER -->
@@ -140,11 +156,17 @@ src="images/IMG_FSREDLOGO.png"
 alt="Forever Solid"
 class="footer-logo">
 
+
 <p class="brand-slogan">
+
 "YOU CAN'T CHANGE HOW SOLID YOU ARE"
+
 <br>
+
 "BUT YOU CAN CHANGE WHO YOU'RE SOLID TO."
+
 </p>
+
 
 <div class="copyright">
 
@@ -153,11 +175,16 @@ class="footer-logo">
 </div>
 
 </footer>
+
+
+
 <!-- ========================= -->
 <!-- MOBILE NAVIGATION -->
 <!-- ========================= -->
 
+
 <nav class="bottom-nav">
+
 
 <a href="index.html">
 
@@ -167,6 +194,8 @@ class="footer-logo">
 
 </a>
 
+
+
 <a href="shop.html">
 
 🔥
@@ -174,6 +203,8 @@ class="footer-logo">
 <span>Forever Solid</span>
 
 </a>
+
+
 
 <a href="cart.html">
 
@@ -191,11 +222,14 @@ class="footer-logo">
 
 </a>
 
+
 </nav>
+
 
 <!-- ========================= -->
 <!-- BACK TO TOP -->
 <!-- ========================= -->
+
 
 <button
 
@@ -203,7 +237,9 @@ id="topButton"
 
 onclick="window.scrollTo({top:0,behavior:'smooth'})">
 
+
 ↑
+
 
 </button>
 
@@ -211,11 +247,14 @@ onclick="window.scrollTo({top:0,behavior:'smooth'})">
 <!-- SCRIPTS -->
 <!-- ========================= -->
 
+
 <script src="products.js"></script>
 
 <script src="trial.js"></script>
 
 <script src="script.js"></script>
+
+
 
 <script>
 
@@ -223,60 +262,108 @@ onclick="window.scrollTo({top:0,behavior:'smooth'})">
         LOAD GREEN BOX PRODUCTS
 =========================================*/
 
+
 const container = document.getElementById("greenProducts");
 
 let html = "";
 
+
+if(container && typeof products !== "undefined"){
+
+
 products
+
 .filter(product => product.brand === "Green Box Baby")
+
 .forEach(product => {
+
 
 html += `
 
 <div class="product-card" data-category="${product.category}">
 
+
 <img
+
 src="${product.image}"
+
 alt="${product.name}">
+
+
 
 <div class="product-info">
 
-<h3>${product.name}</h3>
 
-<p>${product.category}</p>
+<h3>
+
+${product.name}
+
+</h3>
+
+
+
+<p>
+
+${product.category}
+
+</p>
+
+
 
 <div class="price">
+
 
 <strong>S–XL:</strong> $${product.priceSmall}
 
 <br>
 
+
 <strong>2XL+:</strong> $${product.priceLarge}
+
+
 
 </div>
 
+
+
 <button
+
 class="buy-btn"
+
 onclick="viewProduct('${product.id}')">
+
 
 Customize & Order
 
+
 </button>
 
-</div>
+
 
 </div>
+
+
+</div>
+
 
 `;
 
+
 });
+
 
 container.innerHTML = html;
 
+
+}
+
+
 updateCartBadge();
+
 
 </script>
 
+
 </body>
 
-</html>
+</html>        
