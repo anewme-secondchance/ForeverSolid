@@ -1,12 +1,12 @@
-/=========================================
-TADIE4ENT BUSINESS APP
-=========================================/
+/*=========================================
+        TADIE4ENT BUSINESS APP
+=========================================*/
 
-/=========================================
-APP SETTINGS
-=========================================/
+/*=========================================
+        APP SETTINGS
+=========================================*/
 
-const APP_MODE = "FULL";     // TRIAL or FULL
+const APP_MODE = "FULL"; // TRIAL or FULL
 
 const TRIAL_DAYS = 7;
 
@@ -18,9 +18,10 @@ const STORE_PHONE = "9032629694";
 
 const BUSINESS_PRICE = 750;
 
-/=========================================
-LOCAL STORAGE KEYS
-=========================================/
+
+/*=========================================
+        LOCAL STORAGE KEYS
+=========================================*/
 
 const CART_KEY = "cart";
 
@@ -28,75 +29,73 @@ const INSTALL_KEY = "fs_install_date";
 
 const ORDER_KEY = "lastOrder";
 
-/=========================================
-SAVE CART
-=========================================/
+
+/*=========================================
+        SAVE CART
+=========================================*/
 
 function saveCart(){
 
 localStorage.setItem(
-"cart",
+CART_KEY,
 JSON.stringify(cart)
 );
+
 }
 
-/=========================================
-INSTALL DATE
-=========================================/
+/*=========================================
+        INSTALL DATE
+=========================================*/
 
 function setInstallDate(){
 
 if(!localStorage.getItem(INSTALL_KEY)){
 
-    localStorage.setItem(
-
-        INSTALL_KEY,
-
-        new Date().getTime()
-
-    );
+localStorage.setItem(
+INSTALL_KEY,
+new Date().getTime()
+);
 
 }
 
 }
 
-/=========================================
-DAYS USED
-=========================================/
+
+/*=========================================
+        DAYS USED
+=========================================*/
 
 function getDaysUsed(){
 
 const install = Number(
-
-    localStorage.getItem(INSTALL_KEY)
-
+localStorage.getItem(INSTALL_KEY)
 );
 
 const today = new Date().getTime();
 
 return Math.floor(
-
-    (today-install)/(1000*60*60*24)
-
+(today-install)/(1000*60*60*24)
 );
 
 }
 
-/=========================================
-START APP
-=========================================/
+
+/*=========================================
+        START APP
+=========================================*/
 
 setInstallDate();
 
-/=========================================
-TRIAL CHECK
-=========================================/
+
+/*=========================================
+        TRIAL CHECK
+=========================================*/
 
 function checkTrial(){
 
 if(APP_MODE === "FULL"){
 
-    return;
+return;
 
 }
 
@@ -104,15 +103,16 @@ const daysUsed = getDaysUsed();
 
 if(daysUsed >= TRIAL_DAYS){
 
-    showTrialExpired();
+showTrialExpired();
 
 }
 
 }
 
-/=========================================
-TRIAL EXPIRED PAGE
-=========================================/
+
+/*=========================================
+        TRIAL EXPIRED PAGE
+=========================================*/
 
 function showTrialExpired(){
 
@@ -156,7 +156,7 @@ Business App
 
 <h1>
 
-Starting at $750
+Starting at $${BUSINESS_PRICE}
 
 </h1>
 
@@ -201,15 +201,10 @@ Need An App For Your Business?
 <p>
 
 ✔ Clothing Brands<br>
-
 ✔ Tattoo Shops<br>
-
 ✔ Lash Studios<br>
-
 ✔ Restaurants<br>
-
 ✔ Churches<br>
-
 ✔ Small Businesses
 
 </p>
@@ -217,28 +212,16 @@ Need An App For Your Business?
 <div class="trial-buttons">
 
 <a
-
 class="big-red-button"
-
 href="sms:${STORE_PHONE}?body=Hi%20TaDie4ENT!%20I'm%20interested%20in%20purchasing%20a%20custom%20business%20app.">
 
 📱 Text Me
 
 </a>
 
-<a
-
-class="big-green-button"
-
-href="mailto@gmail.com"
-
-📧 Email Me
-
-</a>
-
 </div>
 
-<p style="margin-top:40px;">
+<p>
 
 Designed by
 
@@ -258,22 +241,22 @@ TaDie4ENT
 
 }
 
-/=========================================
-START TRIAL
-=========================================/
+/*=========================================
+        ADD TO CART
+=========================================*/
 
-checkTrial();
-
-/=========================================
-ADD TO CART
-=========================================/
 function addToCart(){
 
-const cart = JSON.parse(localStorage.getItem("cart")) || [];
+const cart = JSON.parse(localStorage.getItem(CART_KEY)) || [];
 
-const price = Number(document.getElementById("productPrice").innerHTML);
+const price = Number(
+document.getElementById("productPrice").innerHTML
+);
 
-const quantity = Number(document.getElementById("quantity").value);
+const quantity = Number(
+document.getElementById("quantity").value
+);
+
 
 const item = {
 
@@ -293,38 +276,53 @@ color: document.getElementById("color").value,
 
 quantity: quantity,
 
-delivery: document.querySelector('input[name="delivery"]').value,
+delivery:
+document.querySelector('input[name="delivery"]:checked').value,
 
-shipping: document.querySelector('input[name="delivery"]').value === "Shipping" ? 6.99 : 0,
 
-address: document.getElementById("address").value,
+shipping:
+document.querySelector('input[name="delivery"]:checked').value === "Shipping"
+? 6.99
+: 0,
 
-city: document.getElementById("city").value,
 
-state: document.getElementById("state").value,
+address:
+document.getElementById("address").value,
 
-zip: document.getElementById("zip").value,
+city:
+document.getElementById("city").value,
 
-notes: document.getElementById("notes").value
+state:
+document.getElementById("state").value,
+
+zip:
+document.getElementById("zip").value,
+
+notes:
+document.getElementById("notes").value
 
 };
 
+
 cart.push(item);
 
+
 localStorage.setItem(
-"cart",
+CART_KEY,
 JSON.stringify(cart)
 );
 
+
 alert("Added to Cart!");
 
-window.location.href = "cart.html";
+
+window.location.href="cart.html";
 
 }
 
-/=========================================
-REMOVE FROM CART
-=========================================/
+/*=========================================
+        REMOVE FROM CART
+=========================================*/
 
 function removeFromCart(index){
 
@@ -336,158 +334,17 @@ updateCart();
 
 }
 
-/=========================================
-CLEAR CART
-=========================================/
+
+
+/*=========================================
+        CLEAR CART
+=========================================*/
 
 function clearCart(){
 
 if(confirm("Remove all items from your cart?")){
 
-    cart = [];
-
-    saveCart();
-
-    updateCart();
-
-}
-
-}
-
-/=========================================
-UPDATE CART
-=========================================/
-
-function updateCart(){
-
-const cartContainer = document.getElementById("cartItems");
-
-const itemCount = document.getElementById("itemCount");
-
-const subtotal = document.getElementById("subtotal");
-
-const grandTotal = document.getElementById("grandTotal");
-
-const emptyCart = document.getElementById("emptyCart");
-
-if(!cartContainer) return;
-
-cartContainer.innerHTML = "";
-
-let total = 0;
-
-let shipping = 0;
-
-if(cart.length === 0){
-
-    if(emptyCart){
-
-        emptyCart.style.display = "block";
-
-    }
-
-    itemCount.innerHTML = "0";
-
-    subtotal.innerHTML = "$0.00";
-
-    grandTotal.innerHTML = "$0.00";
-
-    updateCartBadge();
-
-    return;
-
-}
-
-if(emptyCart){
-
-    emptyCart.style.display = "none";
-
-}
-
-cart.forEach((item,index)=>{
-
-    total += item.total;
-        
-
-shipping += item.shipping || 0;
-
-    cartContainer.innerHTML += `
-
-    <div class="cart-item">
-
-        <img src="${item.image}" class="cart-image" alt="${item.name}">
-
-        <div class="cart-details">
-
-            <h3>${item.name}</h3>
-
-            <p><strong>Size:</strong> ${item.size}</p>
-
-            <p><strong>Color:</strong> ${item.color}</p>
-
-            <p><strong>Quantity:</strong> ${item.quantity}</p>
-
-            <p><strong>Price:</strong> $${item.price}</p>
-
-            <h2>$${item.total.toFixed(2)}</h2>
-
-            <div class="quantity-buttons">
-
-                <button onclick="decreaseQuantity(${index})">
-
-                ➖
-
-                </button>
-
-                <button onclick="increaseQuantity(${index})">
-
-                ➕
-
-                </button>
-
-            </div>
-
-            <button
-
-            class="remove-button"
-
-            onclick="removeFromCart(${index})">
-
-            🗑 Remove
-
-            </button>
-
-        </div>
-
-    </div>
-
-    `;
-
-});
-
-itemCount.innerHTML = cart.length;
-
-subtotal.innerHTML = "$" + total.toFixed(2);
-
-grandTotal.innerHTML = "$" + (total + shipping).toFixed(2);
-
-updateCartBadge();
-
-}
-
-/=========================================
-INCREASE QUANTITY
-=========================================/
-
-function increaseQuantity(index){
-
-cart[index].quantity++;
-
-cart[index].total =
-
-cart[index].price *
-
-cart[index].quantity;
+cart = [];
 
 saveCart();
 
@@ -495,55 +352,276 @@ updateCart();
 
 }
 
-/=========================================
-DECREASE QUANTITY
-=========================================/
+}
 
-function decreaseQuantity(index){
 
-if(cart[index].quantity > 1){
 
-    cart[index].quantity--;
+/*=========================================
+        UPDATE CART
+=========================================*/
 
-    cart[index].total =
+function updateCart(){
 
-    cart[index].price *
+const cartContainer =
+document.getElementById("cartItems");
 
-    cart[index].quantity;
+const itemCount =
+document.getElementById("itemCount");
 
-    saveCart();
+const subtotal =
+document.getElementById("subtotal");
 
-    updateCart();
+const grandTotal =
+document.getElementById("grandTotal");
+
+const emptyCart =
+document.getElementById("emptyCart");
+
+
+if(!cartContainer) return;
+
+
+cartContainer.innerHTML = "";
+
+
+let total = 0;
+
+let shipping = 0;
+
+
+
+if(cart.length === 0){
+
+if(emptyCart){
+
+emptyCart.style.display = "block";
 
 }
 
+
+if(itemCount){
+
+itemCount.innerHTML = "0";
+
 }
 
-/=========================================
-CART BADGE
-=========================================/
 
-function updateCartBadge(){
+if(subtotal){
 
-const badge = document.getElementById("cartBadge");
+subtotal.innerHTML = "$0.00";
 
-if(!badge) return;
+}
 
-let totalItems = 0;
 
-cart.forEach(item=>{
+if(grandTotal){
 
-    totalItems += item.quantity;
+grandTotal.innerHTML = "$0.00";
+
+}
+
+
+updateCartBadge();
+
+return;
+
+}
+
+
+
+if(emptyCart){
+
+emptyCart.style.display = "none";
+
+}
+
+
+
+cart.forEach((item,index)=>{
+
+
+total += Number(item.total || 0);
+
+
+shipping += Number(item.shipping || 0);
+
+
+
+cartContainer.innerHTML += `
+
+<div class="cart-item">
+
+<img src="${item.image}" class="cart-image" alt="${item.name}">
+
+
+<div class="cart-details">
+
+<h3>${item.name}</h3>
+
+<p><strong>Size:</strong> ${item.size}</p>
+
+<p><strong>Color:</strong> ${item.color}</p>
+
+<p><strong>Quantity:</strong> ${item.quantity}</p>
+
+<p><strong>Price:</strong> $${item.price}</p>
+
+
+<h2>
+
+$${Number(item.total || 0).toFixed(2)}
+
+</h2>
+
+
+<button onclick="decreaseQuantity(${index})">
+
+➖
+
+</button>
+
+
+<button onclick="increaseQuantity(${index})">
+
+➕
+
+</button>
+
+
+<button
+class="remove-button"
+onclick="removeFromCart(${index})">
+
+🗑 Remove
+
+</button>
+
+
+</div>
+
+</div>
+
+`;
 
 });
 
-badge.innerHTML = totalItems;
+
+
+if(itemCount){
+
+itemCount.innerHTML = cart.length;
 
 }
 
-/=========================================
-CALCULATE CART TOTAL
-=========================================/
+
+if(subtotal){
+
+subtotal.innerHTML =
+"$" + total.toFixed(2);
+
+}
+
+
+if(grandTotal){
+
+grandTotal.innerHTML =
+"$" + (total + shipping).toFixed(2);
+
+}
+
+
+
+updateCartBadge();
+
+}
+
+/*=========================================
+        INCREASE QUANTITY
+=========================================*/
+
+function increaseQuantity(index){
+
+cart[index].quantity++;
+
+
+cart[index].total =
+
+Number(cart[index].price) *
+
+Number(cart[index].quantity);
+
+
+
+saveCart();
+
+updateCart();
+
+}
+
+
+
+/*=========================================
+        DECREASE QUANTITY
+=========================================*/
+
+function decreaseQuantity(index){
+
+
+if(cart[index].quantity > 1){
+
+
+cart[index].quantity--;
+
+
+cart[index].total =
+
+Number(cart[index].price) *
+
+Number(cart[index].quantity);
+
+
+
+saveCart();
+
+updateCart();
+
+
+}
+
+}
+
+
+
+/*=========================================
+        CART BADGE
+=========================================*/
+
+function updateCartBadge(){
+
+const badge =
+document.getElementById("cartBadge");
+
+
+if(!badge) return;
+
+
+let totalItems = 0;
+
+
+cart.forEach(item=>{
+
+totalItems += Number(item.quantity || 0);
+
+});
+
+
+badge.innerHTML = totalItems;
+
+
+}
+
+/*=========================================
+        CALCULATE CART TOTAL
+=========================================*/
 
 function calculateCartTotal(){
 
@@ -551,176 +629,302 @@ let total = 0;
 
 let shipping = 0;
 
+
 cart.forEach(item=>{
 
-    total += item.total;
+total += Number(item.total || 0);
 
-    shipping += item.shipping || 0;
+shipping += Number(item.shipping || 0);
 
 });
+
 
 return total + shipping;
 
 }
 
-/=========================================
-PLACE ORDER
-=========================================/
+
+
+/*=========================================
+        PLACE ORDER
+=========================================*/
 
 function placeOrder(){
 
+
 if(cart.length === 0){
 
-    alert("Your cart is empty.");
+alert("Your cart is empty.");
 
-    return;
+return;
 
 }
 
+
+
+const delivery =
+document.querySelector('input[name="delivery"]:checked');
+
+
+
 const order = {
 
-    orderNumber:
-    "FS" + Math.floor(100000 + Math.random() * 900000),
 
-    date:
-    new Date().toLocaleDateString(),
+orderNumber:
 
-    firstName:
-    document.getElementById("firstName").value,
+"FS" + Math.floor(100000 + Math.random() * 900000),
 
-    lastName:
-    document.getElementById("lastName").value,
 
-    phone:
-    document.getElementById("phone").value,
+date:
 
-    email:
-    document.getElementById("email").value,
+new Date().toLocaleDateString(),
 
-   delivery:
 
-document.querySelector('input[name="delivery"]').value,
 
-    address:
-    document.getElementById("address").value,
+firstName:
 
-    city:
-    document.getElementById("city").value,
+document.getElementById("firstName").value,
 
-    state:
-    document.getElementById("state").value,
 
-    zip:
-    document.getElementById("zip").value,
 
-    notes:
-    document.getElementById("notes").value,
+lastName:
 
-    items:
-    cart,
+document.getElementById("lastName").value,
 
-    total:
-    calculateCartTotal(),
+
+
+phone:
+
+document.getElementById("phone").value,
+
+
+
+email:
+
+document.getElementById("email").value,
+
+
+
+delivery:
+
+delivery ? delivery.value : "Pickup",
+
+
+
+address:
+
+document.getElementById("address").value,
+
+
+
+city:
+
+document.getElementById("city").value,
+
+
+
+state:
+
+document.getElementById("state").value,
+
+
+
+zip:
+
+document.getElementById("zip").value,
+
+
+
+notes:
+
+document.getElementById("notes").value,
+
+
+
+items:
+
+cart,
+
+
+
+subtotal:
+
+cart.reduce((sum,item)=>
+
+sum + Number(item.total || 0),0),
+
+
 
 shipping:
-cart.reduce((sum,item)=>sum + (item.shipping || 0),0)
+
+cart.reduce((sum,item)=>
+
+sum + Number(item.shipping || 0),0),
+
+
+
+total:
+
+calculateCartTotal()
 
 };
 
+
+
 localStorage.setItem(
 
-    ORDER_KEY,
+ORDER_KEY,
 
-    JSON.stringify(order)
+JSON.stringify(order)
 
 );
+
+
 
 cart = [];
 
 saveCart();
 
-window.location.href = "receipt.html";
+
+
+window.location.href="receipt.html";
+
 
 }
 
-/=========================================
-LOAD RECEIPT
-=========================================/
+/*=========================================
+        LOAD RECEIPT
+=========================================*/
 
 function loadReceipt(){
 
 const order = JSON.parse(
 
-    localStorage.getItem(ORDER_KEY)
+localStorage.getItem(ORDER_KEY)
 
 );
 
+
 if(!order) return;
+
+
 
 document.getElementById("orderNumber").innerHTML =
 order.orderNumber;
 
+
 document.getElementById("orderDate").innerHTML =
 order.date;
+
 
 document.getElementById("customerName").innerHTML =
 order.firstName + " " + order.lastName;
 
+
 document.getElementById("customerPhone").innerHTML =
 order.phone;
+
 
 document.getElementById("customerEmail").innerHTML =
 order.email;
 
+
+
+if(document.getElementById("receiptDelivery")){
+
 document.getElementById("receiptDelivery").innerHTML =
 order.delivery;
 
-document.getElementById("receiptTotal").innerHTML =
-"$" + Number(order.total || 0).toFixed(2);
-        
+}
+
+
+
+if(document.getElementById("receiptSubtotal")){
+
+document.getElementById("receiptSubtotal").innerHTML =
+
+"$" + Number(order.subtotal || 0).toFixed(2);
+
+}
+
+
+
 if(document.getElementById("receiptShipping")){
 
 document.getElementById("receiptShipping").innerHTML =
-"$" + (order.shipping || 0).toFixed(2);
+
+"$" + Number(order.shipping || 0).toFixed(2);
 
 }
 
+
+
+document.getElementById("receiptTotal").innerHTML =
+
+"$" + Number(order.total || 0).toFixed(2);
+
+
+
 const receiptItems =
+
 document.getElementById("receiptItems");
+
+
+
+if(!receiptItems) return;
+
+
 
 receiptItems.innerHTML = "";
 
+
+
 order.items.forEach(item=>{
 
-    receiptItems.innerHTML += `
 
-    <div class="receipt-item">
+receiptItems.innerHTML += `
 
-        <strong>${item.name}</strong><br>
 
-        Size: ${item.size}<br>
+<div class="receipt-item">
 
-        Color: ${item.color}<br>
 
-        Quantity: ${item.quantity}<br>
+<strong>${item.name}</strong><br>
 
-        Price: $${item.price}<br>
 
-        Total: $${item.total.toFixed(2)}
+Size: ${item.size}<br>
 
-    </div>
 
-    <hr>
+Color: ${item.color}<br>
 
-    `;
+
+Quantity: ${item.quantity}<br>
+
+
+Price: $${item.price}<br>
+
+
+Total: $${Number(item.total || 0).toFixed(2)}
+
+
+</div>
+
+
+<hr>
+
+
+`;
+
 
 });
 
+
 }
 
-/=========================================
-PRINT RECEIPT
-=========================================/
+
+
+/*=========================================
+        PRINT RECEIPT
+=========================================*/
 
 function printReceipt(){
 
@@ -728,25 +932,31 @@ window.print();
 
 }
 
-/=========================================
-SEND TEXT ORDER
-=========================================/
+
+
+/*=========================================
+        SEND TEXT ORDER
+=========================================*/
 
 function sendTextOrder(){
 
 const order = JSON.parse(
 
-    localStorage.getItem(ORDER_KEY)
+localStorage.getItem(ORDER_KEY)
 
 );
 
+
+
 if(!order){
 
-    alert("No order found.");
+alert("No order found.");
 
-    return;
+return;
 
 }
+
+
 
 let message =
 
@@ -768,11 +978,14 @@ ${order.delivery}
 
 `;
 
+
+
 order.items.forEach(item=>{
 
-    message +=
 
-`${item.name}
+message += `
+
+${item.name}
 
 Size: ${item.size}
 
@@ -780,34 +993,35 @@ Color: ${item.color}
 
 Qty: ${item.quantity}
 
-Total: $${item.total}
+Total: $${Number(item.total || 0).toFixed(2)}
 
 `;
 
 });
 
-message +=
 
-`
+
+message += `
 
 Grand Total:
-$${order.total.toFixed(2)}
+$${Number(order.total || 0).toFixed(2)}
 
 Thank you!
 
 `;
 
+
+
 window.location.href =
 
-sms:${STORE_PHONE}?body=${encodeURIComponent(message)};
+`sms:${STORE_PHONE}?body=${encodeURIComponent(message)}`;
+
 
 }
 
-
-
-/=========================================
-FILTER PRODUCTS
-=========================================/
+/*=========================================
+        FILTER PRODUCTS
+=========================================*/
 
 function filterProducts(category){
 
@@ -815,89 +1029,108 @@ document
 .querySelectorAll(".product-card")
 .forEach(card=>{
 
-    if(category === "All"){
 
-        card.style.display = "";
+if(category === "All"){
 
-        return;
+card.style.display = "";
 
-    }
+return;
 
-    if(card.dataset.category === category){
+}
 
-        card.style.display = "";
 
-    }else{
+if(card.dataset.category === category){
 
-        card.style.display = "none";
+card.style.display = "";
 
-    }
+}else{
+
+card.style.display = "none";
+
+}
+
 
 });
 
 }
 
-/=========================================
-BACK TO TOP
-=========================================/
+
+
+/*=========================================
+        BACK TO TOP
+=========================================*/
 
 function backToTop(){
 
 window.scrollTo({
 
-    top:0,
+top:0,
 
-    behavior:"smooth"
+behavior:"smooth"
 
 });
 
 }
 
-/=========================================
-PRODUCT PRICE
-=========================================/
+
+
+/*=========================================
+        PRODUCT PRICE
+=========================================*/
 
 function calculatePrice(product,size){
 
+
 if(
 
-    size==="2XL" ||
+size === "2XL" ||
 
-    size==="3XL" ||
+size === "3XL" ||
 
-    size==="4XL"
+size === "4XL"
 
 ){
 
-    return product.priceLarge;
+return product.priceLarge;
 
 }
+
 
 return product.priceSmall;
 
+
 }
 
-/=========================================
-VIEW PRODUCT
-=========================================/
+
+
+/*=========================================
+        VIEW PRODUCT
+=========================================*/
 
 function viewProduct(productId){
 
 localStorage.setItem(
 
-    "selectedProduct",
+"selectedProduct",
 
-    productId
+productId
 
 );
 
-window.location.href = "product.html?id=" + productId;
+
+window.location.href =
+
+"product.html?id=" + productId;
+
 
 }
 
-/=========================================
-APP STARTUP
-=========================================/
+
+
+/*=========================================
+        APP STARTUP
+=========================================*/
+
 
 document.addEventListener(
 
@@ -905,33 +1138,51 @@ document.addEventListener(
 
 function(){
 
+
 updateCartBadge();
+
+
 
 checkTrial();
 
+
+
 if(document.getElementById("cartItems")){
 
-    updateCart();
+updateCart();
 
 }
+
+
 
 if(document.getElementById("receiptItems")){
 
-    loadReceipt();
+loadReceipt();
 
 }
+
+
 
 });
 
-window.addEventListener("load", function () {
+
+
+/*=========================================
+        REMOVE LOADER
+=========================================*/
+
+window.addEventListener("load",function(){
+
 
 const loader = document.getElementById("loader");
 
+
 if(loader){
 
-    loader.remove();
+loader.remove();
 
 }
+
 
 });
 
