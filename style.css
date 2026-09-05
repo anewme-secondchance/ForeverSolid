@@ -2272,21 +2272,32 @@ drop-shadow(0 0 20px #00ff33)
 drop-shadow(0 0 35px #00ff33);
 
 }
+
 .green-title{
 
-color:#00ff33;
+font-family:'Great Vibes', cursive;
+
+font-size:80px;
 
 font-weight:400;
 
-letter-spacing:3px;
+letter-spacing:2px;
+
+color:#39ff14;
+
+text-align:center;
+
+transform:scaleX(1.05);
 
 text-shadow:
-0 0 5px #00ff33,
-0 0 15px #00ff33,
-0 0 30px #00ff33;
+
+0 0 5px #39ff14,
+
+0 0 15px #39ff14,
+
+0 0 35px #39ff14;
 
 }
-
 
 /* =====================================
    GREEN BOX BABY PAGE THEME
