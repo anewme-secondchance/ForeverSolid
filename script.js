@@ -801,7 +801,7 @@ Thank you!
 
 window.location.href =
 
-sms:${STORE_PHONE}?body=${encodeURIComponent(message)};
+`sms:${STORE_PHONE}?body=${encodeURIComponent(message)}`;
 
 }
 
