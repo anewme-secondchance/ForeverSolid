@@ -2045,3 +2045,29 @@ background:#000;
 z-index:999999 !important;
 
 }
+
+/*=========================================
+        GREEN BOX BABY THEME
+=========================================*/
+
+.shop-header.green h1,
+.green-title{
+
+color:#39ff14;
+
+text-shadow:
+0 0 5px #39ff14,
+0 0 15px #00ff66,
+0 0 30px #00ff66;
+
+}
+
+
+.shop-header.green .hero-quote{
+
+color:#39ff14;
+
+text-shadow:
+0 0 10px #00ff66;
+
+}
