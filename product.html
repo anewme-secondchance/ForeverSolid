@@ -19,15 +19,19 @@
 
 </head>
 
+
 <body>
+
 
 <!-- ========================= -->
 <!-- HEADER -->
 <!-- ========================= -->
 
+
 <header>
 
 <div class="top-nav">
+
 
 <button onclick="history.back()">
 
@@ -35,11 +39,13 @@
 
 </button>
 
+
 <a href="receipt.html">
 
 Receipt
 
 </a>
+
 
 <a href="cart.html">
 
@@ -53,20 +59,31 @@ Receipt
 
 </a>
 
+
 </div>
 
 </header>
+
+
+
+
 
 <!-- ========================= -->
 <!-- PAGE HEADER -->
 <!-- ========================= -->
 
+
 <section class="shop-header">
 
+
 <img
+
 src="images/IMG_FSREDLOGO.png"
+
 class="hero-logo-img"
+
 alt="Forever Solid">
+
 
 </section>
 
@@ -76,7 +93,9 @@ alt="Forever Solid">
 
 <section class="product-page">
 
+
 <div class="product-images">
+
 
 <img
 
@@ -86,23 +105,32 @@ src=""
 
 alt="Product"
 
-onclick="openFullImage()"
+onclick="openFullImage(this)">
+
 
 </div>
 
+
+
 <div class="product-details">
 
- <h1 id="productName">
+
+
+<h1 id="productName">
 
 Loading...
 
 </h1>
+
+
 
 <p id="productDescription">
 
 Premium Streetwear
 
 </p>
+
+
 
 <h2>
 
@@ -114,11 +142,15 @@ $<span id="productPrice">
 
 </h2>
 
+
+
+
 <label>
 
 Size
 
 </label>
+
 
 <select id="size">
 
@@ -138,16 +170,24 @@ Size
 
 </select>
 
+
+
+
 <label>
 
 Color
 
 </label>
 
+
 <input
+
 type="text"
+
 id="color"
+
 placeholder="Type Desired Color">
+
 
 <label>
 
@@ -155,48 +195,75 @@ Quantity
 
 </label>
 
+
 <input
+
 type="number"
+
 id="quantity"
+
 value="1"
+
 min="1">
 
-<label>
+ <label>
 
 Pickup or Shipping
 
 </label>
 
+
 <div class="delivery-options">
+
 
 <label>
 
 <input
+
 type="radio"
+
 name="delivery"
+
 value="Pickup"
+
 checked
+
 onclick="toggleShipping()">
+
 
 Pickup
 
+
 </label>
+
+
 
 <label>
 
 <input
+
 type="radio"
+
 name="delivery"
+
 value="Shipping"
+
 onclick="toggleShipping()">
+
 
 Shipping
 
+
 </label>
+
 
 </div>
 
+
+
+
 <div id="shippingSection" style="display:none;">
+
 
 <label>
 
@@ -204,10 +271,16 @@ Street Address
 
 </label>
 
+
 <input
+
 type="text"
+
 id="address"
+
 placeholder="123 Main Street">
+
+
 
 <label>
 
@@ -215,10 +288,16 @@ City
 
 </label>
 
+
 <input
+
 type="text"
+
 id="city"
+
 placeholder="City">
+
+
 
 <label>
 
@@ -226,10 +305,16 @@ State
 
 </label>
 
+
 <input
+
 type="text"
+
 id="state"
+
 placeholder="State">
+
+
 
 <label>
 
@@ -237,12 +322,20 @@ Zip Code
 
 </label>
 
+
 <input
+
 type="text"
+
 id="zip"
+
 placeholder="Zip Code">
 
+
 </div>
+
+
+
 
 <label>
 
@@ -250,38 +343,57 @@ Special Instructions
 
 </label>
 
+
 <textarea
+
 id="notes"
+
 rows="4"
+
 placeholder="Anything you'd like us to know?">
 
 </textarea>
 
+
+
+
 <div class="product-buttons">
 
+
 <button
+
 class="cart-button"
+
 onclick="addToCart()">
+
 
 🛒 Add To Cart
 
+
 </button>
+
 
 <button
+
 class="order-button"
+
 onclick="buyNow()">
 
-⚡ Buy Now
+
+✓ Continue To Checkout
+
 
 </button>
 
+
 </div>
+
 
 </div>
 
 </section>
 
-<!-- ========================= -->
+ <!-- ========================= -->
 <!-- FOOTER -->
 <!-- ========================= -->
 
@@ -292,11 +404,17 @@ src="images/IMG_FSREDLOGO.png"
 alt="Forever Solid"
 class="footer-logo">
 
+
 <p class="brand-slogan">
+
 "YOU CAN'T CHANGE HOW SOLID YOU ARE"
+
 <br>
+
 "BUT YOU CAN CHANGE WHO YOU'RE SOLID TO."
+
 </p>
+
 
 <div class="copyright">
 
@@ -304,13 +422,20 @@ class="footer-logo">
 
 </div>
 
+
 </footer>
 
- <!-- ========================= -->
+
+
+
+
+<!-- ========================= -->
 <!-- MOBILE NAVIGATION -->
 <!-- ========================= -->
 
+
 <nav class="bottom-nav">
+
 
 <a href="index.html">
 
@@ -321,27 +446,61 @@ class="footer-logo">
 </a>
 
 
-<a href="#top">
 
-⬆️
+<a href="shop.html">
 
-<span>Top</span>
+🔥
+
+<span>Forever Solid</span>
 
 </a>
 
+
+
+<a href="cart.html">
+
+🛒
+
+<span>Cart</span>
+
+</a>
+
+
+
+<a href="greenbox.html">
+
+💚
+
+<span>Green Box</span>
+
+</a>
+
+
 </nav>
 
+
+
+
 <button
+
 id="topButton"
+
 onclick="window.scrollTo({top:0,behavior:'smooth'})">
+
 
 ↑
 
+
 </button>
- 
- <!-- ========================= -->
+
+
+
+
+
+<!-- ========================= -->
 <!-- SCRIPTS -->
 <!-- ========================= -->
+
 
 <script src="products.js"></script>
 
@@ -361,27 +520,28 @@ const productId = params.get("id");
 
 const product = products.find(p => p.id === productId);
 
+
 if(!product){
 
-    location.href = "shop.html";
+location.href = "shop.html";
 
 }
 
 else{
 
-    document.getElementById("productImage").src =
-    product.image;
+document.getElementById("productImage").src = product.image;
 
-    document.getElementById("productName").innerHTML =
-    product.name;
+document.getElementById("productName").innerHTML = product.name;
 
-    document.getElementById("productDescription").innerHTML =
-    product.description || "Premium Streetwear";
+document.getElementById("productDescription").innerHTML =
+product.description || "Premium Streetwear";
 
-    document.getElementById("productPrice").innerHTML =
-    product.priceSmall;
+document.getElementById("productPrice").innerHTML =
+product.priceSmall;
 
 }
+
+
 
 /*=========================================
         UPDATE PRICE
@@ -389,7 +549,8 @@ else{
 
 document.getElementById("size").addEventListener("change",function(){
 
-const size=this.value;
+const size = this.value;
+
 
 if(size==="2XL" || size==="3XL" || size==="4XL"){
 
@@ -405,19 +566,33 @@ product.priceSmall;
 
 });
 
+
+
+
+
 /*=========================================
         SHIPPING
 =========================================*/
 
 function toggleShipping(){
 
-const method=document.querySelector('input[name="delivery"]:checked').value;
+const method =
+document.querySelector('input[name="delivery"]:checked').value;
+
 
 document.getElementById("shippingSection").style.display =
 
-method==="Shipping" ? "block" : "none";
+method === "Shipping"
+
+? "block"
+
+: "none";
 
 }
+
+
+
+
 
 /*=========================================
         ADD TO CART
@@ -425,104 +600,93 @@ method==="Shipping" ? "block" : "none";
 
 function addToCart(){
 
-const cart=JSON.parse(localStorage.getItem("cart")) || [];
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+const price =
+Number(document.getElementById("productPrice").innerHTML);
+
+
+const quantity =
+Number(document.getElementById("quantity").value);
+
+
 
 cart.push({
 
-id:product.id,
+id: product.id,
 
-name:product.name,
+name: product.name,
 
-image:product.image,
+image: product.image,
 
-price:document.getElementById("productPrice").innerHTML,
+price: price,
 
- total:
-Number(document.getElementById("productPrice").innerHTML) *
-Number(document.getElementById("quantity").value),
+total: price * quantity,
 
-size:document.getElementById("size").value,
+size: document.getElementById("size").value,
 
-color:document.getElementById("color").value,
+color: document.getElementById("color").value,
 
-quantity:document.getElementById("quantity").value,
+quantity: quantity,
 
-delivery:document.querySelector('input[name="delivery"]:checked').value,
+delivery:
+document.querySelector('input[name="delivery"]:checked').value,
 
- shipping: document.querySelector('input[name="delivery"]:checked').value === "Shipping" ? 6.99 : 0,
- 
-address:document.getElementById("address").value,
+shipping:
+document.querySelector('input[name="delivery"]:checked').value === "Shipping"
+? 6.99
+: 0,
 
-city:document.getElementById("city").value,
+address: document.getElementById("address").value,
 
-state:document.getElementById("state").value,
+city: document.getElementById("city").value,
 
-zip:document.getElementById("zip").value,
+state: document.getElementById("state").value,
 
-notes:document.getElementById("notes").value
+zip: document.getElementById("zip").value,
+
+notes: document.getElementById("notes").value
 
 });
 
+
 localStorage.setItem("cart",JSON.stringify(cart));
+
 
 location.href="cart.html";
 
 }
 
+
+
+
+
 /*=========================================
-        BUY NOW
+        ORDER NOW
 =========================================*/
 
 function buyNow(){
 
-const cart=JSON.parse(localStorage.getItem("cart")) || [];
+addToCart();
 
-cart.push({
-
-id:product.id,
-
-name:product.name,
-
-image:product.image,
-
-price:document.getElementById("productPrice").innerHTML,
-
-size:document.getElementById("size").value,
-
-color:document.getElementById("color").value,
-
-quantity:document.getElementById("quantity").value,
-
-delivery:document.querySelector('input[name="delivery"]:checked').value
-
-});
-
-localStorage.setItem("cart",JSON.stringify(cart));
+setTimeout(function(){
 
 location.href="checkout.html";
 
+},100);
+
 }
+
+
+
+
 
 updateCartBadge();
 
-updateFavoriteIcons();
-
- function openFullImage(img){
-
-    if(img.classList.contains("full-image")){
-
-        img.classList.remove("full-image");
-
-    } else {
-
-        img.classList.add("full-image");
-
-    }
-
-}
- 
 </script>
+
 
 </body>
 
-</html>
+</html> 
