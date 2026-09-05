@@ -19,11 +19,11 @@
 
 </head>
 
+
 <body>
 
-<!-- ========================= -->
+
 <!-- HEADER -->
-<!-- ========================= -->
 
 <header>
 
@@ -35,19 +35,28 @@ Receipt
 
 </a>
 
+
 <a href="cart.html">
 
-Cart
+🛒 Cart
+
+<span id="cartBadge">
+
+0
+
+</span>
 
 </a>
+
 
 </nav>
 
 </header>
 
-<!-- ========================= -->
+
+
 <!-- PAGE HEADER -->
-<!-- ========================= -->
+
 
 <section class="shop-header">
 
@@ -57,39 +66,50 @@ Shopping Cart
 
 </h1>
 
+
 <p>
 
 Review your order before checkout.
 
 </p>
 
+
 </section>
 
-<!-- ========================= -->
+
+
+
 <!-- CART -->
-<!-- ========================= -->
+
 
 <section class="cart-container">
 
+
 <div
+
 id="cartItems"
+
 class="cart-items">
 
-<!-- Cart Products Load Here -->
+
+<!-- Products Load Here -->
+
 
 </div>
 
-<!-- ========================= -->
-<!-- ORDER SUMMARY -->
-<!-- ========================= -->
+
+
 
 <div class="cart-summary">
+
 
 <h2>
 
 Order Summary
 
 </h2>
+
+
 
 <div class="summary-line">
 
@@ -99,13 +119,17 @@ Items
 
 </span>
 
+
 <strong id="itemCount">
 
 0
 
 </strong>
 
+
 </div>
+
+
 
 <div class="summary-line">
 
@@ -115,13 +139,17 @@ Subtotal
 
 </span>
 
+
 <strong id="subtotal">
 
 $0.00
 
 </strong>
 
+
 </div>
+
+
 
 <div class="summary-line">
 
@@ -131,17 +159,24 @@ Shipping
 
 </span>
 
+
 <strong>
 
 Calculated At Checkout
 
 </strong>
 
+
 </div>
+
+
 
 <hr>
 
+
+
 <div class="summary-total">
+
 
 <span>
 
@@ -149,49 +184,84 @@ Total
 
 </span>
 
+
 <strong id="grandTotal">
 
 $0.00
 
 </strong>
 
+
 </div>
 
+
+
+
 <button
+
 class="order-button"
+
 onclick="location.href='checkout.html'">
+
 
 Proceed To Checkout
 
-  </button>
-  
-  <p class="checkout-note">
+
+</button>
+
+
+
+<p class="checkout-note">
+
 
 Secure checkout • Cash App payment • Order confirmation provided
 
+
 </p>
 
+
+
+
 <button
+
 class="cart-button"
+
 onclick="location.href='shop.html'">
+
 
 Continue Shopping
 
+
+</button>
+
+
+
 <button
+
 class="cart-button"
+
 onclick="clearCart()">
+
 
 Clear Cart
 
-</button>  
+
+</button>
+
+
 
 </div>
 
+
 </section>
 
-  <!-- ========================= -->
+
+
+
+
+
 <!-- EMPTY CART -->
-<!-- ========================= -->
+
 
 <section
 
@@ -201,17 +271,23 @@ class="empty-cart"
 
 style="display:none;">
 
+
+
 <img
 
 src="images/IMG_FSLOGO.PNG"
 
 alt="Forever Solid Logo">
 
+
+
 <h2>
 
 Your Cart Is Empty
 
 </h2>
+
+
 
 <p>
 
@@ -221,7 +297,12 @@ Start shopping and come back here to review your order.
 
 </p>
 
+
+
+
 <div class="empty-buttons">
+
+
 
 <a
 
@@ -229,9 +310,13 @@ href="shop.html"
 
 class="big-red-button">
 
+
 🔥 Shop Forever Solid
 
+
 </a>
+
+
 
 <a
 
@@ -239,24 +324,36 @@ href="greenbox.html"
 
 class="big-green-button">
 
+
 💚 Shop Green Box Baby
+
 
 </a>
 
+
+
 </div>
+
+
 
 </section>
 
 
-<!-- ========================= -->
-<!-- TRUST BADGES -->
-<!-- ========================= -->
+
+
+
+
+<!-- TRUST -->
+
 
 <section class="trust-section">
 
+
 <div class="feature">
 
+
 🚚
+
 
 <h3>
 
@@ -264,17 +361,23 @@ Fast Shipping
 
 </h3>
 
+
 <p>
 
 Quick processing on every order.
 
 </p>
 
+
 </div>
+
+
 
 <div class="feature">
 
+
 🔒
+
 
 <h3>
 
@@ -282,17 +385,24 @@ Secure Checkout
 
 </h3>
 
+
 <p>
 
 Your information is protected.
 
 </p>
 
+
 </div>
+
+
+
 
 <div class="feature">
 
+
 ⭐
+
 
 <h3>
 
@@ -300,110 +410,180 @@ Premium Quality
 
 </h3>
 
+
 <p>
 
 Built Different. Stay Solid.
 
 </p>
 
+
 </div>
+
+
 
 </section>
 
-  <!-- ========================= -->
+
+
+
+
+
 <!-- FOOTER -->
-<!-- ========================= -->
+
 
 <footer>
 
+
 <img
+
 src="images/IMG_FSREDLOGO.png"
+
 alt="Forever Solid"
+
 class="footer-logo">
 
+
+
 <p class="brand-slogan">
+
 "YOU CAN'T CHANGE HOW SOLID YOU ARE"
+
 <br>
+
 "BUT YOU CAN CHANGE WHO YOU'RE SOLID TO."
+
 </p>
+
+
 
 <div class="copyright">
 
+
 © 2026 Forever Solid. All Rights Reserved.
+
 
 </div>
 
+
 </footer>
 
-<!-- ========================= -->
-<!-- MOBILE NAVIGATION -->
-<!-- ========================= -->
+
+
+
+
+
+<!-- MOBILE NAV -->
+
 
 <nav class="bottom-nav">
+
 
 <a href="index.html">
 
 🏠
 
-<span>Home</span>
+<span>
+
+Home
+
+</span>
 
 </a>
+
+
 
 <a href="greenbox.html">
 
 💚
 
-<span>Green Box</span>
+<span>
+
+Green Box
+
+</span>
 
 </a>
+
+
 
 <a href="cart.html">
 
 🛒
 
-<span>Cart</span>
+<span>
+
+Cart
+
+</span>
 
 </a>
+
+
 
 <a href="#top">
 
 ⬆️
 
-<span>Top</span>
+<span>
+
+Top
+
+</span>
 
 </a>
 
+
 </nav>
 
-<!-- ========================= -->
-<!-- BACK TO TOP -->
-<!-- ========================= -->
+
+
+
+
 
 <button
+
 id="topButton"
+
 onclick="window.scrollTo({top:0,behavior:'smooth'})">
+
 
 ↑
 
+
 </button>
 
-<!-- ========================= -->
+
+
+
+
+
 <!-- SCRIPTS -->
-<!-- ========================= -->
+
 
 <script src="products.js"></script>
 
-<script src="trial.js"></script>
-
 <script src="script.js"></script>
 
+
+
 <script>
+
+
+document.addEventListener("DOMContentLoaded", function(){
+
 
 updateCart();
 
 updateCartBadge();
 
+
+});
+
+
 </script>
+
+
 
 </body>
 
