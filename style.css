@@ -2191,3 +2191,58 @@ gap:10px;
 }
 
 }
+
+
+/* =====================================
+ GREEN BOX BABY THEME
+===================================== */
+
+.greenbox-page{
+
+background:#001a05;
+
+}
+
+
+/* GREEN OUTLINE BUTTON */
+
+.big-green-button{
+
+background:transparent;
+
+border:2px solid #00ff33;
+
+color:white;
+
+box-shadow:
+0 0 10px #00ff33,
+0 0 25px #00ff33;
+
+font-weight:400;
+
+letter-spacing:1px;
+
+}
+
+
+.big-green-button:hover{
+
+background:#00ff33;
+
+color:#000;
+
+}
+
+
+/* THINNER LETTERS */
+
+.product-info h3,
+.price,
+.buy-btn,
+.order-button{
+
+font-weight:400;
+
+letter-spacing:1px;
+
+}
