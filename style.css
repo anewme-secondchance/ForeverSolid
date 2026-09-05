@@ -2261,6 +2261,17 @@ letter-spacing:1px;
  GREEN BOX BABY TEXT STYLE
 ===================================== */
 
+.shop-header.green .hero-logo-img{
+
+filter:
+
+drop-shadow(0 0 8px #00ff33)
+
+drop-shadow(0 0 20px #00ff33)
+
+drop-shadow(0 0 35px #00ff33);
+
+}
 .green-title{
 
 color:#00ff33;
@@ -2280,13 +2291,6 @@ text-shadow:
 /* =====================================
    GREEN BOX BABY PAGE THEME
 ===================================== */
-
-.shop-header.green{
-
-background:#001a05;
-
-}
-
 
 .green-title{
 
