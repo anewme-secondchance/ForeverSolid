@@ -295,7 +295,42 @@ box-shadow:
 
 }
 
+.order-button{
 
+display:block;
+
+width:100%;
+
+padding:16px;
+
+margin-top:20px;
+
+border-radius:50px;
+
+background:#b30000;
+
+color:#fff;
+
+font-size:18px;
+
+font-weight:700;
+
+text-align:center;
+
+box-shadow:
+0 0 15px #ff0000,
+0 0 35px rgba(255,0,0,.45);
+
+}
+
+
+.order-button:hover{
+
+background:#d50000;
+
+transform:translateY(-2px);
+
+}
 /*==================================================
                  CARD STYLE
 ==================================================*/
