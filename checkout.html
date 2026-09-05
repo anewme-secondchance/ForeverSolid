@@ -19,7 +19,9 @@
 
 </head>
 
+
 <body>
+
 
 <!-- ========================= -->
 <!-- TOP NAVIGATION -->
@@ -27,11 +29,13 @@
 
 <div class="top-nav">
 
+
 <button onclick="history.back()">
 
 ⬅ Back
 
 </button>
+
 
 <button onclick="location.href='index.html'">
 
@@ -39,30 +43,49 @@
 
 </button>
 
+
 <button onclick="location.href='cart.html'">
 
 🛒 Cart
 
+<span id="cartBadge">
+
+0
+
+</span>
+
 </button>
+
+
 </div>
+
+
 
 <!-- ========================= -->
 <!-- HEADER -->
 <!-- ========================= -->
 
+
 <header>
+
 
 <div class="logo">
 
+
 <a href="index.html">
+
 
 <img src="images/IMG_FSLOGO.PNG"
 
 alt="Forever Solid Logo">
 
+
 </a>
 
+
 </div>
+
+
 
 <h1 class="page-title">
 
@@ -70,21 +93,31 @@ Checkout
 
 </h1>
 
+
 <p class="page-subtitle">
 
 Complete your order below.
 
 </p>
 
+
 </header>
+
+
+
+
 
 <!-- ========================= -->
 <!-- CHECKOUT -->
 <!-- ========================= -->
 
+
 <section class="checkout-container">
 
+
+
 <div class="checkout-form">
+
 
 <h2>
 
@@ -92,16 +125,24 @@ Customer Information
 
 </h2>
 
+
+
 <label>
 
 First Name
 
 </label>
 
+
 <input
+
 type="text"
+
 id="firstName"
+
 placeholder="First Name">
+
+
 
 <label>
 
@@ -109,9 +150,13 @@ Last Name
 
 </label>
 
+
 <input
+
 type="text"
+
 id="lastName"
+
 placeholder="Last Name">
 
 <label>
@@ -120,9 +165,13 @@ Phone Number
 
 </label>
 
+
 <input
+
 type="tel"
+
 id="phone"
+
 placeholder="Phone Number">
 
 <label>
@@ -131,31 +180,27 @@ Email Address
 
 </label>
 
+
 <input
+
 type="email"
+
 id="email"
+
 placeholder="Email Address">
 
- <label>
-
+<label>
 Pickup or Shipping
-
 </label>
 
 <div class="delivery-options">
 
 <label>
-
-<input
-
-type="radio"
-
-name="delivery"
-
-value="Pickup"
-
-checked
-
+<input 
+type="radio" 
+name="delivery" 
+value="Pickup" 
+checked 
 onclick="toggleShipping()">
 
 Pickup
@@ -164,14 +209,10 @@ Pickup
 
 <label>
 
-<input
-
-type="radio"
-
-name="delivery"
-
-value="Shipping"
-
+<input 
+type="radio" 
+name="delivery" 
+value="Shipping" 
 onclick="toggleShipping()">
 
 Shipping
@@ -180,85 +221,70 @@ Shipping
 
 </div>
 
+
 <div id="shippingSection" style="display:none;">
 
+<h3>
+Shipping Address
+</h3>
+
 <label>
-
 Street Address
-
 </label>
 
 <input
-
 type="text"
-
 id="address"
-
 placeholder="123 Main Street">
 
+
 <label>
-
 City
-
 </label>
 
 <input
-
 type="text"
-
 id="city"
-
 placeholder="City">
 
+
 <label>
-
 State
-
 </label>
 
 <input
-
 type="text"
-
 id="state"
-
 placeholder="State">
 
+
 <label>
-
 Zip Code
-
 </label>
 
 <input
-
 type="text"
-
 id="zip"
-
 placeholder="Zip Code">
 
 </div>
 
+
 <label>
-
 Special Instructions
-
 </label>
 
 <textarea
-
 id="notes"
-
 rows="4"
-
 placeholder="Add any special requests here...">
-
 </textarea>
 
- <label>
+
+<label>
 Payment Method
 </label>
+
 
 <div class="payment-options">
 
@@ -309,16 +335,14 @@ After payment is sent, click "Place Order" to complete your order.
 
 </div>
 
-<!-- ========================= -->
+ <!-- ========================= -->
 <!-- ORDER SUMMARY -->
 <!-- ========================= -->
 
 <div class="checkout-summary">
 
 <h2>
-
 Order Summary
-
 </h2>
 
 <div id="checkoutItems">
@@ -332,88 +356,76 @@ Order Summary
 <div class="summary-line">
 
 <span>
-
 Items
-
 </span>
 
 <strong id="checkoutItemCount">
-
 0
-
 </strong>
 
 </div>
 
+
 <div class="summary-line">
 
 <span>
-
 Subtotal
-
 </span>
 
 <strong id="checkoutSubtotal">
-
 $0.00
-
 </strong>
 
 </div>
+
 
 <div class="summary-line">
 
 <span>
-
 Shipping
-
 </span>
 
-<strong>
-
-Calculated After Order
-
+<strong id="checkoutShipping">
+$0.00
 </strong>
 
 </div>
 
+
 <hr>
+
 
 <div class="summary-total">
 
 <span>
-
 Total
-
 </span>
 
 <strong id="checkoutTotal">
-
 $0.00
-
 </strong>
 
 </div>
 
+
+
 <button
-
 class="order-button"
-
 onclick="placeOrder()">
 
 ✅ Place Order
 
 </button>
 
+
 <button
-
 class="cart-button"
-
 onclick="location.href='cart.html'">
 
 ⬅ Back To Cart
 
 </button>
+
 
 </div>
 
@@ -443,6 +455,9 @@ class="footer-logo">
 </div>
 
 </footer>
+
+
+
 <!-- ========================= -->
 <!-- MOBILE NAVIGATION -->
 <!-- ========================= -->
@@ -457,13 +472,15 @@ class="footer-logo">
 
 </a>
 
-<a href="pages/shop.html">
 
-👕
+<a href="shop.html">
+
+👕 
 
 <span>Shop</span>
 
 </a>
+
 
 <a href="cart.html">
 
@@ -473,7 +490,8 @@ class="footer-logo">
 
 </a>
 
-<a href="pages/greenbox.html">
+
+<a href="greenbox.html">
 
 💚
 
@@ -481,25 +499,30 @@ class="footer-logo">
 
 </a>
 
+
 </nav>
+
+
+
+
+<!-- ========================= -->
+<!-- SCRIPTS -->
+<!-- ========================= -->
 
 <script src="products.js"></script>
 
 <script src="script.js"></script>
 
-<script>
 
-/* ===========================
-   SHOW / HIDE SHIPPING
-=========================== */
+<script>
 
 function toggleShipping(){
 
-const delivery=document.querySelector('input[name="delivery"]:checked').value;
+const delivery = document.querySelector('input[name="delivery"]:checked').value;
 
-document.getElementById("shippingSection").style.display=
+document.getElementById("shippingSection").style.display =
 
-delivery==="Shipping"
+delivery === "Shipping"
 
 ? "block"
 
@@ -507,16 +530,19 @@ delivery==="Shipping"
 
 }
 
-/* ===========================
-   LOAD CHECKOUT
-=========================== */
+
+document.addEventListener("DOMContentLoaded", function(){
 
 loadCheckout();
 
 updateCartBadge();
 
+});
+
+
 </script>
+
 
 </body>
 
-</html> 
+</html>
