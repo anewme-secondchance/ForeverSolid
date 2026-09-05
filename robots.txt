@@ -1,5 +1,0 @@
-User-agent: *
-
-Allow: /
-
-Sitemap: https://anewme-secondchance.github.io/ForeverSolid/sitemap.xml
