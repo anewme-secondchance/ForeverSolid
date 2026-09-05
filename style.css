@@ -2123,3 +2123,71 @@ drop-shadow(0 0 12px red)
 drop-shadow(0 0 25px red);
 
 }
+
+/* =====================================
+   CART CLEANUP - FINAL OVERRIDES
+   ===================================== */
+
+
+/* Space empty cart buttons */
+
+.empty-buttons{
+
+display:flex;
+
+gap:25px;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+margin-top:30px;
+
+}
+
+
+/* Clean checkout note */
+
+.checkout-note{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+margin-top:20px;
+
+font-size:15px;
+
+text-align:center;
+
+opacity:.9;
+
+}
+
+
+/* Mobile adjustment */
+
+@media(max-width:600px){
+
+.empty-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+
+.checkout-note{
+
+flex-direction:column;
+
+gap:10px;
+
+}
+
+}
