@@ -2381,4 +2381,66 @@ min-height:0;
 
 }
 
+/* =====================================
+   HERO IMAGE REMOVE EXTRA SPACE
+===================================== */
+
+.hero{
+
+padding:0;
+margin:0;
+
+}
+
+
+.hero-banner{
+
+height:auto !important;
+
+min-height:0 !important;
+
+display:block;
+
+}
+
+
+.hero-half{
+
+height:auto !important;
+
+}
+
+
+.hero-half img{
+
+display:block;
+
+width:100%;
+
+height:auto !important;
+
+object-fit:contain;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.hero-banner{
+
+padding:0;
+
+margin:0;
+
+}
+
+.hero-half img{
+
+max-height:none;
+
+}
+
+}        
 }
