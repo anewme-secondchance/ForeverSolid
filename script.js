@@ -897,6 +897,61 @@ window.location.href = "product.html?id=" + productId;
 
 }
 
+function loadCheckout(){ 
+ 
+const cart = JSON.parse(localStorage.getItem("cart")) || []; 
+ 
+let items = document.getElementById("checkoutItems"); 
+ 
+let count = document.getElementById("checkoutItemCount"); 
+ 
+let subtotal = document.getElementById("checkoutSubtotal"); 
+ 
+let shipping = document.getElementById("checkoutShipping"); 
+ 
+let totalBox = document.getElementById("checkoutTotal"); 
+ 
+if(!items) return; 
+ 
+items.innerHTML = ""; 
+ 
+let total = 0; 
+ 
+let ship = 0; 
+ 
+cart.forEach(item=>{ 
+ 
+total += Number(item.total); 
+ 
+ship += Number(item.shipping || 0); 
+ 
+items.innerHTML += ` 
+ 
+<p>
+${item.name}
+<br>
+Size: ${item.size}
+<br>
+Quantity: ${item.quantity}
+<br>
+$${Number(item.total).toFixed(2)}
+
+</p> 
+ 
+`; 
+ 
+}); 
+ 
+if(count) count.innerHTML = cart.length; 
+ 
+if(subtotal) subtotal.innerHTML = "$" + total.toFixed(2); 
+ 
+if(shipping) shipping.innerHTML = "$" + ship.toFixed(2); 
+ 
+if(totalBox) totalBox.innerHTML = "$" + (total + ship).toFixed(2); 
+ 
+}
+
 /*=========================================
 APP STARTUP
 =========================================*/
