@@ -19,15 +19,19 @@
 
 </head>
 
+
 <body>
+
 
 <!-- ========================= -->
 <!-- HEADER -->
 <!-- ========================= -->
 
+
 <header>
 
 <div class="top-nav">
+
 
 <button onclick="history.back()">
 
@@ -35,11 +39,13 @@
 
 </button>
 
+
 <a href="receipt.html">
 
 Receipt
 
 </a>
+
 
 <a href="cart.html">
 
@@ -53,15 +59,21 @@ Receipt
 
 </a>
 
+
 </div>
 
 </header>
+
+
+
 
 <!-- ========================= -->
 <!-- MOBILE MENU -->
 <!-- ========================= -->
 
+
 <div class="mobile-menu">
+
 
 <a href="index.html">
 
@@ -69,11 +81,13 @@ Home
 
 </a>
 
+
 <a href="shop.html">
 
 Forever Solid
 
 </a>
+
 
 <a href="greenbox.html">
 
@@ -81,11 +95,13 @@ Green Box Baby
 
 </a>
 
+
 <a href="cart.html">
 
 Cart
 
 </a>
+
 
 <a href="checkout.html">
 
@@ -93,38 +109,58 @@ Checkout
 
 </a>
 
+
 <a href="receipt.html">
 
 Receipt
 
 </a>
 
+
 </div>
 
-<!-- ========================= -->
+ <!-- ========================= -->
 <!-- PAGE HEADER -->
 <!-- ========================= -->
 
+
 <section class="shop-header">
 
+
 <img
+
 src="images/IMG_FSREDLOGO.png"
+
 alt="Forever Solid Logo"
+
 class="hero-logo-img">
+
+
 
 <p class="hero-quote">
 
 "YOU CAN'T CHANGE HOW SOLID YOU ARE"
+
 <br>
+
 "BUT YOU CAN CHANGE WHO YOU'RE SOLID TO."
 
 </p>
 
+
 </section>
 
- <!-- ================= FILTER BUTTONS ================= -->
+
+
+
+
+<!-- ========================= -->
+<!-- FILTER BUTTONS -->
+<!-- ========================= -->
+
 
 <section class="filter-section">
+
 
 <button onclick="filterProducts('All')">
 
@@ -132,11 +168,15 @@ All
 
 </button>
 
+
+
 <button onclick="filterProducts('Shirts')">
 
 Shirts
 
 </button>
+
+
 
 <button onclick="filterProducts('Long Sleeve')">
 
@@ -144,11 +184,15 @@ Long Sleeve
 
 </button>
 
+
+
 <button onclick="filterProducts('Hoodies')">
 
 Hoodies
 
 </button>
+
+
 
 <button onclick="filterProducts('Shorts')">
 
@@ -156,11 +200,15 @@ Shorts
 
 </button>
 
+
+
 <button onclick="filterProducts('Short Sets')">
 
 Sets
 
 </button>
+
+
 
 <button onclick="filterProducts('Hats')">
 
@@ -168,32 +216,59 @@ Hats
 
 </button>
 
+
 </section>
 
-<!-- ================= PRODUCTS ================= -->
+
+
+
+
+<!-- ========================= -->
+<!-- PRODUCTS -->
+<!-- ========================= -->
+
 
 <section
+
 id="shopProducts"
+
 class="products-grid">
+
 
 <!-- Products Load Here -->
 
-</section>       
 
- <!-- ================= FOOTER ================= -->
+</section>
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
 
 <footer>
 
+
 <img
+
 src="images/IMG_FSREDLOGO.png"
+
 alt="Forever Solid"
+
 class="footer-logo">
 
+
+
 <p class="brand-slogan">
+
 "YOU CAN'T CHANGE HOW SOLID YOU ARE"
+
 <br>
+
 "BUT YOU CAN CHANGE WHO YOU'RE SOLID TO."
+
 </p>
+
+
 
 <div class="copyright">
 
@@ -201,12 +276,20 @@ class="footer-logo">
 
 </div>
 
+
 </footer>
 
 
-<!-- ================= MOBILE NAVIGATION ================= -->
+
+
+
+<!-- ========================= -->
+<!-- MOBILE NAVIGATION -->
+<!-- ========================= -->
+
 
 <nav class="bottom-nav">
+
 
 <a href="index.html">
 
@@ -216,6 +299,8 @@ class="footer-logo">
 
 </a>
 
+
+
 <a href="greenbox.html">
 
 💚
@@ -223,6 +308,18 @@ class="footer-logo">
 <span>Green Box</span>
 
 </a>
+
+
+
+<a href="cart.html">
+
+🛒
+
+<span>Cart</span>
+
+</a>
+
+
 
 <a href="#top">
 
@@ -232,17 +329,29 @@ class="footer-logo">
 
 </a>
 
+
 </nav>
 
+
+
+
+
 <button
+
 id="topButton"
+
 onclick="window.scrollTo({top:0,behavior:'smooth'})">
+
 
 ↑
 
+
 </button>
 
-<!-- ================= SCRIPTS ================= -->
+<!-- ========================= -->
+<!-- SCRIPTS -->
+<!-- ========================= -->
+
 
 <script src="products.js"></script>
 
@@ -250,66 +359,116 @@ onclick="window.scrollTo({top:0,behavior:'smooth'})">
 
 <script src="script.js"></script>
 
+
 <script>
 
 /*=========================================
         LOAD FOREVER SOLID PRODUCTS
 =========================================*/
 
+
 const container = document.getElementById("shopProducts");
 
 let html = "";
 
+
+if(container && typeof products !== "undefined"){
+
+
 products
+
 .filter(product => product.brand === "Forever Solid")
+
 .forEach(product => {
+
 
 html += `
 
+
 <div class="product-card" data-category="${product.category}">
 
+
 <img
+
 src="${product.image}"
+
 alt="${product.name}">
+
+
 
 <div class="product-info">
 
-<h3>${product.name}</h3>
 
-<p>${product.category}</p>
+<h3>
+
+${product.name}
+
+</h3>
+
+
+
+<p>
+
+${product.category}
+
+</p>
+
+
 
 <div class="price">
 
+
 <strong>S–XL:</strong> $${product.priceSmall}
+
 
 <br>
 
+
 <strong>2XL+:</strong> $${product.priceLarge}
+
 
 </div>
 
+
+
 <button
+
 class="buy-btn"
+
 onclick="viewProduct('${product.id}')">
 
-Customize & Order
+
+🛍️ Customize & Order
+
 
 </button>
 
-</div>
+
 
 </div>
+
+
+</div>
+
 
 `;
 
+
 });
+
 
 container.innerHTML = html;
 
-updateFavoriteIcons();
+
+}
+
+
+updateCartBadge();
+
 
 </script>
 
+
 </body>
 
-</html>       
+</html> 
