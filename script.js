@@ -271,7 +271,7 @@ ADD TO CART
 =========================================*/
 function addToCart(){
 
-const cart = JSON.parse(localStorage.getItem("cart")) || [];
+cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const price = Number(document.getElementById("productPrice").innerHTML);
 
