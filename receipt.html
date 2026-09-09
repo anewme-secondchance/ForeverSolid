@@ -237,10 +237,7 @@ Email
 
 </div>
 
-
-
 <hr>
-
 
 
 <h3>
@@ -248,6 +245,44 @@ Email
 Items Purchased
 
 </h3>
+
+
+<div id="receiptItemsList">
+
+<!-- Items Load Here -->
+
+</div>
+
+
+<div class="receipt-row">
+
+<span>
+Delivery
+</span>
+
+<strong id="receiptDelivery">
+</strong>
+
+</div>
+
+
+<div class="receipt-row">
+
+<span>
+Shipping
+</span>
+
+<strong id="receiptShipping">
+$0.00
+</strong>
+
+</div>
+
+
+
+
+
+
 
  <!-- ========================= -->
 <!-- FOOTER -->
@@ -368,12 +403,14 @@ onclick="window.scrollTo({top:0,behavior:'smooth'})">
 
 <script src="script.js"></script>
 
-
 <script>
+
+loadReceipt();
 
 updateCartBadge();
 
 </script>
+
 
 
 </body>
