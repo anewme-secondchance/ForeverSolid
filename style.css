@@ -2393,30 +2393,29 @@ min-height:0;
 }
 
 /* =====================================
-   HERO IMAGE REMOVE EXTRA SPACE
+   FINAL HERO MOBILE SIDE BY SIDE FIX
 ===================================== */
 
-.hero{
-
-padding:0;
-margin:0;
-
-}
-
-
 .hero-banner{
+
+display:grid !important;
+
+grid-template-columns:1fr 1fr !important;
 
 height:auto !important;
 
 min-height:0 !important;
 
-display:grid;
+width:100%;
 
-grid-template-columns:1fr 1fr;
+overflow:hidden;
 
 }
 
+
 .hero-half{
+
+width:100% !important;
 
 height:auto !important;
 
@@ -2425,34 +2424,32 @@ height:auto !important;
 
 .hero-half img{
 
-display:block;
-
-width:100%;
+width:100% !important;
 
 height:auto !important;
 
-object-fit:contain;
+object-fit:cover;
+
+display:block;
 
 }
 
-
-/* MOBILE */
 
 @media(max-width:600px){
 
 .hero-banner{
 
-padding:0;
+display:grid !important;
 
-margin:0;
+grid-template-columns:1fr 1fr !important;
 
 }
+
 
 .hero-half img{
 
-max-height:none;
+height:auto !important;
 
 }
 
-}        
 }
