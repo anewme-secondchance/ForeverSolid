@@ -2453,3 +2453,39 @@ height:auto !important;
 }
 
 }
+
+/* FINAL PHONE HERO SIDE BY SIDE */
+
+@media(max-width:600px){
+
+.hero-banner{
+
+display:grid !important;
+
+grid-template-columns:1fr 1fr !important;
+
+height:auto !important;
+
+width:100% !important;
+
+}
+
+
+.hero-half{
+
+width:50% !important;
+
+}
+
+
+.hero-half img{
+
+width:100% !important;
+
+height:auto !important;
+
+object-fit:cover !important;
+
+}
+
+}
