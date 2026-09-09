@@ -307,15 +307,12 @@ notes:""
 };
 
 cart.push(item);
-
 localStorage.setItem(
 "cart",
 JSON.stringify(cart)
 );
 
-alert("Added to Cart!");
-
-window.location.href = "cart.html";
+// no redirect here
 
 }
 
