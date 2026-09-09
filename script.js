@@ -295,10 +295,9 @@ color: document.getElementById("color").value,
 
 quantity: quantity,
 
-delivery: document.querySelector('input[name="delivery"]').value,
+delivery: document.querySelector('input[name="delivery"]:checked').value,
 
-shipping: document.querySelector('input[name="delivery"]').value === "Shipping" ? 6.99 : 0,
-
+shipping: document.querySelector('input[name="delivery"]:checked').value === "Shipping" ? 6.99 : 0,
 address: document.getElementById("address").value,
 
 city: document.getElementById("city").value,
@@ -599,9 +598,9 @@ const order = {
     email:
     document.getElementById("email").value,
 
-   delivery:
+  delivery:
 
-document.querySelector('input[name="delivery"]').value,
+document.querySelector('input[name="delivery"]:checked').value,
 
     address:
     document.getElementById("address").value,
