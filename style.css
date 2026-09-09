@@ -2410,10 +2410,11 @@ height:auto !important;
 
 min-height:0 !important;
 
-display:block;
+display:grid;
+
+grid-template-columns:1fr 1fr;
 
 }
-
 
 .hero-half{
 
