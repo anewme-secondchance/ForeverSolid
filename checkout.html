@@ -499,6 +499,7 @@ function toggleShipping(){
 
 const delivery = document.querySelector('input[name="delivery"]:checked').value;
 
+
 document.getElementById("shippingSection").style.display =
 
 delivery === "Shipping"
@@ -507,8 +508,36 @@ delivery === "Shipping"
 
 : "none";
 
+
+// ADD SHIPPING COST
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+cart.forEach(item => {
+
+item.delivery = delivery;
+
+item.shipping = delivery === "Shipping" ? 6.99 : 0;
+
+});
+
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+
+loadCheckout();
+
 }
 
+
+document.addEventListener("DOMContentLoaded", function(){
+
+loadCheckout();
+
+updateCartBadge();
+
+});
 
 document.addEventListener("DOMContentLoaded", function(){
 
