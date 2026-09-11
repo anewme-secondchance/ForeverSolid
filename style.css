@@ -2413,3 +2413,21 @@ margin-bottom:25px;
 margin-top:25px;
 
 }
+
+@media(max-width:600px){
+
+/* Move Shop header down */
+.shop-header{
+    padding-top:80px;
+}
+
+
+/* Make top buttons match */
+.top-nav button,
+.top-nav a{
+
+    font-size:22px;
+    padding:10px;
+}
+
+}
