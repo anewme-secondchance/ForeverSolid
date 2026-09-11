@@ -1319,7 +1319,9 @@ padding:16px;
 
 border-radius:50px;
 
-background:var(--red);
+background:transparent;
+
+border:2px solid #ff0000;
 
 color:#fff;
 
@@ -1348,13 +1350,11 @@ transform:translateY(-2px);
 
 .buy-btn.green{
 
-background:var(--green);
+background:transparent;
 
-box-shadow:
+border:2px solid #39ff14;
 
-0 0 15px var(--green-light),
-
-0 0 30px rgba(57,255,20,.35);
+box-shadow:0 0 8px rgba(57,255,20,.4);
 
 }
 
