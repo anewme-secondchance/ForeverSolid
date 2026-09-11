@@ -480,13 +480,9 @@ color: document.getElementById("color").value,
 
 quantity: quantity,
 
-delivery:
-document.querySelector('input[name="delivery"]:checked').value,
+delivery:"",
 
-shipping:
-document.querySelector('input[name="delivery"]:checked').value === "Shipping"
-? 6.99
-: 0,
+shipping:0,
 
 address:"",
 
@@ -503,7 +499,7 @@ notes:""
 localStorage.setItem("cart",JSON.stringify(cart));
 
 
-location.href="cart.html";
+location.href="checkout.html";
 
 }
 
@@ -514,18 +510,16 @@ location.href="cart.html";
 /*=========================================
         ORDER NOW
 =========================================*/
+
 function buyNow(){
 
 addToCart();
-
-window.location.href="checkout.html";
 
 }
 
 updateCartBadge();
 
 </script>
-
 
 </body>
 
