@@ -2389,3 +2389,27 @@ text-shadow:
 }
 
 }
+
+/* PAYMENT CLEANUP */
+
+.payment-options,
+.cashapp-box{
+
+text-align:center;
+
+}
+
+
+.cashapp-box{
+
+margin-top:25px;
+margin-bottom:25px;
+
+}
+
+
+.checkout-summary{
+
+margin-top:25px;
+
+}
