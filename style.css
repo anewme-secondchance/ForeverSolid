@@ -2556,3 +2556,31 @@ box-shadow:
 
 }
 }
+
+
+/* FINAL PHONE HERO SIZE FIX */
+
+@media(max-width:600px){
+
+.hero-banner{
+    display:flex !important;
+    width:100% !important;
+    height:70vh !important;
+    overflow:hidden !important;
+}
+
+.hero-half{
+    width:50% !important;
+    height:70vh !important;
+    flex:0 0 50% !important;
+}
+
+.hero-half img{
+    width:100% !important;
+    height:70vh !important;
+    object-fit:cover !important;
+    display:block !important;
+}
+
+}
+        
