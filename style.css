@@ -2459,7 +2459,7 @@ display:grid !important;
 
 grid-template-columns:1fr 1fr !important;
 
-height:auto !important;
+height:100vh !important;
 
 width:100% !important;
 
