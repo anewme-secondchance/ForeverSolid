@@ -2530,4 +2530,29 @@ box-shadow:
     display:block !important;
 }
 
+
+        /* FINAL MOBILE HERO IMAGE FIX */
+
+@media (max-width:600px){
+
+.hero-banner{
+    display:flex !important;
+    flex-direction:row !important;
+    width:100% !important;
+    height:auto !important;
+}
+
+.hero-half{
+    width:50% !important;
+    height:auto !important;
+}
+
+.hero-half img{
+    width:100% !important;
+    height:auto !important;
+    object-fit:cover !important;
+    display:block !important;
+}
+
+}
 }
