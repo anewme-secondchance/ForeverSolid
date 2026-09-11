@@ -2431,3 +2431,11 @@ margin-top:25px;
 }
 
 }
+
+@media(max-width:600px){
+
+.product-images img{
+    height:350px;
+}
+
+}
