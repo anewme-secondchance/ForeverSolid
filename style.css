@@ -2465,19 +2465,18 @@ width:100% !important;
 
 }
 
-
 .hero-half{
 
 width:50% !important;
+height:100% !important;
 
 }
-
 
 .hero-half img{
 
 width:100% !important;
 
-height:auto !important;
+height:100% !important;
 
 object-fit:cover !important;
 
