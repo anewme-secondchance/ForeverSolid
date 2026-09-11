@@ -2487,7 +2487,10 @@ object-fit:cover !important;
 
 /* FOREVER SOLID BUTTON HOVER FIX */
 
+
 .big-red-button:hover{
+
+transform:translateY(-3px);
 
 background:transparent !important;
 
@@ -2496,10 +2499,8 @@ border-color:#ff0000 !important;
 color:#fff !important;
 
 box-shadow:
-0 0 15px #ff0000,
-0 0 35px #ff0000,
-0 0 55px rgba(255,0,0,.7) !important;
-
-transform:translateY(-3px);
+0 0 20px #ff0000,
+0 0 45px #ff0000,
+0 0 70px rgba(255,0,0,.9) !important;
 
 }
