@@ -2504,3 +2504,30 @@ box-shadow:
 0 0 70px rgba(255,0,0,.9) !important;
 
 }
+
+
+/* FINAL PHONE HERO FIX - DO NOT CHANGE ABOVE */
+
+@media (max-width:600px){
+
+.hero-banner{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    width:100% !important;
+    height:auto !important;
+    overflow:hidden !important;
+}
+
+.hero-half{
+    width:100% !important;
+    height:auto !important;
+}
+
+.hero-half img{
+    width:100% !important;
+    height:auto !important;
+    object-fit:cover !important;
+    display:block !important;
+}
+
+}
