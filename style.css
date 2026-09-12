@@ -921,7 +921,7 @@ position:relative;
 
 z-index:20;
 
-filter:
+filter:none;
 
 drop-shadow(0 0 5px red)
 
@@ -2260,12 +2260,7 @@ letter-spacing:1px;
 .shop-header.green .hero-logo-img{
 
 filter:
-
-drop-shadow(0 0 8px #00ff33)
-
-drop-shadow(0 0 20px #00ff33)
-
-drop-shadow(0 0 35px #00ff33);
+drop-shadow(0 0 5px #39ff14);
 
 }
 
@@ -2324,11 +2319,7 @@ text-shadow:
 
 border-color:#00ff33;
 
-box-shadow:
-
-0 0 10px rgba(0,255,51,.5),
-
-0 0 25px rgba(0,255,51,.25);
+box-shadow:none;
 
 }
 
@@ -2341,9 +2332,7 @@ color:#fff;
 
 font-weight:400;
 
-text-shadow:
-
-0 0 8px #00ff33;
+text-shadow:none;
 
 }
 
@@ -2418,10 +2407,15 @@ margin-top:25px;
 @media(max-width:600px){
 
 /* Move Shop header down */
-.shop-header{
-    padding-top:80px;
-}
 
+.shop-header.green .hero-logo-img{
+
+width:100vw;
+max-width:none;
+margin-left:calc(50% - 50vw);
+margin-right:calc(50% - 50vw);
+
+}
 
 /* Make top buttons match */
 .top-nav button,
