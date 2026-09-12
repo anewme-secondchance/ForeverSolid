@@ -635,7 +635,7 @@ localStorage.setItem(
 // SEND ORDER EMAIL
 
 emailjs.send(
-"service_xics3xg",
+"service_1cmgqsh",
 "template_e8uxtmv",
 {
 
