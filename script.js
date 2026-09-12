@@ -6,7 +6,7 @@ TADIE4ENT BUSINESS APP
 APP SETTINGS
 =========================================*/
 
-const APP_MODE = "FULL";     // TRIAL or FULL
+const APP_MODE = "FULL";     
 
 const TRIAL_DAYS = 7;
 
@@ -1051,17 +1051,6 @@ if(loader){
 }
 
 });
-
-function startTrial(){
-
-localStorage.setItem(
-"fs_install_date",
-new Date().getTime()
-);
-
-window.location.href="index.html";
-
-}
 
 function startTrial(){
 
