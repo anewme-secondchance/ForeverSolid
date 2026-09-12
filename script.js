@@ -647,9 +647,16 @@ order.phone,
 
 email:
 order.email,
-
+    
 order:
-JSON.stringify(order.items),
+order.items.map(item =>
+`${item.name}
+Size: ${item.size}
+Color: ${item.color}
+Quantity: ${item.quantity}
+Price: $${item.price}
+Total: $${item.total}`
+).join("\n\n"),
 
 total:
 "$" + order.total.toFixed(2),
