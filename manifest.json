@@ -7,7 +7,7 @@
   "theme_color": "#990000",
   "icons": [
     {
-      "src": "images/IMG_FSREDLOGO.png",
+      "src": "images/IMG_FSapp.png",
       "sizes": "512x512",
       "type": "image/png"
     }
