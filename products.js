@@ -359,7 +359,7 @@ const products = [
     brand: "Green Box Baby",
     name: "Green Box Baby Green Logo Tee",
     category: "Shirts",
-    image: "images/IMG_GREENBOX3.jpg",
+    image: "images/IMG_GREENBOX03.jpg",
     description: "Green Box Baby Signature Tee",
     priceSmall: 35,
     priceLarge: 40,
