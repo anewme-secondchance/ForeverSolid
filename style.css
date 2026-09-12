@@ -2690,3 +2690,154 @@ font-size:20px;
 cursor:pointer;
 
 }
+
+/* ==============================
+   TaDie4ENT Trial Page FINAL FIX
+============================== */
+
+
+.trial-page{
+
+max-width:1000px;
+margin:auto;
+padding:60px 30px;
+color:white;
+
+}
+
+
+
+/* Logo */
+
+.trial-brand{
+
+text-align:center;
+margin-bottom:80px;
+
+}
+
+
+.tadie-logo{
+
+width:600px;
+max-width:90%;
+height:auto;
+display:block;
+margin:0 auto 50px auto;
+
+}
+
+
+
+/* Headings */
+
+.trial-page h2{
+
+text-align:center;
+margin:50px 0 25px;
+line-height:1.4;
+
+}
+
+
+.trial-page p{
+
+line-height:1.8;
+margin-bottom:30px;
+
+}
+
+
+
+/* All package boxes */
+
+.price-card{
+
+max-width:700px;
+margin:50px auto;
+padding:35px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.25);
+
+border-radius:25px;
+
+}
+
+
+
+/* Inside cards */
+
+.price-card h3{
+
+font-size:30px;
+margin-bottom:20px;
+
+}
+
+
+.price-card h2{
+
+margin:15px 0;
+
+text-align:left;
+
+}
+
+
+.price-card p{
+
+line-height:2;
+
+}
+
+
+
+/* Maintenance section */
+
+.trial-page h2:nth-of-type(4){
+
+margin-top:80px;
+
+}
+
+
+
+/* Agreement area */
+
+.trial-page button{
+
+display:block;
+
+margin:50px auto;
+
+padding:18px 45px;
+
+background:white;
+
+color:black;
+
+border:none;
+
+border-radius:50px;
+
+font-size:20px;
+
+font-weight:700;
+
+cursor:pointer;
+
+}
+
+
+
+/* Contact */
+
+.trial-page:last-child{
+
+text-align:center;
+
+margin-top:60px;
+
+}
