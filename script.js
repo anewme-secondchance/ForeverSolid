@@ -6,7 +6,7 @@ TADIE4ENT BUSINESS APP
 APP SETTINGS
 =========================================*/
 
-const APP_MODE = "FULL";     
+const APP_MODE = "TRIAL";
 
 const TRIAL_DAYS = 7;
 
@@ -98,7 +98,7 @@ function checkTrial(){
 
 if(APP_MODE === "FULL"){
 
-    return;
+return;
 
 }
 
@@ -106,7 +106,7 @@ const daysUsed = getDaysUsed();
 
 if(daysUsed >= TRIAL_DAYS){
 
-    showTrialExpired();
+showTrialExpired();
 
 }
 
@@ -1059,12 +1059,11 @@ localStorage.setItem(
 new Date().getTime()
 );
 
-alert("Trial Started!");
+alert("Your 7-Day Custom App Experience Has Started!");
 
-window.location.href="index.html";
+window.location.href = "index.html";
 
 }
-
 function openImageViewer(image){
 
 let viewer = document.getElementById("imageViewer");
