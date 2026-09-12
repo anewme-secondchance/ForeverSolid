@@ -621,6 +621,11 @@ document.querySelector('input[name="delivery"]:checked').value === "Shipping"
 : 0
 ),
 
+    shipping:
+document.querySelector('input[name="delivery"]:checked').value === "Shipping"
+? 6.99
+: 0
+};    
 localStorage.setItem(
 
     ORDER_KEY,
