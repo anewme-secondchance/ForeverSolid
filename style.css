@@ -921,8 +921,10 @@ position:relative;
 z-index:20;
 
 filter:
-drop-shadow(0 0 3px #ff0000)
-drop-shadow(0 0 8px #ff0000);
+brightness(.65)
+drop-shadow(0 0 5px #b30000)
+drop-shadow(0 0 15px #b30000)
+drop-shadow(0 0 30px #ff0000);
 
 }
 
