@@ -906,7 +906,6 @@ z-index:10;
 
 /*================ LOGO ================*/
 
-
 .hero-logo-img{
 
 display:block;
@@ -921,11 +920,9 @@ position:relative;
 
 z-index:20;
 
-filter:none;
-
-drop-shadow(0 0 5px red)
-
-drop-shadow(0 0 12px red);
+filter:
+drop-shadow(0 0 3px #ff0000)
+drop-shadow(0 0 8px #ff0000);
 
 }
 
