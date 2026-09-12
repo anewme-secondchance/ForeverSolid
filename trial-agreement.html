@@ -264,32 +264,6 @@ After the trial ends, continued service requires purchase or contacting TaDie4EN
 
 
 
-
-
-<script>
-
-function startTrial(){
-
-localStorage.setItem(
-"fs_install_date",
-new Date().getTime()
-);
-
-
-alert("Your 7-Day Custom App Experience Has Started!");
-
-
-window.location.assign("index.html");
-
-
-}
-
-</script>
-
-
-
-
-
 <!-- CONTACT -->
 
 
@@ -311,7 +285,24 @@ TaDie4ENT Custom Apps
 
 </section>
 
+<script>
 
+function startTrial(){
+
+localStorage.setItem(
+"fs_install_date",
+new Date().getTime()
+);
+
+alert("Your 7-Day Custom App Experience Has Started!");
+
+window.location.assign("index.html");
+
+}
+
+</script>
+
+<script src="script.js"></script>
 
 <script src="script.js"></script>
 
