@@ -2455,3 +2455,17 @@ margin-right:calc(50% - 50vw);
 }
 
 }
+
+.powered-by{
+
+text-align:center;
+
+font-size:14px;
+
+margin-top:15px;
+
+opacity:.8;
+
+letter-spacing:1px;
+
+}
