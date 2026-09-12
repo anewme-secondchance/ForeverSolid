@@ -613,15 +613,13 @@ document.querySelector('input[name="delivery"]:checked').value,
     items:
     cart,
 
-    total:
-    calculateCartTotal(),
-
-shipping:
+total:
+calculateCartTotal() +
+(
 document.querySelector('input[name="delivery"]:checked').value === "Shipping"
 ? 6.99
 : 0
-
-};
+),
 
 localStorage.setItem(
 
