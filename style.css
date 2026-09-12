@@ -921,10 +921,10 @@ position:relative;
 z-index:20;
 
 filter:
-brightness(.75)
+brightness(1)
 drop-shadow(0 0 3px #b30000)
-drop-shadow(0 0 10px #b30000)
-drop-shadow(0 0 18px #ff0000);
+drop-shadow(0 0 8px #b30000)
+drop-shadow(0 0 15px #ff0000);
 
 }
 
