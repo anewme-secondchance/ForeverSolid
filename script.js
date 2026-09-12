@@ -1064,3 +1064,9 @@ alert("Trial Started!");
 window.location.href="index.html";
 
 }
+
+function openFullImage(image){
+
+image.classList.toggle("full-image");
+
+}
