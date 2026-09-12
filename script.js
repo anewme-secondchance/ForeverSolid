@@ -667,17 +667,10 @@ order.notes
 }
 
 )
+
 .then(function(){
 
 console.log("Order email sent");
-
-})
-.catch(function(error){
-
-console.log("Email failed", error);
-
-});
-
 
 cart = [];
 
@@ -685,6 +678,20 @@ saveCart();
 
 window.location.href = "receipt.html";
 
+})
+.catch(function(error){
+
+console.log("Email failed", error);
+
+alert("Order saved, but email failed.");
+
+cart = [];
+
+saveCart();
+
+window.location.href = "receipt.html";
+
+});
     }
 /*=========================================
 LOAD RECEIPT
