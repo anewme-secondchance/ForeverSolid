@@ -1062,3 +1062,16 @@ new Date().getTime()
 window.location.href="index.html";
 
 }
+
+function startTrial(){
+
+localStorage.setItem(
+"fs_install_date",
+new Date().getTime()
+);
+
+alert("Trial Started!");
+
+window.location.href="index.html";
+
+}
