@@ -653,9 +653,7 @@ order.items.map(item =>
 `${item.name}
 Size: ${item.size}
 Color: ${item.color}
-Quantity: ${item.quantity}
-Price: $${item.price}
-Total: $${item.total}`
+Quantity: ${item.quantity}`
 ).join("\n\n"),
 
 total:
