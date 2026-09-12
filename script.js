@@ -629,13 +629,61 @@ localStorage.setItem(
 
 );
 
+
+// SEND ORDER EMAIL
+
+emailjs.send(
+"service_xics3xg",
+"template_e8uxtmv",
+{
+
+name:
+order.firstName + " " + order.lastName,
+
+phone:
+order.phone,
+
+email:
+order.email,
+
+order:
+JSON.stringify(order.items),
+
+total:
+"$" + order.total.toFixed(2),
+
+delivery:
+order.delivery,
+
+address:
+order.address + " " +
+order.city + " " +
+order.state + " " +
+order.zip,
+
+notes:
+order.notes
+
+}
+
+)
+.then(function(){
+
+console.log("Order email sent");
+
+})
+.catch(function(error){
+
+console.log("Email failed", error);
+
+});
+
+
 cart = [];
 
 saveCart();
 
 window.location.href = "receipt.html";
-
-}
 
 /*=========================================
 LOAD RECEIPT
