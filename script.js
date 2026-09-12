@@ -617,7 +617,7 @@ document.querySelector('input[name="delivery"]:checked').value,
     calculateCartTotal(),
 
 shipping:
-cart.reduce((sum,item)=>sum + (item.shipping || 0),0)
+order.delivery === "Shipping" ? 6.99 : 0
 
 };
 
