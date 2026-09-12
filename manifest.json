@@ -1,0 +1,15 @@
+{
+  "name": "Forever Solid",
+  "short_name": "Forever Solid",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#990000",
+  "icons": [
+    {
+      "src": "images/IMG_FSREDLOGO.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
