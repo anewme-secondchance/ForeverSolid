@@ -1065,8 +1065,21 @@ window.location.href="index.html";
 
 }
 
-function openFullImage(image){
+function openImageViewer(image){
 
-image.classList.toggle("full-image");
+let viewer = document.getElementById("imageViewer");
+
+let bigImage = document.getElementById("bigImage");
+
+bigImage.src = image;
+
+viewer.style.display = "flex";
+
+}
+
+
+function closeImageViewer(){
+
+document.getElementById("imageViewer").style.display = "none";
 
 }
