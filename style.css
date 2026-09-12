@@ -2562,3 +2562,122 @@ border-radius:50px;
 border:2px solid #333;
 
 }
+
+/* =========================
+   TaDie4ENT Trial Page Layout
+========================= */
+
+.trial-page{
+
+max-width:1000px;
+margin:auto;
+padding:60px 25px;
+
+color:white;
+
+}
+
+
+.trial-brand{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+
+.tadie-logo{
+
+width:320px;
+
+margin-bottom:35px;
+
+}
+
+
+.trial-page h2{
+
+margin-top:50px;
+
+margin-bottom:20px;
+
+line-height:1.4;
+
+}
+
+
+.trial-page p{
+
+line-height:1.8;
+
+margin-bottom:30px;
+
+}
+
+
+
+
+.price-card{
+
+margin:50px auto;
+
+padding:35px;
+
+max-width:700px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.25);
+
+}
+
+
+
+.price-card h3{
+
+font-size:30px;
+
+margin-bottom:20px;
+
+}
+
+
+
+.price-card h2{
+
+margin:15px 0;
+
+}
+
+
+
+.price-card p{
+
+margin-bottom:20px;
+
+line-height:2;
+
+}
+
+
+
+/* Trial button */
+
+.trial-page button{
+
+display:block;
+
+margin:60px auto;
+
+padding:18px 40px;
+
+border-radius:50px;
+
+font-size:20px;
+
+cursor:pointer;
+
+}
