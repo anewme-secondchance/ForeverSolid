@@ -610,8 +610,8 @@ document.querySelector('input[name="delivery"]:checked').value,
     notes:
     document.getElementById("notes").value,
 
-    items:
-    cart,
+  items:
+cart,
 
 total:
 calculateCartTotal() +
@@ -621,16 +621,18 @@ document.querySelector('input[name="delivery"]:checked').value === "Shipping"
 : 0
 ),
 
-    shipping:
+shipping:
 document.querySelector('input[name="delivery"]:checked').value === "Shipping"
 ? 6.99
 : 0
-};    
+
+};
+
 localStorage.setItem(
 
-    ORDER_KEY,
+ORDER_KEY,
 
-    JSON.stringify(order)
+JSON.stringify(order)
 
 );
 
