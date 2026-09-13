@@ -2991,3 +2991,29 @@ text-shadow:
 0 0 10px rgba(0,170,255,.7);
 
 }
+
+#trial-status{
+
+text-align:center;
+
+margin:20px auto;
+
+padding:15px;
+
+max-width:400px;
+
+border-radius:50px;
+
+background:rgba(0,170,255,.15);
+
+border:1px solid #00aaff;
+
+color:white;
+
+font-weight:600;
+
+box-shadow:
+
+0 0 20px rgba(0,170,255,.5);
+
+}
