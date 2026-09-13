@@ -1082,3 +1082,31 @@ function closeImageViewer(){
 document.getElementById("imageViewer").style.display = "none";
 
 }
+
+function showTrialStatus(){
+
+let start = localStorage.getItem("fs_install_date");
+
+if(start){
+
+let sevenDays = 7 * 24 * 60 * 60 * 1000;
+
+let endDate = Number(start) + sevenDays;
+
+let daysLeft = Math.ceil(
+(endDate - Date.now()) / (24 * 60 * 60 * 1000)
+);
+
+
+document.getElementById("trial-status").innerHTML =
+
+"🚀 TaDie4ENT Custom App Trial Active<br>" +
+daysLeft +
+" Days Remaining";
+
+}
+
+}
+
+
+showTrialStatus();
