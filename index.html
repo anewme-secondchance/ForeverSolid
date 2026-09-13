@@ -25,10 +25,26 @@
 
 
 <body>
- 
+
 <script>
 
-if(!localStorage.getItem("fs_install_date")){
+let trialStart = localStorage.getItem("fs_install_date");
+
+let sevenDays = 7 * 24 * 60 * 60 * 1000;
+
+
+if(!trialStart){
+
+window.location.href="trial-agreement.html";
+
+}
+
+
+else if(Date.now() - trialStart >= sevenDays){
+
+localStorage.removeItem("fs_install_date");
+
+alert("Your 7-Day App Experience Has Ended. Contact TaDie4ENT to continue service.");
 
 window.location.href="trial-agreement.html";
 
